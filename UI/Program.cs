@@ -14,7 +14,7 @@ namespace UI
         [STAThread]
         static void Main()
         {
-            Services.Log.LOG_START();
+            //Services.Log.LOG_START();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
