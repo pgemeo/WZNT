@@ -26,7 +26,7 @@ namespace Services
         {
             // Create client
             ServiceClient WZNTServices = new ServiceClient();
-            double Similarity = 0;// WZNTServices.ParseSimilarity(File1, File2);
+            double Similarity = WZNTServices.ParseSimilarity(File1, File2);
             Log.Info(string.Format("Images have {0} of similarity", Similarity));
             // Close the client.
             WZNTServices.Close();
