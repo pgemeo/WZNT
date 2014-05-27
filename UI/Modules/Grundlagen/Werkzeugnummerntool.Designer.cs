@@ -43,6 +43,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModTitle = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tableLayout1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btNew = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.tableLayout2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -212,11 +220,98 @@
             this.treeView1.Size = new System.Drawing.Size(250, 385);
             this.treeView1.TabIndex = 0;
             // 
+            // tableLayout1
+            // 
+            this.tableLayout1.AutoScroll = true;
+            this.tableLayout1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tableLayout1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayout1.ColumnCount = 2;
+            this.tableLayout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.11236F));
+            this.tableLayout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.88764F));
+            this.tableLayout1.Location = new System.Drawing.Point(330, 160);
+            this.tableLayout1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayout1.Name = "tableLayout1";
+            this.tableLayout1.RowCount = 1;
+            this.tableLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayout1.Size = new System.Drawing.Size(300, 340);
+            this.tableLayout1.TabIndex = 7;
+            // 
+            // btNew
+            // 
+            this.btNew.Location = new System.Drawing.Point(0, 0);
+            this.btNew.Margin = new System.Windows.Forms.Padding(0);
+            this.btNew.Name = "btNew";
+            this.btNew.Size = new System.Drawing.Size(75, 25);
+            this.btNew.TabIndex = 8;
+            this.btNew.Text = "Neu";
+            this.btNew.UseVisualStyleBackColor = true;
+            // 
+            // btEdit
+            // 
+            this.btEdit.Location = new System.Drawing.Point(75, 0);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(75, 25);
+            this.btEdit.TabIndex = 9;
+            this.btEdit.Text = "Ändern";
+            this.btEdit.UseVisualStyleBackColor = true;
+            // 
+            // btSave
+            // 
+            this.btSave.Location = new System.Drawing.Point(150, 0);
+            this.btSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(75, 25);
+            this.btSave.TabIndex = 10;
+            this.btSave.Text = "Speichern";
+            this.btSave.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btNew);
+            this.flowLayoutPanel1.Controls.Add(this.btEdit);
+            this.flowLayoutPanel1.Controls.Add(this.btSave);
+            this.flowLayoutPanel1.Controls.Add(this.btCancel);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(330, 520);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(350, 25);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // btCancel
+            // 
+            this.btCancel.Location = new System.Drawing.Point(225, 0);
+            this.btCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 25);
+            this.btCancel.TabIndex = 11;
+            this.btCancel.Text = "Abbrechen";
+            this.btCancel.UseVisualStyleBackColor = true;
+            // 
+            // tableLayout2
+            // 
+            this.tableLayout2.AutoScroll = true;
+            this.tableLayout2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tableLayout2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayout2.ColumnCount = 3;
+            this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayout2.Location = new System.Drawing.Point(680, 160);
+            this.tableLayout2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayout2.Name = "tableLayout2";
+            this.tableLayout2.RowCount = 1;
+            this.tableLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayout2.Size = new System.Drawing.Size(300, 170);
+            this.tableLayout2.TabIndex = 12;
+            // 
             // Werkzeugnummerntool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 562);
+            this.Controls.Add(this.tableLayout2);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.tableLayout1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -236,6 +331,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,5 +352,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblModTitle;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TableLayoutPanel tableLayout1;
+        private System.Windows.Forms.Button btNew;
+        private System.Windows.Forms.Button btEdit;
+        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.TableLayoutPanel tableLayout2;
     }
 }
