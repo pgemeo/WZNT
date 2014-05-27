@@ -214,7 +214,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(15, 160);
+            this.treeView1.Location = new System.Drawing.Point(50, 160);
             this.treeView1.Margin = new System.Windows.Forms.Padding(0);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(250, 385);
@@ -296,7 +296,7 @@
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayout2.Location = new System.Drawing.Point(680, 160);
+            this.tableLayout2.Location = new System.Drawing.Point(660, 160);
             this.tableLayout2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayout2.Name = "tableLayout2";
             this.tableLayout2.RowCount = 1;

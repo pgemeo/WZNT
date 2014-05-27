@@ -162,6 +162,7 @@ namespace UI.Modules.Grundlagen
             this.treeView1.AfterSelect += TreeView1_AfterSelect;
             // TableLayoutPanel
             this.tableLayout1.CellPaint += TableLayoutPanel_CellPaint;
+            this.tableLayout2.CellPaint += TableLayoutPanel_CellPaint;
         }
         //
         // handle after select tree node event 
