@@ -36,6 +36,7 @@ namespace UI.Modules.Grundlagen
             TopMenuStrip.Size = new System.Drawing.Size(330, 24);
             TopMenuStrip.Margin = new Padding(0, 0, 30, 0);
             TopMenuStrip.TabIndex = 0;
+            TopMenuStrip.Cursor = Cursors.Hand;
             // add child and put it into first index
             flPanelTop.Controls.Add(TopMenuStrip);
             flPanelTop.Controls.SetChildIndex(TopMenuStrip, 0);
@@ -47,10 +48,12 @@ namespace UI.Modules.Grundlagen
             ToolStripMenuItem SubItem = new ToolStripMenuItem();
             SubItem.Text = "Dateneingang";
             Item.DropDownItems.Add(SubItem);
+            Item.DropDown.Cursor = Cursors.Hand;
 
             SubItem = new ToolStripMenuItem();
             SubItem.Text = "Drucklärung";
             Item.DropDownItems.Add(SubItem);
+            Item.DropDown.Cursor = Cursors.Hand;
 
             TopMenuStrip.Items.Add(Item);
             
