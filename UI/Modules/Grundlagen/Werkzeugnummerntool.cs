@@ -26,9 +26,20 @@ namespace UI.Modules.Grundlagen
         protected void InitializeTopMenu()
         {
             // TopMenuStrip
-            this.TopMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.TopMenuStrip.Name = "TopMenuStrip";
-            this.TopMenuStrip.TabIndex = 0;
+            MenuStrip TopMenuStrip = new MenuStrip();
+            TopMenuStrip.Location = new System.Drawing.Point(0, 0);
+            TopMenuStrip.Name = "TopMenuStrip";
+            TopMenuStrip.TabIndex = 0;
+            TopMenuStrip.Font = new System.Drawing.Font("Segoe UI", 12F);
+            TopMenuStrip.Location = new System.Drawing.Point(0, 0);
+            TopMenuStrip.Name = "TopMenuStrip";
+            TopMenuStrip.Size = new System.Drawing.Size(330, 24);
+            TopMenuStrip.Margin = new Padding(0, 0, 30, 0);
+            TopMenuStrip.TabIndex = 0;
+            // add child and put it into first index
+            flPanelTop.Controls.Add(TopMenuStrip);
+            flPanelTop.Controls.SetChildIndex(TopMenuStrip, 0);
+            
             // Item1
             ToolStripMenuItem Item = new ToolStripMenuItem();
             Item.Text = "Anwendungen";
@@ -41,15 +52,17 @@ namespace UI.Modules.Grundlagen
             SubItem.Text = "Drucklärung";
             Item.DropDownItems.Add(SubItem);
 
-            this.TopMenuStrip.Items.Add(Item);
+            TopMenuStrip.Items.Add(Item);
+            
             // Item2
             Item = new ToolStripMenuItem();
             Item.Text = "Verwaltung";
-            this.TopMenuStrip.Items.Add(Item);
+            TopMenuStrip.Items.Add(Item);
+            
             // Item3
             Item = new ToolStripMenuItem();
             Item.Text = "Extras";
-            this.TopMenuStrip.Items.Add(Item);
+            TopMenuStrip.Items.Add(Item);
         }
     }
 }
