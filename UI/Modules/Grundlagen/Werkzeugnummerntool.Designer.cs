@@ -69,10 +69,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(70, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(60, 5);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -83,7 +83,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(10, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -147,10 +147,10 @@
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(883, 5);
+            this.pictureBox9.Location = new System.Drawing.Point(885, 5);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
             this.pictureBox9.TabIndex = 4;
             this.pictureBox9.TabStop = false;
             // 
@@ -158,10 +158,10 @@
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(943, 5);
+            this.pictureBox7.Location = new System.Drawing.Point(930, 5);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
             // 
@@ -169,10 +169,10 @@
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(823, 5);
+            this.pictureBox8.Location = new System.Drawing.Point(840, 5);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             // 
@@ -187,14 +187,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 60);
+            this.panel1.Size = new System.Drawing.Size(1008, 50);
             this.panel1.TabIndex = 5;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Controls.Add(this.lblModTitle);
-            this.panel2.Location = new System.Drawing.Point(104, 110);
+            this.panel2.Location = new System.Drawing.Point(104, 100);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 30);
@@ -214,7 +214,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(50, 160);
+            this.treeView1.Location = new System.Drawing.Point(50, 150);
             this.treeView1.Margin = new System.Windows.Forms.Padding(0);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(250, 385);
@@ -228,7 +228,7 @@
             this.tableLayout1.ColumnCount = 2;
             this.tableLayout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.11236F));
             this.tableLayout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.88764F));
-            this.tableLayout1.Location = new System.Drawing.Point(330, 160);
+            this.tableLayout1.Location = new System.Drawing.Point(330, 150);
             this.tableLayout1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayout1.Name = "tableLayout1";
             this.tableLayout1.RowCount = 1;
@@ -272,7 +272,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btEdit);
             this.flowLayoutPanel1.Controls.Add(this.btSave);
             this.flowLayoutPanel1.Controls.Add(this.btCancel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(330, 520);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(330, 510);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(350, 25);
             this.flowLayoutPanel1.TabIndex = 11;
@@ -296,7 +296,7 @@
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayout2.Location = new System.Drawing.Point(660, 160);
+            this.tableLayout2.Location = new System.Drawing.Point(660, 150);
             this.tableLayout2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayout2.Name = "tableLayout2";
             this.tableLayout2.RowCount = 1;
