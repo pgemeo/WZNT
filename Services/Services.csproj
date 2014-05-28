@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbManager.cs" />
     <Compile Include="ImageParser.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,9 +78,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Service References\WZNTServices\Service.wsdl" />
+    <None Include="Service References\WZNTServices\Service.xsd" />
+    <None Include="Service References\WZNTServices\Service1.wsdl" />
     <None Include="Service References\WZNTServices\Service1.xsd" />
     <None Include="Service References\WZNTServices\Service2.xsd" />
+    <None Include="Service References\WZNTServices\Service3.xsd" />
+    <None Include="Service References\WZNTServices\Services.WZNTServices.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruArtAufEinzelnutzen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WZNTServices\Reference.svcmap">
@@ -88,7 +97,6 @@
     </None>
     <None Include="Service References\WZNTServices\configuration.svcinfo" />
     <None Include="Service References\WZNTServices\configuration91.svcinfo" />
-    <None Include="Service References\WZNTServices\Service.disco" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -101,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dll\EyeOpen.Imaging.Processing.dll" />
+    <None Include="Service References\WZNTServices\Service1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

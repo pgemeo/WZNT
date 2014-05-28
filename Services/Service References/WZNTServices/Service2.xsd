@@ -1,33 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="ParsePixels">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="File1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="File2" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ParsePixelsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ParsePixelsResult" type="xs:double" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ParseSimilarity">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="File1" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="File2" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ParseSimilarityResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ParseSimilarityResult" type="xs:double" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGruArtAufEinzelnutzen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtAufEinzelnutzen" nillable="true" type="tns:GruArtAufEinzelnutzen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtAufEinzelnutzen" nillable="true" type="tns:ArrayOfGruArtAufEinzelnutzen" />
+  <xs:complexType name="GruArtAufEinzelnutzen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aufgabe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruArtAufEinSpraches" nillable="true" type="tns:ArrayOfGruArtAufEinSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtAufEinzelnutzen" nillable="true" type="tns:GruArtAufEinzelnutzen" />
+  <xs:complexType name="ArrayOfGruArtAufEinSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtAufEinSprache" nillable="true" type="tns:GruArtAufEinSprache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtAufEinSprache" nillable="true" type="tns:ArrayOfGruArtAufEinSprache" />
+  <xs:complexType name="GruArtAufEinSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruArtAufEinzelnutzen" nillable="true" type="tns:GruArtAufEinzelnutzen" />
+      <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdAufgabe" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtAufEinSprache" nillable="true" type="tns:GruArtAufEinSprache" />
+  <xs:complexType name="GruSprachen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruArtAufEinSpraches" nillable="true" type="tns:ArrayOfGruArtAufEinSprache" />
+      <xs:element minOccurs="0" name="GruArtBasisArtSpraches" nillable="true" type="tns:ArrayOfGruArtBasisArtSprache" />
+      <xs:element minOccurs="0" name="GruArtDruckVerSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVerSprache" />
+      <xs:element minOccurs="0" name="GruArtDruckVorlSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVorlSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Iso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Sprache" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+  <xs:complexType name="ArrayOfGruArtBasisArtSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtBasisArtSprache" nillable="true" type="tns:GruArtBasisArtSprache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtBasisArtSprache" nillable="true" type="tns:ArrayOfGruArtBasisArtSprache" />
+  <xs:complexType name="GruArtBasisArtSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruArtBasisart" nillable="true" type="tns:GruArtBasisart" />
+      <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdBasisart" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtBasisArtSprache" nillable="true" type="tns:GruArtBasisArtSprache" />
+  <xs:complexType name="GruArtBasisart">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Basisart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruArtBasisArtSpraches" nillable="true" type="tns:ArrayOfGruArtBasisArtSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtBasisart" nillable="true" type="tns:GruArtBasisart" />
+  <xs:complexType name="ArrayOfGruArtDruckVerSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtDruckVerSprache" nillable="true" type="tns:GruArtDruckVerSprache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtDruckVerSprache" nillable="true" type="tns:ArrayOfGruArtDruckVerSprache" />
+  <xs:complexType name="GruArtDruckVerSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruArtDruckverf" nillable="true" type="tns:GruArtDruckverf" />
+      <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDruckvorl" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UebSetDruckv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UebSetKurzz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtDruckVerSprache" nillable="true" type="tns:GruArtDruckVerSprache" />
+  <xs:complexType name="GruArtDruckverf">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Auflosung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Druckverfahren" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruArtDruckVerSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVerSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Kurzzeichen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtDruckverf" nillable="true" type="tns:GruArtDruckverf" />
+  <xs:complexType name="ArrayOfGruArtDruckVorlSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtDruckVorlSprache" nillable="true" type="tns:GruArtDruckVorlSprache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtDruckVorlSprache" nillable="true" type="tns:ArrayOfGruArtDruckVorlSprache" />
+  <xs:complexType name="GruArtDruckVorlSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruArtDruckvorl" nillable="true" type="tns:GruArtDruckvorl" />
+      <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDruckvorl" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtDruckVorlSprache" nillable="true" type="tns:GruArtDruckVorlSprache" />
+  <xs:complexType name="GruArtDruckvorl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Druckvorlagen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruArtDruckVorlSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVorlSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtDruckvorl" nillable="true" type="tns:GruArtDruckvorl" />
 </xs:schema>

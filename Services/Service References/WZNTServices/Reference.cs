@@ -9,11 +9,1233 @@
 //------------------------------------------------------------------------------
 
 namespace Services.WZNTServices {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WZNTService")]
+    [System.SerializableAttribute()]
+    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool BoolValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StringValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool BoolValue {
+            get {
+                return this.BoolValueField;
+            }
+            set {
+                if ((this.BoolValueField.Equals(value) != true)) {
+                    this.BoolValueField = value;
+                    this.RaisePropertyChanged("BoolValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StringValue {
+            get {
+                return this.StringValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
+                    this.StringValueField = value;
+                    this.RaisePropertyChanged("StringValue");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtAufEinzelnutzen", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtAufEinzelnutzen : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AufgabeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtAufEinSprache[] GruArtAufEinSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Aufgabe {
+            get {
+                return this.AufgabeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AufgabeField, value) != true)) {
+                    this.AufgabeField = value;
+                    this.RaisePropertyChanged("Aufgabe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtAufEinSprache[] GruArtAufEinSpraches {
+            get {
+                return this.GruArtAufEinSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtAufEinSprachesField, value) != true)) {
+                    this.GruArtAufEinSprachesField = value;
+                    this.RaisePropertyChanged("GruArtAufEinSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtAufEinSprache", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtAufEinSprache : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruSprachen GruSprachenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdAufgabeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdSpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebersetzungField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen {
+            get {
+                return this.GruArtAufEinzelnutzenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtAufEinzelnutzenField, value) != true)) {
+                    this.GruArtAufEinzelnutzenField = value;
+                    this.RaisePropertyChanged("GruArtAufEinzelnutzen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruSprachen GruSprachen {
+            get {
+                return this.GruSprachenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruSprachenField, value) != true)) {
+                    this.GruSprachenField = value;
+                    this.RaisePropertyChanged("GruSprachen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdAufgabe {
+            get {
+                return this.IdAufgabeField;
+            }
+            set {
+                if ((this.IdAufgabeField.Equals(value) != true)) {
+                    this.IdAufgabeField = value;
+                    this.RaisePropertyChanged("IdAufgabe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdSprache {
+            get {
+                return this.IdSpracheField;
+            }
+            set {
+                if ((this.IdSpracheField.Equals(value) != true)) {
+                    this.IdSpracheField = value;
+                    this.RaisePropertyChanged("IdSprache");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Uebersetzung {
+            get {
+                return this.UebersetzungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebersetzungField, value) != true)) {
+                    this.UebersetzungField = value;
+                    this.RaisePropertyChanged("Uebersetzung");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruSprachen", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruSprachen : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtAufEinSprache[] GruArtAufEinSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtBasisArtSprache[] GruArtBasisArtSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckVerSprache[] GruArtDruckVerSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckVorlSprache[] GruArtDruckVorlSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IsoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SpracheField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtAufEinSprache[] GruArtAufEinSpraches {
+            get {
+                return this.GruArtAufEinSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtAufEinSprachesField, value) != true)) {
+                    this.GruArtAufEinSprachesField = value;
+                    this.RaisePropertyChanged("GruArtAufEinSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtBasisArtSprache[] GruArtBasisArtSpraches {
+            get {
+                return this.GruArtBasisArtSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtBasisArtSprachesField, value) != true)) {
+                    this.GruArtBasisArtSprachesField = value;
+                    this.RaisePropertyChanged("GruArtBasisArtSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckVerSprache[] GruArtDruckVerSpraches {
+            get {
+                return this.GruArtDruckVerSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckVerSprachesField, value) != true)) {
+                    this.GruArtDruckVerSprachesField = value;
+                    this.RaisePropertyChanged("GruArtDruckVerSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckVorlSprache[] GruArtDruckVorlSpraches {
+            get {
+                return this.GruArtDruckVorlSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckVorlSprachesField, value) != true)) {
+                    this.GruArtDruckVorlSprachesField = value;
+                    this.RaisePropertyChanged("GruArtDruckVorlSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Iso {
+            get {
+                return this.IsoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IsoField, value) != true)) {
+                    this.IsoField = value;
+                    this.RaisePropertyChanged("Iso");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sprache {
+            get {
+                return this.SpracheField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SpracheField, value) != true)) {
+                    this.SpracheField = value;
+                    this.RaisePropertyChanged("Sprache");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtBasisArtSprache", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtBasisArtSprache : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtBasisart GruArtBasisartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruSprachen GruSprachenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdBasisartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdSpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebersetzungField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtBasisart GruArtBasisart {
+            get {
+                return this.GruArtBasisartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtBasisartField, value) != true)) {
+                    this.GruArtBasisartField = value;
+                    this.RaisePropertyChanged("GruArtBasisart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruSprachen GruSprachen {
+            get {
+                return this.GruSprachenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruSprachenField, value) != true)) {
+                    this.GruSprachenField = value;
+                    this.RaisePropertyChanged("GruSprachen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdBasisart {
+            get {
+                return this.IdBasisartField;
+            }
+            set {
+                if ((this.IdBasisartField.Equals(value) != true)) {
+                    this.IdBasisartField = value;
+                    this.RaisePropertyChanged("IdBasisart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdSprache {
+            get {
+                return this.IdSpracheField;
+            }
+            set {
+                if ((this.IdSpracheField.Equals(value) != true)) {
+                    this.IdSpracheField = value;
+                    this.RaisePropertyChanged("IdSprache");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Uebersetzung {
+            get {
+                return this.UebersetzungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebersetzungField, value) != true)) {
+                    this.UebersetzungField = value;
+                    this.RaisePropertyChanged("Uebersetzung");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtDruckVerSprache", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtDruckVerSprache : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckverf GruArtDruckverfField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruSprachen GruSprachenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdDruckvorlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdSpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebSetDruckvField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebSetKurzzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckverf GruArtDruckverf {
+            get {
+                return this.GruArtDruckverfField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckverfField, value) != true)) {
+                    this.GruArtDruckverfField = value;
+                    this.RaisePropertyChanged("GruArtDruckverf");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruSprachen GruSprachen {
+            get {
+                return this.GruSprachenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruSprachenField, value) != true)) {
+                    this.GruSprachenField = value;
+                    this.RaisePropertyChanged("GruSprachen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdDruckvorl {
+            get {
+                return this.IdDruckvorlField;
+            }
+            set {
+                if ((this.IdDruckvorlField.Equals(value) != true)) {
+                    this.IdDruckvorlField = value;
+                    this.RaisePropertyChanged("IdDruckvorl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdSprache {
+            get {
+                return this.IdSpracheField;
+            }
+            set {
+                if ((this.IdSpracheField.Equals(value) != true)) {
+                    this.IdSpracheField = value;
+                    this.RaisePropertyChanged("IdSprache");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UebSetDruckv {
+            get {
+                return this.UebSetDruckvField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebSetDruckvField, value) != true)) {
+                    this.UebSetDruckvField = value;
+                    this.RaisePropertyChanged("UebSetDruckv");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UebSetKurzz {
+            get {
+                return this.UebSetKurzzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebSetKurzzField, value) != true)) {
+                    this.UebSetKurzzField = value;
+                    this.RaisePropertyChanged("UebSetKurzz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtDruckVorlSprache", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtDruckVorlSprache : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckvorl GruArtDruckvorlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruSprachen GruSprachenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdDruckvorlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdSpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebersetzungField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckvorl GruArtDruckvorl {
+            get {
+                return this.GruArtDruckvorlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckvorlField, value) != true)) {
+                    this.GruArtDruckvorlField = value;
+                    this.RaisePropertyChanged("GruArtDruckvorl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruSprachen GruSprachen {
+            get {
+                return this.GruSprachenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruSprachenField, value) != true)) {
+                    this.GruSprachenField = value;
+                    this.RaisePropertyChanged("GruSprachen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdDruckvorl {
+            get {
+                return this.IdDruckvorlField;
+            }
+            set {
+                if ((this.IdDruckvorlField.Equals(value) != true)) {
+                    this.IdDruckvorlField = value;
+                    this.RaisePropertyChanged("IdDruckvorl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdSprache {
+            get {
+                return this.IdSpracheField;
+            }
+            set {
+                if ((this.IdSpracheField.Equals(value) != true)) {
+                    this.IdSpracheField = value;
+                    this.RaisePropertyChanged("IdSprache");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Uebersetzung {
+            get {
+                return this.UebersetzungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebersetzungField, value) != true)) {
+                    this.UebersetzungField = value;
+                    this.RaisePropertyChanged("Uebersetzung");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtBasisart", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtBasisart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BasisartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtBasisArtSprache[] GruArtBasisArtSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Basisart {
+            get {
+                return this.BasisartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BasisartField, value) != true)) {
+                    this.BasisartField = value;
+                    this.RaisePropertyChanged("Basisart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtBasisArtSprache[] GruArtBasisArtSpraches {
+            get {
+                return this.GruArtBasisArtSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtBasisArtSprachesField, value) != true)) {
+                    this.GruArtBasisArtSprachesField = value;
+                    this.RaisePropertyChanged("GruArtBasisArtSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtDruckverf", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtDruckverf : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AuflosungField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DruckverfahrenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckVerSprache[] GruArtDruckVerSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KurzzeichenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Auflosung {
+            get {
+                return this.AuflosungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuflosungField, value) != true)) {
+                    this.AuflosungField = value;
+                    this.RaisePropertyChanged("Auflosung");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Druckverfahren {
+            get {
+                return this.DruckverfahrenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DruckverfahrenField, value) != true)) {
+                    this.DruckverfahrenField = value;
+                    this.RaisePropertyChanged("Druckverfahren");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckVerSprache[] GruArtDruckVerSpraches {
+            get {
+                return this.GruArtDruckVerSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckVerSprachesField, value) != true)) {
+                    this.GruArtDruckVerSprachesField = value;
+                    this.RaisePropertyChanged("GruArtDruckVerSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Kurzzeichen {
+            get {
+                return this.KurzzeichenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KurzzeichenField, value) != true)) {
+                    this.KurzzeichenField = value;
+                    this.RaisePropertyChanged("Kurzzeichen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtDruckvorl", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruArtDruckvorl : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DruckvorlagenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckVorlSprache[] GruArtDruckVorlSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Druckvorlagen {
+            get {
+                return this.DruckvorlagenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DruckvorlagenField, value) != true)) {
+                    this.DruckvorlagenField = value;
+                    this.RaisePropertyChanged("Druckvorlagen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckVorlSprache[] GruArtDruckVorlSpraches {
+            get {
+                return this.GruArtDruckVorlSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckVorlSprachesField, value) != true)) {
+                    this.GruArtDruckVorlSprachesField = value;
+                    this.RaisePropertyChanged("GruArtDruckVorlSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WZNTServices.IService")]
     public interface IService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
+        string GetData(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetData", ReplyAction="http://tempuri.org/IService/GetDataResponse")]
+        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
+        Services.WZNTServices.CompositeType GetDataUsingDataContract(Services.WZNTServices.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService/GetDataUsingDataContractResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.CompositeType> GetDataUsingDataContractAsync(Services.WZNTServices.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinzelnutzenResponse")]
+        Services.WZNTServices.GruArtAufEinzelnutzen[] GetListGruArtAufEinzelnutzen();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> GetListGruArtAufEinzelnutzenAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -53,6 +1275,30 @@ namespace Services.WZNTServices {
         
         public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public string GetData(int value) {
+            return base.Channel.GetData(value);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
+            return base.Channel.GetDataAsync(value);
+        }
+        
+        public Services.WZNTServices.CompositeType GetDataUsingDataContract(Services.WZNTServices.CompositeType composite) {
+            return base.Channel.GetDataUsingDataContract(composite);
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.CompositeType> GetDataUsingDataContractAsync(Services.WZNTServices.CompositeType composite) {
+            return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public Services.WZNTServices.GruArtAufEinzelnutzen[] GetListGruArtAufEinzelnutzen() {
+            return base.Channel.GetListGruArtAufEinzelnutzen();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> GetListGruArtAufEinzelnutzenAsync() {
+            return base.Channel.GetListGruArtAufEinzelnutzenAsync();
         }
         
         public double ParsePixels(string File1, string File2) {

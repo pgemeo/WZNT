@@ -22,10 +22,12 @@
     <MetadataSource Address="http://localhost/WZNTServices/Service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="3c194919-def9-483c-8064-f88b8ce33f71" SourceId="1" SourceUrl="http://port17012.priv.epal.pt/WZNTServices/Service.svc?wsdl" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="b5a46fb1-0888-4534-babf-d3b4c694b4a5" SourceId="1" SourceUrl="http://port17012.priv.epal.pt/WZNTServices/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="33135b98-be74-4b11-a886-cf8aed438dbe" SourceId="1" SourceUrl="http://port17012.priv.epal.pt/WZNTServices/Service.svc?disco" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="4d1daa76-69ce-4590-8176-8892c7511d5a" SourceId="1" SourceUrl="http://port17012.priv.epal.pt/WZNTServices/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="1e8b6520-acc7-4ba9-8cef-6796f39a3745" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="8d0a4812-f66f-404f-9bf0-838f83396b62" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="db1c64ec-042a-4a5b-99b5-490867289247" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="de0a5a10-ba0e-4dbf-9c26-0222bf14f273" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="8770eba8-acad-4312-9ad5-6f06cd1f4b55" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="8dea9ebf-5e31-4fe9-9c4b-95f848987a7c" SourceId="1" SourceUrl="http://localhost/WZNTServices/Service.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

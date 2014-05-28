@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Services;
+using Services.WZNTServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -173,24 +175,12 @@ namespace UI.Modules.Grundlagen
         //
         protected void InitializeGridView()
         {
-            DataTable Table = GetDataGridView();
-            Table.Columns[0].ReadOnly = true;
-            this.dataGridView1.DataSource = Table;
+            this.dataGridView1.DataSource = GetDataGridView();
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
         }
-        protected DataTable GetDataGridView()
+        protected List<GruArtAufEinzelnutzen> GetDataGridView()
         {
-            DataTable DataTable = new DataTable();
-            DataTable.Columns.Add("id");
-            DataTable.Columns.Add("name");
-            for (int i = 0; i != 20; ++i)
-            {
-                DataRow Row = DataTable.NewRow();
-                Row["id"] = i;
-                Row["name"] = "teste";
-                DataTable.Rows.Add(Row);
-            }
-            return DataTable;
+            return DbManager.GetListGruArtAufEinzelnutzen();
         }
         
         //
@@ -214,12 +204,7 @@ namespace UI.Modules.Grundlagen
         
         private void btSave_Click(object sender, EventArgs e)
         {
-            DataTable DataTable = GetDataGridView();
-            this.dataGridView1.BindingContext[DataTable].EndCurrentEdit();
-            DataTable Table = (DataTable)this.dataGridView1.DataSource;
-            foreach(DataRow Row in Table.Rows) {
-                MessageBox.Show("Id: " + Row[0] + "State: " + Row.RowState);
-            }
+            
         }
 
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -235,26 +220,30 @@ namespace UI.Modules.Grundlagen
 
         private void btNew_Click(object sender, EventArgs e)
         {
+            List<GruArtAufEinzelnutzen> DataSource = (List<GruArtAufEinzelnutzen>)this.dataGridView1.DataSource;
+            DataSource.Add(new GruArtAufEinzelnutzen());
+            this.dataGridView1.DataSource = null;
+            this.dataGridView1.DataSource = DataSource;
             this.dataGridView1.FirstDisplayedScrollingRowIndex = this.dataGridView1.Rows.Count - 1;
-            this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[1];
+            this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[0];
             this.dataGridView1.CurrentCell.OwningRow.ReadOnly = false;
             this.dataGridView1.BeginEdit(false);
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
-            foreach (DataGridViewRow Row in Rows)
-            {
-                Row.ReadOnly = false;
-                this.dataGridView1.CurrentCell = Row.Cells[1];
-                this.dataGridView1.BeginEdit(false);
-            }
             DataGridViewSelectedCellCollection Cells = this.dataGridView1.SelectedCells;
             foreach (DataGridViewCell Cell in Cells)
             {
+                this.dataGridView1.CurrentCell = Cell;
                 Cell.OwningRow.ReadOnly = false;
-                this.dataGridView1.CurrentCell = Cell.OwningRow.Cells[1];
+                this.dataGridView1.BeginEdit(false);
+            }
+            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
+            foreach (DataGridViewRow Row in Rows)
+            {
+                this.dataGridView1.CurrentCell = Row.Cells[0];
+                Row.ReadOnly = false;
                 this.dataGridView1.BeginEdit(false);
             }
         }
