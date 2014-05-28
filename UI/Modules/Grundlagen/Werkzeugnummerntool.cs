@@ -13,7 +13,7 @@ namespace UI.Modules.Grundlagen
     public partial class Werkzeugnummerntool : Form
     {
         // 
-        // constructor
+        // Constructor
         // 
         public Werkzeugnummerntool()
         {
@@ -22,8 +22,9 @@ namespace UI.Modules.Grundlagen
             InitializeTree();
             InitializeEvents();
         }
+        
         // 
-        // dynamically create top menu
+        // Top Menu
         // 
         protected void InitializeTopMenu()
         {
@@ -69,8 +70,9 @@ namespace UI.Modules.Grundlagen
             Item.Text = "Extras";
             TopMenuStrip.Items.Add(Item);
         }
+        
         // 
-        // dynamically create tree nodes
+        // Tree View
         //
         protected void InitializeTree()
         {
@@ -156,16 +158,43 @@ namespace UI.Modules.Grundlagen
             Child1 = new TreeNode("Berechtigungen");
             Node.Nodes.Add(Child1);
         }
+        
+        // 
+        // Events
+        //
         protected void InitializeEvents()
         {
             // Tree View
             this.treeView1.AfterSelect += TreeView1_AfterSelect;
-            // TableLayoutPanel
-            this.tableLayout1.CellPaint += TableLayoutPanel_CellPaint;
-            this.tableLayout2.CellPaint += TableLayoutPanel_CellPaint;
         }
+        
+        // 
+        // Grid View
         //
-        // handle after select tree node event 
+        protected void InitializeGridView()
+        {
+            DataTable Table = GetDataGridView();
+            Table.Columns[0].ReadOnly = true;
+            this.dataGridView1.DataSource = Table;
+            this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
+        }
+        protected DataTable GetDataGridView()
+        {
+            DataTable DataTable = new DataTable();
+            DataTable.Columns.Add("id");
+            DataTable.Columns.Add("name");
+            for (int i = 0; i != 20; ++i)
+            {
+                DataRow Row = DataTable.NewRow();
+                Row["id"] = i;
+                Row["name"] = "teste";
+                DataTable.Rows.Add(Row);
+            }
+            return DataTable;
+        }
+        
+        //
+        // Handlers 
         //
         protected void TreeView1_AfterSelect(System.Object sender,
             System.Windows.Forms.TreeViewEventArgs e)
@@ -177,24 +206,62 @@ namespace UI.Modules.Grundlagen
                     MessageBox.Show("You like the keyboard!");
                     break;
                 case TreeViewAction.ByMouse:
-                    Label Label = new Label();
-                    Label.Text = "Artikel identisch";
-                    int Row = this.tableLayout1.RowStyles.Add(new RowStyle());
-                    this.tableLayout1.Controls.Add(Label, 1, Row);
+                    MessageBox.Show("You like the mouse!");
+                    InitializeGridView();
                     break;
             }
         }
-        //
-        // handle cell paint event 
-        //
-        protected void TableLayoutPanel_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        
+        private void btSave_Click(object sender, EventArgs e)
         {
-            if (e.Column == 0)
-            {
-                Graphics G = e.Graphics;
-                Rectangle R = e.CellBounds;
-                G.FillRectangle(Brushes.Gray, R);
+            DataTable DataTable = GetDataGridView();
+            this.dataGridView1.BindingContext[DataTable].EndCurrentEdit();
+            DataTable Table = (DataTable)this.dataGridView1.DataSource;
+            foreach(DataRow Row in Table.Rows) {
+                MessageBox.Show("Id: " + Row[0] + "State: " + Row.RowState);
             }
+        }
+
+        private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (!e.Row.IsNewRow)
+            {
+                DialogResult Dialog = MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation",
+                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Dialog == DialogResult.No)
+                    e.Cancel = true;
+            }
+        }
+
+        private void btNew_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.FirstDisplayedScrollingRowIndex = this.dataGridView1.Rows.Count - 1;
+            this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[1];
+            this.dataGridView1.CurrentCell.OwningRow.ReadOnly = false;
+            this.dataGridView1.BeginEdit(false);
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
+            foreach (DataGridViewRow Row in Rows)
+            {
+                Row.ReadOnly = false;
+                this.dataGridView1.CurrentCell = Row.Cells[1];
+                this.dataGridView1.BeginEdit(false);
+            }
+            DataGridViewSelectedCellCollection Cells = this.dataGridView1.SelectedCells;
+            foreach (DataGridViewCell Cell in Cells)
+            {
+                Cell.OwningRow.ReadOnly = false;
+                this.dataGridView1.CurrentCell = Cell.OwningRow.Cells[1];
+                this.dataGridView1.BeginEdit(false);
+            }
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            InitializeGridView();
         }
     }
 }
