@@ -9,14 +9,27 @@ namespace Services
 {
     public class DbManager
     {
-        public static List<GruArtAufEinzelnutzen> GetListGruArtAufEinzelnutzen()
+        public static GruArtAufEinzelnutzen GetListGruArtAufEinzelnutzen()
         {
+            GruArtAufEinzelnutzen element = null;
+
+            using (WZNTServices.ServiceClient client = new ServiceClient())
+            {
+                string mydata = client.GetData(1);
+                
+                element = client.GetListGruArtAufEinzelnutzen();
+            }
+
+            /*
             // Create client
             ServiceClient WZNTServices = new ServiceClient();
             List<GruArtAufEinzelnutzen> Result = WZNTServices.GetListGruArtAufEinzelnutzen().ToList();
             // Close the client.
             WZNTServices.Close();
             return Result;
+            */
+
+            return element;
         }
     }
 }
