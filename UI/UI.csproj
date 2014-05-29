@@ -95,7 +95,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Services.WZNTServices.GruArtAufEinzelnutzen1.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
