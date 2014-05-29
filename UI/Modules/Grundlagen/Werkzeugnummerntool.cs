@@ -186,10 +186,8 @@ namespace UI.Modules.Grundlagen
         //
         // Handlers 
         //
-        protected void TreeView1_AfterSelect(System.Object sender,
-            System.Windows.Forms.TreeViewEventArgs e)
+        protected void TreeView1_AfterSelect(System.Object sender, TreeViewEventArgs e)
         {
-
             switch ((e.Action))
             {
                 case TreeViewAction.ByKeyboard:
