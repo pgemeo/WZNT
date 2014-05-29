@@ -181,6 +181,11 @@ namespace UI.Modules.Grundlagen
         protected BindingSource GetDataGridView()
         {
             this.gruArtAufEinzelnutzenBindingSource.DataSource = DbManager.GetListGruArtAufEinzelnutzen();
+            this.dataGridView1.Columns.Clear();
+            DataGridViewColumn Column = new DataGridViewTextBoxColumn();
+            Column.HeaderText = "Column 1";
+            Column.DataPropertyName = "Aufgabe";
+            this.dataGridView1.Columns.Add(Column);
             return this.gruArtAufEinzelnutzenBindingSource;
         }
         

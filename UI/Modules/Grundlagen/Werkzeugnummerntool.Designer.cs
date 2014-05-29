@@ -49,11 +49,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btCancel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.gruArtAufEinzelnutzenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aufgabeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oTimeStampDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -68,8 +65,8 @@
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // flPanelTop
@@ -296,15 +293,15 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.aufgabeDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn,
-            this.oTimeStampDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.gruArtAufEinzelnutzenBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(355, 150);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(250, 340);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // gruArtAufEinzelnutzenBindingSource
+            // 
+            this.gruArtAufEinzelnutzenBindingSource.DataSource = typeof(Services.WZNTServices.GruArtAufEinzelnutzen);
             // 
             // dataGridView2
             // 
@@ -315,28 +312,6 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(250, 170);
             this.dataGridView2.TabIndex = 13;
-            // 
-            // gruArtAufEinzelnutzenBindingSource
-            // 
-            this.gruArtAufEinzelnutzenBindingSource.DataSource = typeof(Services.WZNTServices.GruArtAufEinzelnutzen);
-            // 
-            // aufgabeDataGridViewTextBoxColumn
-            // 
-            this.aufgabeDataGridViewTextBoxColumn.DataPropertyName = "Aufgabe";
-            this.aufgabeDataGridViewTextBoxColumn.HeaderText = "Column 1";
-            this.aufgabeDataGridViewTextBoxColumn.Name = "aufgabeDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // oTimeStampDataGridViewTextBoxColumn
-            // 
-            this.oTimeStampDataGridViewTextBoxColumn.DataPropertyName = "OTimeStamp";
-            this.oTimeStampDataGridViewTextBoxColumn.HeaderText = "OTimeStamp";
-            this.oTimeStampDataGridViewTextBoxColumn.Name = "oTimeStampDataGridViewTextBoxColumn";
             // 
             // Werkzeugnummerntool
             // 
@@ -367,8 +342,8 @@
             this.panel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,8 +372,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource gruArtAufEinzelnutzenBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aufgabeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn oTimeStampDataGridViewTextBoxColumn;
     }
 }
