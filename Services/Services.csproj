@@ -102,9 +102,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadataStorage Include="Service References\WZNTServices\" />
   </ItemGroup>
   <ItemGroup>
