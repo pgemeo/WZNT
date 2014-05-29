@@ -178,9 +178,10 @@ namespace UI.Modules.Grundlagen
             this.dataGridView1.DataSource = GetDataGridView();
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
         }
-        protected List<GruArtAufEinzelnutzen> GetDataGridView()
+        protected BindingSource GetDataGridView()
         {
-            return DbManager.GetListGruArtAufEinzelnutzen();
+            this.gruArtAufEinzelnutzenBindingSource.DataSource = DbManager.GetListGruArtAufEinzelnutzen();
+            return this.gruArtAufEinzelnutzenBindingSource;
         }
         
         //
