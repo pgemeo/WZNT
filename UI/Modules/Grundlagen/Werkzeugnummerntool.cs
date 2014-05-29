@@ -202,7 +202,10 @@ namespace UI.Modules.Grundlagen
         
         private void btSave_Click(object sender, EventArgs e)
         {
-            
+            GruArtAufEinzelnutzen Instance = new GruArtAufEinzelnutzen();
+            Instance.Id = 9;
+            DbManager.InsertGruArtAufEinzelnutzen(Instance);
+            InitializeGridView();
         }
 
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
