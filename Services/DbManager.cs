@@ -33,7 +33,6 @@ namespace Services
                     using (WZNTServices.ServiceClient Client = new ServiceClient())
                     {
                         Client.InsertGruArtAufEinzelnutzen(Instance);
-                        throw new Exception("Error on Inserting");
                         Transaction.Complete();
                     }
                 }
