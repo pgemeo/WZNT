@@ -219,14 +219,17 @@ namespace UI.Modules.Grundlagen
 
         private void btNew_Click(object sender, EventArgs e)
         {
-            List<GruArtAufEinzelnutzen> DataSource = (List<GruArtAufEinzelnutzen>)this.dataGridView1.DataSource;
-            DataSource.Add(new GruArtAufEinzelnutzen());
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.DataSource = DataSource;
-            this.dataGridView1.FirstDisplayedScrollingRowIndex = this.dataGridView1.Rows.Count - 1;
-            this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[0];
-            this.dataGridView1.CurrentCell.OwningRow.ReadOnly = false;
-            this.dataGridView1.BeginEdit(false);
+            if (this.dataGridView1.DataSource != null)
+            {
+                List<GruArtAufEinzelnutzen> DataSource = (List<GruArtAufEinzelnutzen>)this.dataGridView1.DataSource;
+                DataSource.Add(new GruArtAufEinzelnutzen());
+                this.dataGridView1.DataSource = null;
+                this.dataGridView1.DataSource = DataSource;
+                this.dataGridView1.FirstDisplayedScrollingRowIndex = this.dataGridView1.Rows.Count - 1;
+                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[0];
+                this.dataGridView1.CurrentCell.OwningRow.ReadOnly = false;
+                this.dataGridView1.BeginEdit(false);
+            }
         }
 
         private void btEdit_Click(object sender, EventArgs e)
