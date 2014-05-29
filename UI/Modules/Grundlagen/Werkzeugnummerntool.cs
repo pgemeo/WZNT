@@ -193,10 +193,8 @@ namespace UI.Modules.Grundlagen
             switch ((e.Action))
             {
                 case TreeViewAction.ByKeyboard:
-                    MessageBox.Show("You like the keyboard!");
                     break;
                 case TreeViewAction.ByMouse:
-                    MessageBox.Show("You like the mouse!");
                     InitializeGridView();
                     break;
             }
