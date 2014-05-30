@@ -172,6 +172,9 @@ namespace UI.Modules.Grundlagen
             // Grid View
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
             this.dataGridView1.RowEnter += DataGridView_RowEnter;
+            // !IMPORTANT: Cell Formatting is important for data binding
+            this.dataGridView1.CellFormatting += DataGridView_CellFormatting;
+            this.dataGridView2.CellFormatting += DataGridView_CellFormatting;
         }
         
         // 
@@ -196,7 +199,7 @@ namespace UI.Modules.Grundlagen
         }
                 
         //
-        // Handlers 
+        // Handlers Tree
         //
         protected void TreeView1_AfterSelect(System.Object sender, TreeViewEventArgs e)
         {
@@ -209,7 +212,10 @@ namespace UI.Modules.Grundlagen
                     break;
             }
         }
-
+        
+        //
+        // Handlers Grid View
+        //
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             if (!e.Row.IsNewRow)
@@ -220,17 +226,26 @@ namespace UI.Modules.Grundlagen
                     e.Cancel = true;
             }
         }
-
         private void DataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             InitializeGridView2();
         }
-        
+        private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView DataGridView = (DataGridView)sender;
+            if (DataGridView.Columns[e.ColumnIndex].DataPropertyName.Contains("."))
+                e.Value = System.Web.UI.DataBinder.Eval(
+                    DataGridView.Rows[e.RowIndex].DataBoundItem,
+                    DataGridView.Columns[e.ColumnIndex].DataPropertyName);
+        }
+
+        //
+        // Handlers Buttons
+        //
         private void btSave_Click(object sender, EventArgs e)
         {
             
         }
-
         private void btNew_Click(object sender, EventArgs e)
         {
             if (this.dataGridView1.DataSource != null)
@@ -245,7 +260,6 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.BeginEdit(false);
             }
         }
-
         private void btEdit_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedCellCollection Cells = this.dataGridView1.SelectedCells;
@@ -263,7 +277,6 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.BeginEdit(false);
             }
         }
-
         private void btCancel_Click(object sender, EventArgs e)
         {
             InitializeGridView1();
