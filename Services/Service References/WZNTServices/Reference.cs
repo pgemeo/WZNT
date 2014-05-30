@@ -1487,6 +1487,12 @@ namespace Services.WZNTServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinzelnutzenResponse")]
         System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> GetListGruArtAufEinzelnutzenAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/GetGruArtAufEinzelnutzenResponse")]
+        Services.WZNTServices.GruArtAufEinzelnutzen GetGruArtAufEinzelnutzen(int Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/GetGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen> GetGruArtAufEinzelnutzenAsync(int Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Mandatory)]
         void InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
@@ -1562,6 +1568,14 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> GetListGruArtAufEinzelnutzenAsync() {
             return base.Channel.GetListGruArtAufEinzelnutzenAsync();
+        }
+        
+        public Services.WZNTServices.GruArtAufEinzelnutzen GetGruArtAufEinzelnutzen(int Id) {
+            return base.Channel.GetGruArtAufEinzelnutzen(Id);
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen> GetGruArtAufEinzelnutzenAsync(int Id) {
+            return base.Channel.GetGruArtAufEinzelnutzenAsync(Id);
         }
         
         public void InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
