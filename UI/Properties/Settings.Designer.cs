@@ -49,14 +49,19 @@ namespace UI.Properties {
 				<Visible>false</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
-				<HeaderText>ID_Sprache</HeaderText>
-				<DataPropertyName>ID_Sprache</DataPropertyName>
+				<HeaderText>IdSprache</HeaderText>
+				<DataPropertyName>IdSprache</DataPropertyName>
 				<Visible>false</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
-				<HeaderText>ID_Aufgabe</HeaderText>
-				<DataPropertyName>ID_Aufgabe</DataPropertyName>
+				<HeaderText>IdAufgabe</HeaderText>
+				<DataPropertyName>IdAufgabe</DataPropertyName>
 				<Visible>false</Visible>
+			</DataGridViewColumn>
+			<DataGridViewColumn>
+				<HeaderText>Aufgabe</HeaderText>
+				<DataPropertyName>GruArtAufEinzelnutzen.Aufgabe</DataPropertyName>
+				<Visible>true</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
 				<HeaderText>Uebersetzung</HeaderText>
