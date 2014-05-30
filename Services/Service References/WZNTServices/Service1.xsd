@@ -54,6 +54,20 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetListGruArtAufEinSprache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GruArtAufEinzelnutzen" nillable="true" type="q5:GruArtAufEinzelnutzen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListGruArtAufEinSpracheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q6:ArrayOfGruArtAufEinSprache" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ParsePixels">
     <xs:complexType>
       <xs:sequence>

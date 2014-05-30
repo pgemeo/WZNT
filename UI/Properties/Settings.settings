@@ -1,7 +1,49 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataGridViewColumns" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Elements&gt;
+	&lt;GruArtAufEinzelnutzen&gt;
+		&lt;DataGridViewColumns&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;Id&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;Id&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;false&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;Aufgabe&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;Aufgabe&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;true&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+		&lt;/DataGridViewColumns&gt;
+	&lt;/GruArtAufEinzelnutzen&gt;
+	&lt;GruArtAufEinSprache&gt;
+		&lt;DataGridViewColumns&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;Id&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;Id&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;false&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;ID_Sprache&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;ID_Sprache&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;false&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;ID_Aufgabe&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;ID_Aufgabe&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;false&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+			&lt;DataGridViewColumn&gt;
+				&lt;HeaderText&gt;Uebersetzung&lt;/HeaderText&gt;
+				&lt;DataPropertyName&gt;Uebersetzung&lt;/DataPropertyName&gt;
+				&lt;Visible&gt;true&lt;/Visible&gt;
+			&lt;/DataGridViewColumn&gt;
+		&lt;/DataGridViewColumns&gt;
+	&lt;/GruArtAufEinSprache&gt;
+&lt;/Elements&gt;</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

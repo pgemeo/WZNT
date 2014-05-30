@@ -171,14 +171,28 @@ namespace UI.Modules.Grundlagen
             this.treeView1.AfterSelect += TreeView1_AfterSelect;
             // Grid View
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
+            this.dataGridView1.RowEnter += DataGridView_RowEnter;
         }
         
         // 
         // Grid View
         //
-        protected void InitializeGridView()
+        protected void InitializeGridView1()
         {
-            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1);
+            List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
+            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
+        }
+        protected void InitializeGridView2()
+        {
+            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
+            if (Rows.Count > 0 && Rows[0].Cells[0].Value != null)
+            {
+                int Id = (int)Rows[0].Cells[0].Value;
+                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
+                GruArtAufEinzelnutzen.Id = Id;
+                List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
+                DataBindingSource.SetBindingSource(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
+            }
         }
                 
         //
@@ -191,7 +205,7 @@ namespace UI.Modules.Grundlagen
                 case TreeViewAction.ByKeyboard:
                     break;
                 case TreeViewAction.ByMouse:
-                    InitializeGridView();
+                    InitializeGridView1();
                     break;
             }
         }
@@ -206,13 +220,15 @@ namespace UI.Modules.Grundlagen
                     e.Cancel = true;
             }
         }
+
+        private void DataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            InitializeGridView2();
+        }
         
         private void btSave_Click(object sender, EventArgs e)
         {
-            GruArtAufEinzelnutzen Instance = new GruArtAufEinzelnutzen();
-            Instance.Id = 9;
-            DbManager.InsertGruArtAufEinzelnutzen(Instance);
-            InitializeGridView();
+            
         }
 
         private void btNew_Click(object sender, EventArgs e)
@@ -250,7 +266,7 @@ namespace UI.Modules.Grundlagen
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            InitializeGridView();
+            InitializeGridView1();
         }
     }
 }

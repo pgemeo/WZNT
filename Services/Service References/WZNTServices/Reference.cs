@@ -330,6 +330,9 @@ namespace Services.WZNTServices {
         private Services.WZNTServices.GruArtDruckVorlSprache[] GruArtDruckVorlSprachesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruProgAbrgruSprache[] GruProgAbrgruSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -399,6 +402,19 @@ namespace Services.WZNTServices {
                 if ((object.ReferenceEquals(this.GruArtDruckVorlSprachesField, value) != true)) {
                     this.GruArtDruckVorlSprachesField = value;
                     this.RaisePropertyChanged("GruArtDruckVorlSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruProgAbrgruSprache[] GruProgAbrgruSpraches {
+            get {
+                return this.GruProgAbrgruSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruProgAbrgruSprachesField, value) != true)) {
+                    this.GruProgAbrgruSprachesField = value;
+                    this.RaisePropertyChanged("GruProgAbrgruSpraches");
                 }
             }
         }
@@ -906,6 +922,147 @@ namespace Services.WZNTServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruProgAbrgruSprache", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruProgAbrgruSprache : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruProgAbrgru GruProgAbrgruField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruSprachen GruSprachenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdAbrGrundField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdSpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UebAbrGrundField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruProgAbrgru GruProgAbrgru {
+            get {
+                return this.GruProgAbrgruField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruProgAbrgruField, value) != true)) {
+                    this.GruProgAbrgruField = value;
+                    this.RaisePropertyChanged("GruProgAbrgru");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruSprachen GruSprachen {
+            get {
+                return this.GruSprachenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruSprachenField, value) != true)) {
+                    this.GruSprachenField = value;
+                    this.RaisePropertyChanged("GruSprachen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdAbrGrund {
+            get {
+                return this.IdAbrGrundField;
+            }
+            set {
+                if ((this.IdAbrGrundField.Equals(value) != true)) {
+                    this.IdAbrGrundField = value;
+                    this.RaisePropertyChanged("IdAbrGrund");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdSprache {
+            get {
+                return this.IdSpracheField;
+            }
+            set {
+                if ((this.IdSpracheField.Equals(value) != true)) {
+                    this.IdSpracheField = value;
+                    this.RaisePropertyChanged("IdSprache");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UebAbrGrund {
+            get {
+                return this.UebAbrGrundField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UebAbrGrundField, value) != true)) {
+                    this.UebAbrGrundField = value;
+                    this.RaisePropertyChanged("UebAbrGrund");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GruArtBasisart", Namespace="http://schemas.datacontract.org/2004/07/Model")]
     [System.SerializableAttribute()]
     public partial class GruArtBasisart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1215,6 +1372,99 @@ namespace Services.WZNTServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruProgAbrgru", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.SerializableAttribute()]
+    public partial class GruProgAbrgru : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AbrGrundField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruProgAbrgruSprache[] GruProgAbrgruSprachesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AbrGrund {
+            get {
+                return this.AbrGrundField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AbrGrundField, value) != true)) {
+                    this.AbrGrundField = value;
+                    this.RaisePropertyChanged("AbrGrund");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruProgAbrgruSprache[] GruProgAbrgruSpraches {
+            get {
+                return this.GruProgAbrgruSprachesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruProgAbrgruSprachesField, value) != true)) {
+                    this.GruProgAbrgruSprachesField = value;
+                    this.RaisePropertyChanged("GruProgAbrgruSpraches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WZNTServices.IService")]
     public interface IService {
@@ -1243,6 +1493,12 @@ namespace Services.WZNTServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse")]
         System.Threading.Tasks.Task InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
+        Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -1314,6 +1570,14 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
             return base.Channel.InsertGruArtAufEinzelnutzenAsync(Instance);
+        }
+        
+        public Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen) {
+            return base.Channel.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen) {
+            return base.Channel.GetListGruArtAufEinSpracheAsync(GruArtAufEinzelnutzen);
         }
         
         public double ParsePixels(string File1, string File2) {

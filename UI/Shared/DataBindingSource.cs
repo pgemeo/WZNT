@@ -11,14 +11,14 @@ namespace UI.Shared
 {
     public class DataBindingSource
     {
-        public static void SetBindingSource(BindingSource Source, DataGridView GridView)
+        public static void SetBindingSource(BindingSource Source, DataGridView GridView, object Collection)
         {
-            Source.DataSource = DbManager.GetListGruArtAufEinzelnutzen();
+            Type Type = Collection.GetType().GenericTypeArguments.Single();
+            GridView.AutoGenerateColumns = false;
             GridView.Columns.Clear();
-            DataGridViewColumn Column = new DataGridViewTextBoxColumn();
-            Column.HeaderText = "Column 1";
-            Column.DataPropertyName = "Aufgabe";
-            GridView.Columns.Add(Column);
+            Source.DataSource = Collection;
+            List<DataGridViewColumn> Columns = BindingConfiguration.GetDataGridViewColumns(Type.Name);
+            GridView.Columns.AddRange(Columns.ToArray());
             GridView.DataSource = Source;
         }
     }

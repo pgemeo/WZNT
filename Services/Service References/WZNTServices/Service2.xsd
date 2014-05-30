@@ -39,6 +39,7 @@
       <xs:element minOccurs="0" name="GruArtBasisArtSpraches" nillable="true" type="tns:ArrayOfGruArtBasisArtSprache" />
       <xs:element minOccurs="0" name="GruArtDruckVerSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVerSprache" />
       <xs:element minOccurs="0" name="GruArtDruckVorlSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVorlSprache" />
+      <xs:element minOccurs="0" name="GruProgAbrgruSpraches" nillable="true" type="tns:ArrayOfGruProgAbrgruSprache" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Iso" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
@@ -130,4 +131,31 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruArtDruckvorl" nillable="true" type="tns:GruArtDruckvorl" />
+  <xs:complexType name="ArrayOfGruProgAbrgruSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruProgAbrgruSprache" nillable="true" type="tns:GruProgAbrgruSprache" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruProgAbrgruSprache" nillable="true" type="tns:ArrayOfGruProgAbrgruSprache" />
+  <xs:complexType name="GruProgAbrgruSprache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruProgAbrgru" nillable="true" type="tns:GruProgAbrgru" />
+      <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdAbrGrund" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UebAbrGrund" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruProgAbrgruSprache" nillable="true" type="tns:GruProgAbrgruSprache" />
+  <xs:complexType name="GruProgAbrgru">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AbrGrund" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruProgAbrgruSpraches" nillable="true" type="tns:ArrayOfGruProgAbrgruSprache" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruProgAbrgru" nillable="true" type="tns:GruProgAbrgru" />
 </xs:schema>

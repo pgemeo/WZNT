@@ -51,6 +51,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gruArtAufEinzelnutzenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.gruArtAufEinSpracheBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinSpracheBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // flPanelTop
@@ -305,13 +307,19 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.DataSource = this.gruArtAufEinSpracheBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(660, 150);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(250, 170);
             this.dataGridView2.TabIndex = 13;
+            // 
+            // gruArtAufEinSpracheBindingSource
+            // 
+            this.gruArtAufEinSpracheBindingSource.DataSource = typeof(Services.WZNTServices.GruArtAufEinSprache);
             // 
             // Werkzeugnummerntool
             // 
@@ -344,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinSpracheBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,5 +381,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource gruArtAufEinzelnutzenBindingSource;
+        private System.Windows.Forms.BindingSource gruArtAufEinSpracheBindingSource;
     }
 }

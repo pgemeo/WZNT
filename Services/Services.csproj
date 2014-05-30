@@ -87,6 +87,9 @@
     <None Include="Service References\WZNTServices\Services.WZNTServices.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruArtAufEinSprache.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruArtAufEinzelnutzen.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

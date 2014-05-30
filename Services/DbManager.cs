@@ -11,7 +11,7 @@ namespace Services
     public class DbManager
     {
         //
-        // ArtAufEinzelnutzen
+        // GruArtAufEinzelnutzen
         //
         public static List<GruArtAufEinzelnutzen> GetListGruArtAufEinzelnutzen()
         {
@@ -42,6 +42,21 @@ namespace Services
                     throw ex;
                 }
             }
+        }
+
+        //
+        // GruArtAufEinSprache
+        //
+        public static List<GruArtAufEinSprache> GetListGruArtAufEinSprache(GruArtAufEinzelnutzen GruArtAufEinzelnutzen)
+        {
+            List<GruArtAufEinSprache> Elements = null;
+
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Elements = Client.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen).ToList();
+            }
+
+            return Elements;
         }
     }
 }
