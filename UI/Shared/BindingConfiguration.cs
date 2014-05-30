@@ -16,7 +16,7 @@ namespace UI.Shared
             string XmlConfiguration = Properties.Settings.Default.DataGridViewColumns;
             XmlDocument XmlDoc = new XmlDocument();
             XmlDoc.LoadXml(XmlConfiguration);
-                var XmlElements = XmlDoc.SelectNodes(string.Format("Elements/{0}/DataGridViewColumns/DataGridViewColumn", ElementName));
+            var XmlElements = XmlDoc.SelectNodes(string.Format("Elements/{0}/DataGridViewColumns/DataGridViewColumn", ElementName));
             foreach(XmlNode XNode in XmlElements)
             {
                 DataGridViewColumn Column = new DataGridViewTextBoxColumn();
