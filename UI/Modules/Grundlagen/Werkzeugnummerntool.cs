@@ -1,6 +1,4 @@
-﻿using Services;
-using Services.WZNTServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Services;
+using Services.WZNTServices;
+using UI.Shared;
 
 namespace UI.Modules.Grundlagen
 {
@@ -168,6 +169,8 @@ namespace UI.Modules.Grundlagen
         {
             // Tree View
             this.treeView1.AfterSelect += TreeView1_AfterSelect;
+            // Grid View
+            this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
         }
         
         // 
@@ -175,20 +178,9 @@ namespace UI.Modules.Grundlagen
         //
         protected void InitializeGridView()
         {
-            this.dataGridView1.DataSource = GetDataGridView();
-            this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
+            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1);
         }
-        protected BindingSource GetDataGridView()
-        {
-            this.gruArtAufEinzelnutzenBindingSource.DataSource = DbManager.GetListGruArtAufEinzelnutzen();
-            this.dataGridView1.Columns.Clear();
-            DataGridViewColumn Column = new DataGridViewTextBoxColumn();
-            Column.HeaderText = "Column 1";
-            Column.DataPropertyName = "Aufgabe";
-            this.dataGridView1.Columns.Add(Column);
-            return this.gruArtAufEinzelnutzenBindingSource;
-        }
-        
+                
         //
         // Handlers 
         //
@@ -203,14 +195,6 @@ namespace UI.Modules.Grundlagen
                     break;
             }
         }
-        
-        private void btSave_Click(object sender, EventArgs e)
-        {
-            GruArtAufEinzelnutzen Instance = new GruArtAufEinzelnutzen();
-            Instance.Id = 9;
-            DbManager.InsertGruArtAufEinzelnutzen(Instance);
-            InitializeGridView();
-        }
 
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
@@ -221,6 +205,14 @@ namespace UI.Modules.Grundlagen
                 if (Dialog == DialogResult.No)
                     e.Cancel = true;
             }
+        }
+        
+        private void btSave_Click(object sender, EventArgs e)
+        {
+            GruArtAufEinzelnutzen Instance = new GruArtAufEinzelnutzen();
+            Instance.Id = 9;
+            DbManager.InsertGruArtAufEinzelnutzen(Instance);
+            InitializeGridView();
         }
 
         private void btNew_Click(object sender, EventArgs e)
