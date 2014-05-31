@@ -190,7 +190,7 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1()
         {
             List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
-            GridView1BaseCollection = Collection;
+            GridView1BaseCollection = Collection.Select(X => X).ToList();
             DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
