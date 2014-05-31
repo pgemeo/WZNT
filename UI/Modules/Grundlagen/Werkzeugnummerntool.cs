@@ -185,19 +185,30 @@ namespace UI.Modules.Grundlagen
             List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
             DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
         }
-        protected void InitializeGridView2()
+        protected void InitializeGridView2(DataGridViewRow Row)
         {
-            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
-            if (Rows.Count > 0 && Rows[0].Cells[0].Value != null)
+            if (Row != null && Row.Cells.Count > 0 && Row.Cells[0].Value != null)
             {
-                int Id = (int)Rows[0].Cells[0].Value;
+                int Id = (int)Row.Cells[0].Value;
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
                 GruArtAufEinzelnutzen.Id = Id;
                 List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
                 DataBindingSource.SetBindingSource(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
             }
+            else
+            {
+                ResetGridView2();
+            }
         }
-                
+        protected void ResetGridView1()
+        {
+            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, new List<GruArtAufEinzelnutzen>());
+        }
+        protected void ResetGridView2()
+        {
+            DataBindingSource.SetBindingSource(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, new List<GruArtAufEinSprache>());
+        }
+
         //
         // Handlers Tree
         //
@@ -228,7 +239,8 @@ namespace UI.Modules.Grundlagen
         }
         private void DataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            InitializeGridView2();
+            DataGridView GridView = (DataGridView)sender;
+            InitializeGridView2(GridView.Rows[e.RowIndex]);
         }
         private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
