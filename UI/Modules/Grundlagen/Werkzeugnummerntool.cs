@@ -185,11 +185,11 @@ namespace UI.Modules.Grundlagen
             List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
             DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
         }
-        protected void InitializeGridView2(DataGridViewRow Row)
+        protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
         {
-            if (Row != null && Row.Cells.Count > 0 && Row.Cells[0].Value != null)
+            if (GridView1SelectedRow != null && GridView1SelectedRow.Cells.Count > 0 && GridView1SelectedRow.Cells[0].Value != null)
             {
-                int Id = (int)Row.Cells[0].Value;
+                int Id = (int)GridView1SelectedRow.Cells[0].Value;
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
                 GruArtAufEinzelnutzen.Id = Id;
                 List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
