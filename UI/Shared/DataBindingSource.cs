@@ -16,10 +16,10 @@ namespace UI.Shared
         {
             if (Source != null && GridView != null && Collection != null)
             {
-                Type Type = GlobalFunctions.GetListElementsType(Collection);
                 GridView.AutoGenerateColumns = false;
                 GridView.Columns.Clear();
                 Source.DataSource = Collection;
+                Type Type = GlobalFunctions.GetListElementsType(Collection);
                 List<DataGridViewColumn> Columns = BindingConfiguration.GetDataGridViewColumns(Type.Name);
                 GridView.Columns.AddRange(Columns.ToArray());
                 GridView.DataSource = Source;
