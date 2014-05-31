@@ -22,13 +22,17 @@ namespace UI.Shared
                 return Collection.GetType().GenericTypeArguments.Single();
             }
         }
-        public static List<T> CloneList<T>(List<T> oldList)
+        public static IList CloneList(IList List)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            MemoryStream stream = new MemoryStream();
-            formatter.Serialize(stream, oldList);
-            stream.Position = 0;
-            return (List<T>)formatter.Deserialize(stream);
+            if(List != null)
+            {
+                BinaryFormatter Formatter = new BinaryFormatter();
+                MemoryStream Stream = new MemoryStream();
+                Formatter.Serialize(Stream, List);
+                Stream.Position = 0;
+                return (IList)Formatter.Deserialize(Stream);
+            }
+            return null;
         } 
     }
 }

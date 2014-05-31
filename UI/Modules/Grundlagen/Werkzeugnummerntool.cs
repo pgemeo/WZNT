@@ -201,26 +201,14 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1(TreeNode Node)
         {
             ResetGridView1();
-            if (Node.Text.Equals("Aufgaben Einzelnutzen"))
-            {
-                List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
-                BaseWorkspace = GlobalFunctions.CloneList(Collection);
-                Workspace = Collection;
-            }
+            IList Collection = GetGridView1Collection(Node);
+            Workspace = Collection;
+            BaseWorkspace = GlobalFunctions.CloneList(Collection);
             DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
         {
-            // Get Cell Values
-            int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
-            string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
-            // Workspace
-            List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
-            // Parent Item
-            GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
-            // Child Items
-            List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
-                GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+            IList Collection = GetGridView2Collection(GridView1SelectedRow);
             // Binding
             DataBindingSource.Set(this.bindingSource2, this.dataGridView2, Collection);
         }
@@ -234,6 +222,29 @@ namespace UI.Modules.Grundlagen
         protected void ResetGridView2()
         {
             DataBindingSource.Set(this.bindingSource2, this.dataGridView2, null);
+        }
+        protected IList GetGridView1Collection(TreeNode Node)
+        {
+            if (Node.Text.Equals("Aufgaben Einzelnutzen"))
+            {
+                List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
+                return Collection;
+            }
+            return null;
+        }
+        protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
+        {
+            // Get Cell Values
+            int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
+            string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
+            // Workspace
+            List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+            // Parent Item
+            GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+            // Child Items
+            List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
+                GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+            return Collection;
         }
 
         //
@@ -395,34 +406,11 @@ namespace UI.Modules.Grundlagen
         }
         private void btNew_Click(object sender, EventArgs e)
         {
-            if (this.dataGridView1.DataSource != null)
-            {
-                List<GruArtAufEinzelnutzen> DataSource = (List<GruArtAufEinzelnutzen>)this.dataGridView1.DataSource;
-                DataSource.Add(new GruArtAufEinzelnutzen());
-                this.dataGridView1.DataSource = null;
-                this.dataGridView1.DataSource = DataSource;
-                this.dataGridView1.FirstDisplayedScrollingRowIndex = this.dataGridView1.Rows.Count - 1;
-                this.dataGridView1.CurrentCell = this.dataGridView1.Rows[this.dataGridView1.Rows.Count - 1].Cells[0];
-                this.dataGridView1.CurrentCell.OwningRow.ReadOnly = false;
-                this.dataGridView1.BeginEdit(false);
-            }
+            
         }
         private void btEdit_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedCellCollection Cells = this.dataGridView1.SelectedCells;
-            foreach (DataGridViewCell Cell in Cells)
-            {
-                this.dataGridView1.CurrentCell = Cell;
-                Cell.OwningRow.ReadOnly = false;
-                this.dataGridView1.BeginEdit(false);
-            }
-            DataGridViewSelectedRowCollection Rows = this.dataGridView1.SelectedRows;
-            foreach (DataGridViewRow Row in Rows)
-            {
-                this.dataGridView1.CurrentCell = Row.Cells[0];
-                Row.ReadOnly = false;
-                this.dataGridView1.BeginEdit(false);
-            }
+            
         }
         private void btCancel_Click(object sender, EventArgs e)
         {
