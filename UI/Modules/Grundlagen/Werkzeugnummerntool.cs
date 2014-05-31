@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Shared;
+using System.Collections;
 using Services;
 using Services.WZNTServices;
-using UI.Shared;
 
 namespace UI.Modules.Grundlagen
 {
     public partial class Werkzeugnummerntool : Form
     {
+        // 
+        // Class Properties
+        //
+        protected IList GridView1BaseCollection;
+        protected IList GridView2BaseCollection;
+
         // 
         // Constructor
         // 
@@ -183,7 +190,8 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1()
         {
             List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
-            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
+            GridView1BaseCollection = Collection;
+            DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
         {
@@ -193,7 +201,8 @@ namespace UI.Modules.Grundlagen
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
                 GruArtAufEinzelnutzen.Id = Id;
                 List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
-                DataBindingSource.SetBindingSource(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
+                GridView2BaseCollection = Collection;
+                DataBindingSource.Set(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
             }
             else
             {
@@ -202,11 +211,13 @@ namespace UI.Modules.Grundlagen
         }
         protected void ResetGridView1()
         {
-            DataBindingSource.SetBindingSource(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, new List<GruArtAufEinzelnutzen>());
+            GridView1BaseCollection = null;
+            DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, new List<GruArtAufEinzelnutzen>());
         }
         protected void ResetGridView2()
         {
-            DataBindingSource.SetBindingSource(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, new List<GruArtAufEinSprache>());
+            GridView2BaseCollection = null;
+            DataBindingSource.Set(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, new List<GruArtAufEinSprache>());
         }
 
         //
@@ -256,7 +267,28 @@ namespace UI.Modules.Grundlagen
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            
+            BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
+            IList List1 = Source1.List;
+            Type Type1 = GlobalFunctions.GetListElementsType(List1);
+            Type BaseType1 = GlobalFunctions.GetListElementsType(GridView1BaseCollection);
+            if (Type1 == typeof(GruArtAufEinzelnutzen) && Type1 == BaseType1)
+            {
+                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)List1;
+                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)GridView1BaseCollection;
+                
+                // Finding Edit Elements
+                List<GruArtAufEinzelnutzen> EditElements1 =
+                    (from E in Elements1
+                     join B in BaseElements1 on E.Id equals B.Id into Join
+                     from I in Join
+                     select E
+                    ).ToList();
+                MessageBox.Show(String.Format("Edit {0} element(s).", EditElements1.Count));
+                
+                // Finding Insert Elements
+                List<GruArtAufEinzelnutzen> InsertElements1 = Elements1.Except(BaseElements1).ToList();
+                MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements1.Count));
+            }
         }
         private void btNew_Click(object sender, EventArgs e)
         {
