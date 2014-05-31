@@ -49,9 +49,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btCancel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gruArtAufEinzelnutzenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.gruArtAufEinSpracheBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.flPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -66,9 +66,9 @@
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinSpracheBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // flPanelTop
@@ -295,15 +295,15 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.gruArtAufEinzelnutzenBindingSource;
+            this.dataGridView1.DataSource = this.bindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(355, 150);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(250, 340);
             this.dataGridView1.TabIndex = 12;
             // 
-            // gruArtAufEinzelnutzenBindingSource
+            // bindingSource1
             // 
-            this.gruArtAufEinzelnutzenBindingSource.DataSource = typeof(Services.WZNTServices.GruArtAufEinzelnutzen);
+            this.bindingSource1.DataSource = typeof(Services.WZNTServices.GruArtAufEinzelnutzen);
             // 
             // dataGridView2
             // 
@@ -311,15 +311,15 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.DataSource = this.gruArtAufEinSpracheBindingSource;
+            this.dataGridView2.DataSource = this.bindingSource2;
             this.dataGridView2.Location = new System.Drawing.Point(660, 150);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(250, 170);
             this.dataGridView2.TabIndex = 13;
             // 
-            // gruArtAufEinSpracheBindingSource
+            // bindingSource2
             // 
-            this.gruArtAufEinSpracheBindingSource.DataSource = typeof(Services.WZNTServices.GruArtAufEinSprache);
+            this.bindingSource2.DataSource = typeof(Services.WZNTServices.GruArtAufEinSprache);
             // 
             // Werkzeugnummerntool
             // 
@@ -350,9 +350,9 @@
             this.panel2.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinzelnutzenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruArtAufEinSpracheBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,7 +380,7 @@
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource gruArtAufEinzelnutzenBindingSource;
-        private System.Windows.Forms.BindingSource gruArtAufEinSpracheBindingSource;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }

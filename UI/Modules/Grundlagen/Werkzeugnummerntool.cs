@@ -19,8 +19,8 @@ namespace UI.Modules.Grundlagen
         // 
         // Class Properties
         //
-        protected IList GridView1BaseCollection;
-        protected IList GridView2BaseCollection;
+        protected IList Workspace;
+        protected IList BaseWorkspace;
 
         // 
         // Constructor
@@ -32,7 +32,7 @@ namespace UI.Modules.Grundlagen
             InitializeTree();
             InitializeEvents();
         }
-        
+
         // 
         // Top Menu
         // 
@@ -53,11 +53,11 @@ namespace UI.Modules.Grundlagen
             // add child and put it into first index
             flPanelTop.Controls.Add(TopMenuStrip);
             flPanelTop.Controls.SetChildIndex(TopMenuStrip, 0);
-            
+
             // Item1
             ToolStripMenuItem Item = new ToolStripMenuItem();
             Item.Text = "Anwendungen";
-            
+
             ToolStripMenuItem SubItem = new ToolStripMenuItem();
             SubItem.Text = "Dateneingang";
             Item.DropDownItems.Add(SubItem);
@@ -69,18 +69,18 @@ namespace UI.Modules.Grundlagen
             Item.DropDown.Cursor = Cursors.Hand;
 
             TopMenuStrip.Items.Add(Item);
-            
+
             // Item2
             Item = new ToolStripMenuItem();
             Item.Text = "Verwaltung";
             TopMenuStrip.Items.Add(Item);
-            
+
             // Item3
             Item = new ToolStripMenuItem();
             Item.Text = "Extras";
             TopMenuStrip.Items.Add(Item);
         }
-        
+
         // 
         // Tree View
         //
@@ -168,58 +168,72 @@ namespace UI.Modules.Grundlagen
             Child1 = new TreeNode("Berechtigungen");
             Node.Nodes.Add(Child1);
         }
-        
+
         // 
         // Events
         //
         protected void InitializeEvents()
         {
+            //
             // Tree View
+            //
             this.treeView1.AfterSelect += TreeView1_AfterSelect;
-            // Grid View
+            //
+            // Grid View 1
+            //
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
-            this.dataGridView1.RowEnter += DataGridView_RowEnter;
+            this.dataGridView1.RowEnter += DataGridView1_RowEnter;
             // !IMPORTANT: Cell Formatting is important for data binding
             this.dataGridView1.CellFormatting += DataGridView_CellFormatting;
+            //
+            // Grid View 2
+            //
+            this.dataGridView2.UserDeletingRow += DataGridView_UserDeletingRow;
+            this.dataGridView2.Leave += DataGridView2_Leave;
+            this.dataGridView2.CellBeginEdit += DataGridView2_CellBeginEdit;
+            // !IMPORTANT: Cell Formatting is important for data binding
             this.dataGridView2.CellFormatting += DataGridView_CellFormatting;
         }
-        
+
         // 
         // Grid View
         //
-        protected void InitializeGridView1()
+        protected void InitializeGridView1(TreeNode Node)
         {
-            List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
-            // !IMPORTANT: Base Collection must be a copy of the list and not a pointer to the list
-            GridView1BaseCollection = Collection.Select(X => X).ToList();
-            DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
+            ResetGridView1();
+            if (Node.Text.Equals("Aufgaben Einzelnutzen"))
+            {
+                List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
+                BaseWorkspace = GlobalFunctions.CloneList(Collection);
+                Workspace = Collection;
+            }
+            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
         {
-            if (GridView1SelectedRow != null && GridView1SelectedRow.Cells.Count > 0 && GridView1SelectedRow.Cells[0].Value != null)
-            {
-                int Id = (int)GridView1SelectedRow.Cells[0].Value;
-                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
-                GruArtAufEinzelnutzen.Id = Id;
-                List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
-                // !IMPORTANT: Base Collection must be a copy of the list and not a pointer to the list
-                GridView2BaseCollection = Collection.Select(X => X).ToList();
-                DataBindingSource.Set(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
-            }
-            else
-            {
-                ResetGridView2();
-            }
+            // Get Cell Values
+            int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
+            string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
+            // Workspace
+            List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+            // Parent Item
+            GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+            // Child Items
+            List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
+                GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+            // Binding
+            DataBindingSource.Set(this.bindingSource2, this.dataGridView2, Collection);
         }
         protected void ResetGridView1()
         {
-            GridView1BaseCollection = null;
-            DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, new List<GruArtAufEinzelnutzen>());
+            this.dataGridView1.CurrentCell = null;
+            Workspace = null;
+            BaseWorkspace = null;
+            ResetGridView2();
         }
         protected void ResetGridView2()
         {
-            GridView2BaseCollection = null;
-            DataBindingSource.Set(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, new List<GruArtAufEinSprache>());
+            DataBindingSource.Set(this.bindingSource2, this.dataGridView2, null);
         }
 
         //
@@ -232,28 +246,101 @@ namespace UI.Modules.Grundlagen
                 case TreeViewAction.ByKeyboard:
                     break;
                 case TreeViewAction.ByMouse:
-                    InitializeGridView1();
+                    InitializeGridView1(e.Node);
                     break;
             }
         }
-        
+
         //
-        // Handlers Grid View
+        // Handlers Grid View 
         //
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (!e.Row.IsNewRow)
-            {
-                DialogResult Dialog = MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation",
+            DialogResult Dialog = MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation",
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (Dialog == DialogResult.No)
-                    e.Cancel = true;
-            }
+            if (Dialog == DialogResult.No)
+                e.Cancel = true;
         }
-        private void DataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView GridView = (DataGridView)sender;
             InitializeGridView2(GridView.Rows[e.RowIndex]);
+        }
+        private void DataGridView2_Leave(object sender, EventArgs e)
+        {
+            // Check Dirty Row
+            if (this.dataGridView2.IsCurrentRowDirty)
+            {
+                // End Edit
+                this.dataGridView2.EndEdit();
+            }
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ? 
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            if(GridView1SelectedRow != null)
+            {
+                // Get Cell Values
+                int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
+                string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
+                // Workspace
+                List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+                // Parent Item
+                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+                // Childs
+                List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
+                    GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+                BindingSource Source2 = (BindingSource)this.dataGridView2.DataSource;
+                List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Source2.List;
+                
+                // Edit Elements
+                List<GruArtAufEinSprache> EditChilds =
+                    (from VC in ViewChilds
+                     join WSC in WSChilds on VC.Id equals WSC.Id into Join
+                     from J in Join
+                     select VC
+                    ).ToList();
+                                
+                // Delete Elements
+                List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
+                WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
+
+                // Add Elements
+                List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
+                AddChilds = AddChilds.Select(X =>
+                    new GruArtAufEinSprache
+                    {
+                        Id = X.Id,
+                        IdSprache = X.IdSprache,
+                        IdAufgabe = GruArtAufEinzelnutzen.Id,
+                        GruArtAufEinzelnutzen = GruArtAufEinzelnutzen,
+                        ExtensionData = X.ExtensionData,
+                        GruSprachen = X.GruSprachen,
+                        Uebersetzung = X.Uebersetzung,
+                        OTimeStamp = X.OTimeStamp
+                    }
+                    ).ToList();
+                WSChilds.AddRange(AddChilds);
+
+                // Remove Empty Elements From View
+                WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
+                
+                // Update Parent
+                GruArtAufEinzelnutzen.GruArtAufEinSpraches = WSChilds.ToArray();
+            }
+        }
+        private void DataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            if (GridView1SelectedRow != null)
+            {
+                // Get Cell Values
+                int Id = (int)GridView1SelectedRow.Cells[0].Value;
+                this.dataGridView2.Rows[e.RowIndex].Cells[2].Value = Convert.ToString(Id);
+            }
         }
         private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -269,30 +356,40 @@ namespace UI.Modules.Grundlagen
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
-            IList List1 = Source1.List;
-            Type Type1 = GlobalFunctions.GetListElementsType(List1);
-            Type BaseType1 = GlobalFunctions.GetListElementsType(GridView1BaseCollection);
+            Type Type1 = GlobalFunctions.GetListElementsType(Workspace);
+            Type BaseType1 = GlobalFunctions.GetListElementsType(BaseWorkspace);
             if (Type1 == typeof(GruArtAufEinzelnutzen) && Type1 == BaseType1)
             {
-                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)List1;
-                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)GridView1BaseCollection;
-                
+                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace;
+                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)BaseWorkspace;
+
                 // Finding Edit Elements
-                List<GruArtAufEinzelnutzen> EditElements1 =
+                List<GruArtAufEinzelnutzen> EditElements1 = 
                     (from E in Elements1
                      join B in BaseElements1 on E.Id equals B.Id into Join
-                     from I in Join
+                     from J in Join
                      select E
                     ).ToList();
                 MessageBox.Show(String.Format("Edit {0} element(s).", EditElements1.Count));
-                
+
                 // Finding Insert Elements
-                List<GruArtAufEinzelnutzen> InsertElements1 = Elements1.Except(BaseElements1).ToList();
+                List<GruArtAufEinzelnutzen> InsertElements1 = 
+                    (from E in Elements1
+                     join B in BaseElements1 on E.Id equals B.Id into Join
+                     from J in Join.DefaultIfEmpty()
+                     where J == null && E != null
+                     select E
+                    ).ToList();
                 MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements1.Count));
 
                 // Finding Delete Elements
-                List<GruArtAufEinzelnutzen> DeleteElements1 = BaseElements1.Except(Elements1).ToList();
+                List<GruArtAufEinzelnutzen> DeleteElements1 =
+                    (from B in BaseElements1
+                     join E in Elements1 on B.Id equals E.Id into Join
+                     from J in Join.DefaultIfEmpty()
+                     where J == null && B != null
+                     select B
+                    ).ToList();
                 MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements1.Count));
             }
         }
@@ -329,7 +426,7 @@ namespace UI.Modules.Grundlagen
         }
         private void btCancel_Click(object sender, EventArgs e)
         {
-            InitializeGridView1();
+            InitializeGridView1(treeView1.SelectedNode);
         }
     }
 }

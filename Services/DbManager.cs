@@ -15,14 +15,17 @@ namespace Services
         //
         public static List<GruArtAufEinzelnutzen> GetListGruArtAufEinzelnutzen()
         {
-            List<GruArtAufEinzelnutzen> Elements = null;
-
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                Elements = Client.GetListGruArtAufEinzelnutzen().ToList();
+                return Client.GetListGruArtAufEinzelnutzen().ToList();
             }
-
-            return Elements;
+        }
+        public static GruArtAufEinzelnutzen GetGruArtAufEinzelnutzen(int Id)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                return Client.GetGruArtAufEinzelnutzen(Id);
+            }
         }
         public static void InsertGruArtAufEinzelnutzen(GruArtAufEinzelnutzen Instance)
         {
@@ -49,14 +52,10 @@ namespace Services
         //
         public static List<GruArtAufEinSprache> GetListGruArtAufEinSprache(GruArtAufEinzelnutzen GruArtAufEinzelnutzen)
         {
-            List<GruArtAufEinSprache> Elements = null;
-
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                Elements = Client.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen).ToList();
+                return Client.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen).ToList();
             }
-
-            return Elements;
         }
     }
 }

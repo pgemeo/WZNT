@@ -24,6 +24,13 @@ namespace UI.Shared
                 GridView.Columns.AddRange(Columns.ToArray());
                 GridView.DataSource = Source;
             }
+            else
+            {
+                GridView.AutoGenerateColumns = false;
+                GridView.Columns.Clear();
+                Source.DataSource = Collection;
+                GridView.DataSource = Source;
+            }
         }
     }
 }
