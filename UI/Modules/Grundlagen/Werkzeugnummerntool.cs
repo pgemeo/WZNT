@@ -190,6 +190,7 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1()
         {
             List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
+            // !IMPORTANT: Base Collection must be a copy of the list and not a pointer to the list
             GridView1BaseCollection = Collection.Select(X => X).ToList();
             DataBindingSource.Set(this.gruArtAufEinzelnutzenBindingSource, this.dataGridView1, Collection);
         }
@@ -201,7 +202,8 @@ namespace UI.Modules.Grundlagen
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = new GruArtAufEinzelnutzen();
                 GruArtAufEinzelnutzen.Id = Id;
                 List<GruArtAufEinSprache> Collection = DbManager.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
-                GridView2BaseCollection = Collection;
+                // !IMPORTANT: Base Collection must be a copy of the list and not a pointer to the list
+                GridView2BaseCollection = Collection.Select(X => X).ToList();
                 DataBindingSource.Set(this.gruArtAufEinSpracheBindingSource, this.dataGridView2, Collection);
             }
             else
