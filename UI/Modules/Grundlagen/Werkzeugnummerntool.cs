@@ -234,25 +234,8 @@ namespace UI.Modules.Grundlagen
         }
         protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
         {
-            // Get Cell Values
-            int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
-            string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
-            // Workspace
-            List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
-            // Parent Item
-            GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
-            // Child Items
-            List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
-                GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
-            return Collection;
-        }
-        protected void UpdateDataGridView2AfterLeave()
-        {
-            // Get Selected Row
-            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
-                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
-                this.dataGridView1.CurrentCell.OwningRow : null;
-            if (GridView1SelectedRow != null)
+            Type Type = GlobalFunctions.GetListElementsType(Workspace);
+            if (Type == typeof(GruArtAufEinzelnutzen))
             {
                 // Get Cell Values
                 int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
@@ -261,46 +244,73 @@ namespace UI.Modules.Grundlagen
                 List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
                 // Parent Item
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
-                // Childs
-                List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
+                // Child Items
+                List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
                     GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
-                BindingSource Source2 = (BindingSource)this.dataGridView2.DataSource;
-                List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Source2.List;
+                return Collection;
+            }
+            return null;
+        }
+        protected void UpdateWorkspaceAfterLeaveDataGridView2()
+        {
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            if (GridView1SelectedRow != null)
+            {
+                Type Type = GlobalFunctions.GetListElementsType(Workspace);
+                if (Type == typeof(GruArtAufEinzelnutzen))
+                {
+                    // Get Cell Values
+                    int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
+                    string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
+                    // Workspace
+                    List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+                    // Workspace Item
+                    GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+                    // Workspace Childs
+                    List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
+                        GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+                    // View2 Childs
+                    BindingSource Source2 = (BindingSource)this.dataGridView2.DataSource;
+                    List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Source2.List;
 
-                // Edit Elements
-                List<GruArtAufEinSprache> EditChilds =
-                    (from VC in ViewChilds
-                     join WSC in WSChilds on VC.Id equals WSC.Id into Join
-                     from J in Join
-                     select VC
-                    ).ToList();
+                    // Edit Elements
+                    List<GruArtAufEinSprache> EditChilds =
+                        (from VC in ViewChilds
+                         join WSC in WSChilds on VC.Id equals WSC.Id into Join
+                         from J in Join
+                         select VC
+                        ).ToList();
 
-                // Delete Elements
-                List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
-                WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
+                    // Delete Elements
+                    List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
+                    WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
 
-                // Add Elements
-                List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
-                AddChilds = AddChilds.Select(X =>
-                    new GruArtAufEinSprache
-                    {
-                        Id = X.Id,
-                        IdSprache = X.IdSprache,
-                        IdAufgabe = GruArtAufEinzelnutzen.Id,
-                        GruArtAufEinzelnutzen = GruArtAufEinzelnutzen,
-                        ExtensionData = X.ExtensionData,
-                        GruSprachen = X.GruSprachen,
-                        Uebersetzung = X.Uebersetzung,
-                        OTimeStamp = X.OTimeStamp
-                    }
-                    ).ToList();
-                WSChilds.AddRange(AddChilds);
+                    // Add Elements
+                    List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
+                    AddChilds = AddChilds.Select(X =>
+                        new GruArtAufEinSprache
+                        {
+                            Id = X.Id,
+                            IdSprache = X.IdSprache,
+                            IdAufgabe = GruArtAufEinzelnutzen.Id,
+                            GruArtAufEinzelnutzen = GruArtAufEinzelnutzen,
+                            ExtensionData = X.ExtensionData,
+                            GruSprachen = X.GruSprachen,
+                            Uebersetzung = X.Uebersetzung,
+                            OTimeStamp = X.OTimeStamp
+                        }
+                        ).ToList();
+                    WSChilds.AddRange(AddChilds);
 
-                // Remove Empty Elements From View
-                WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
+                    // Remove Empty Elements From View
+                    WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
 
-                // Update Parent
-                GruArtAufEinzelnutzen.GruArtAufEinSpraches = WSChilds.ToArray();
+                    // Update Parent
+                    GruArtAufEinzelnutzen.GruArtAufEinSpraches = WSChilds.ToArray();
+                }
             }
         }
         protected void UpdateDataGridView2OnBeginEdit(int RowIndex) 
@@ -311,9 +321,13 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
-                // Get Cell Values
-                int Id = (int)GridView1SelectedRow.Cells[0].Value;
-                this.dataGridView2.Rows[RowIndex].Cells[2].Value = Convert.ToString(Id);
+                Type Type = GlobalFunctions.GetListElementsType(Workspace);
+                if (Type == typeof(GruArtAufEinzelnutzen))
+                {
+                    // Get Cell Values
+                    int Id = (int)GridView1SelectedRow.Cells[0].Value;
+                    this.dataGridView2.Rows[RowIndex].Cells[2].Value = Convert.ToString(Id);
+                }
             }
         }
 
@@ -355,7 +369,7 @@ namespace UI.Modules.Grundlagen
                 // End Edit
                 this.dataGridView2.EndEdit();
             }
-            UpdateDataGridView2AfterLeave();
+            UpdateWorkspaceAfterLeaveDataGridView2();
         }
         private void DataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
