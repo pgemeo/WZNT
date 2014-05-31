@@ -290,6 +290,10 @@ namespace UI.Modules.Grundlagen
                 // Finding Insert Elements
                 List<GruArtAufEinzelnutzen> InsertElements1 = Elements1.Except(BaseElements1).ToList();
                 MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements1.Count));
+
+                // Finding Delete Elements
+                List<GruArtAufEinzelnutzen> DeleteElements1 = BaseElements1.Except(Elements1).ToList();
+                MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements1.Count));
             }
         }
         private void btNew_Click(object sender, EventArgs e)
