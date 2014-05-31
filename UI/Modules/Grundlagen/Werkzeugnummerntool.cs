@@ -20,7 +20,6 @@ namespace UI.Modules.Grundlagen
         // Class Properties
         //
         protected IList Workspace;
-        protected IList BaseWorkspace;
 
         // 
         // Constructor
@@ -201,9 +200,7 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1(TreeNode Node)
         {
             ResetGridView1();
-            IList Collection = GetGridView1Collection(Node);
-            Workspace = Collection;
-            BaseWorkspace = GlobalFunctions.CloneList(Collection);
+            Workspace = GetGridView1Collection(Node);
             DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
@@ -216,7 +213,6 @@ namespace UI.Modules.Grundlagen
         {
             this.dataGridView1.CurrentCell = null;
             Workspace = null;
-            BaseWorkspace = null;
             ResetGridView2();
         }
         protected void ResetGridView2()
@@ -390,12 +386,13 @@ namespace UI.Modules.Grundlagen
         private void btSave_Click(object sender, EventArgs e)
         {
             Type Type1 = GlobalFunctions.GetListElementsType(Workspace);
-            Type BaseType1 = GlobalFunctions.GetListElementsType(BaseWorkspace);
+            Type BaseType1 = GlobalFunctions.GetListElementsType(((BindingSource)this.dataGridView1.DataSource).List);
             if (Type1 == typeof(GruArtAufEinzelnutzen) && Type1 == BaseType1)
             {
                 List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace;
-                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)BaseWorkspace;
-
+                BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
+                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)Source1.List;
+                
                 // Finding Edit Elements
                 List<GruArtAufEinzelnutzen> EditElements1 = 
                     (from E in Elements1
@@ -406,23 +403,23 @@ namespace UI.Modules.Grundlagen
                 MessageBox.Show(String.Format("Edit {0} element(s).", EditElements1.Count));
 
                 // Finding Insert Elements
-                List<GruArtAufEinzelnutzen> InsertElements1 = 
-                    (from E in Elements1
+                List<GruArtAufEinzelnutzen> InsertElements1 = Elements1.Except(BaseElements1).ToList();
+                    /*(from E in Elements1
                      join B in BaseElements1 on E.Id equals B.Id into Join
                      from J in Join.DefaultIfEmpty()
                      where J == null && E != null
                      select E
-                    ).ToList();
+                    ).ToList();*/
                 MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements1.Count));
 
                 // Finding Delete Elements
-                List<GruArtAufEinzelnutzen> DeleteElements1 =
-                    (from B in BaseElements1
+                List<GruArtAufEinzelnutzen> DeleteElements1 = BaseElements1.Except(Elements1).ToList();
+                    /*(from B in BaseElements1
                      join E in Elements1 on B.Id equals E.Id into Join
                      from J in Join.DefaultIfEmpty()
                      where J == null && B != null
                      select B
-                    ).ToList();
+                    ).ToList();*/
                 MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements1.Count));
             }
         }
