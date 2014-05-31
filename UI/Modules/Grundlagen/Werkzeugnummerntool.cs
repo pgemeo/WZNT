@@ -19,7 +19,7 @@ namespace UI.Modules.Grundlagen
         // 
         // Class Properties
         //
-        protected IList Workspace;
+        protected Workspace Workspace;
 
         // 
         // Constructor
@@ -200,8 +200,9 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1(TreeNode Node)
         {
             ResetGridView1();
-            Workspace = GetGridView1Collection(Node);
-            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace);
+            Workspace = new Workspace();
+            Workspace.List = GetGridView1Collection(Node);
+            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace.List);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
         {
@@ -230,14 +231,14 @@ namespace UI.Modules.Grundlagen
         }
         protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
         {
-            Type Type = GlobalFunctions.GetListElementsType(Workspace);
+            Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
             if (Type == typeof(GruArtAufEinzelnutzen))
             {
                 // Get Cell Values
                 int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                 string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                 // Workspace
-                List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+                List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace.List;
                 // Parent Item
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
                 // Child Items
@@ -255,14 +256,14 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
-                Type Type = GlobalFunctions.GetListElementsType(Workspace);
+                Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
                 if (Type == typeof(GruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
                     int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                     string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                     // Workspace
-                    List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace;
+                    List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace.List;
                     // Workspace Item
                     GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
                     // Workspace Childs
@@ -317,7 +318,7 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
-                Type Type = GlobalFunctions.GetListElementsType(Workspace);
+                Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
                 if (Type == typeof(GruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
@@ -385,11 +386,11 @@ namespace UI.Modules.Grundlagen
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            Type Type1 = GlobalFunctions.GetListElementsType(Workspace);
+            Type Type1 = GlobalFunctions.GetListElementsType(Workspace.List);
             Type BaseType1 = GlobalFunctions.GetListElementsType(((BindingSource)this.dataGridView1.DataSource).List);
             if (Type1 == typeof(GruArtAufEinzelnutzen) && Type1 == BaseType1)
             {
-                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace;
+                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace.List;
                 BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
                 List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)Source1.List;
                 

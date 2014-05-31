@@ -69,6 +69,7 @@
     <Compile Include="Shared\BindingConfiguration.cs" />
     <Compile Include="Shared\DataBindingSource.cs" />
     <Compile Include="Shared\GlobalFunctions.cs" />
+    <Compile Include="Shared\Workspace.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
