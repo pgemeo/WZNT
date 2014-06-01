@@ -207,6 +207,10 @@ namespace UI.Modules.Grundlagen
             this.dataGridView2.CellBeginEdit += DataGridView2_CellBeginEdit;
             // !IMPORTANT: Cell Formatting is important for data binding
             this.dataGridView2.CellFormatting += DataGridView_CellFormatting;
+            //
+            // Form
+            //
+            this.Closing += Form_Closing;
         }
 
         // 
@@ -443,6 +447,16 @@ namespace UI.Modules.Grundlagen
         private void btCancel_Click(object sender, EventArgs e)
         {
             InitializeGridView1(treeView1.SelectedNode);
+        }
+
+        //
+        // Handlers Form
+        //
+        private void Form_Closing(object sender, CancelEventArgs e)
+        {
+            this.Activate();
+            this.Dispose();
+            this.Close();
         }
     }
 }

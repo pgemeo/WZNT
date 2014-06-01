@@ -16,14 +16,7 @@ namespace UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            try
-            {
-                Application.Run(new Form1());
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                string s = e.StackTrace;
-            }
+            Application.Run(new Form1());
         }
     }
 }
