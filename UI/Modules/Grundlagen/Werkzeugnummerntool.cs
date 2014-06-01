@@ -239,6 +239,7 @@ namespace UI.Modules.Grundlagen
         {
             DataBindingSource.Set(this.bindingSource2, this.dataGridView2, null);
         }
+        
         protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
         {
             if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
@@ -400,40 +401,14 @@ namespace UI.Modules.Grundlagen
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
+            DialogResult Dialog = MessageBox.Show("Are you sure you want to save?", "Save confirmation",
+                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Dialog == DialogResult.Yes)
             {
-                List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace.List;
-                BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
-                List<GruArtAufEinzelnutzen> BaseElements1 = (List<GruArtAufEinzelnutzen>)Source1.List;
-                
-                // Finding Edit Elements
-                List<GruArtAufEinzelnutzen> EditElements1 = 
-                    (from E in Elements1
-                     join B in BaseElements1 on E.Id equals B.Id into Join
-                     from J in Join
-                     select E
-                    ).ToList();
-                MessageBox.Show(String.Format("Edit {0} element(s).", EditElements1.Count));
-
-                // Finding Insert Elements
-                List<GruArtAufEinzelnutzen> InsertElements1 = Elements1.Except(BaseElements1).ToList();
-                    /*(from E in Elements1
-                     join B in BaseElements1 on E.Id equals B.Id into Join
-                     from J in Join.DefaultIfEmpty()
-                     where J == null && E != null
-                     select E
-                    ).ToList();*/
-                MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements1.Count));
-
-                // Finding Delete Elements
-                List<GruArtAufEinzelnutzen> DeleteElements1 = BaseElements1.Except(Elements1).ToList();
-                    /*(from B in BaseElements1
-                     join E in Elements1 on B.Id equals E.Id into Join
-                     from J in Join.DefaultIfEmpty()
-                     where J == null && B != null
-                     select B
-                    ).ToList();*/
-                MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements1.Count));
+                if (Workspace.SaveChanges())
+                {
+                    MessageBox.Show("All changes have been saved!");
+                }
             }
         }
         private void btNew_Click(object sender, EventArgs e)
