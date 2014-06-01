@@ -64,6 +64,56 @@ namespace UI.Shared
             return null;
         }
 
+        public bool SaveElement(object Element, object Data)
+        {
+            bool ReturnValue = false;
+            if (Type == typeof(GruArtAufEinzelnutzen))
+            {
+                GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Element;
+                // Workspace Childs
+                List<GruArtAufEinSprache> WSChilds = (Instance.GruArtAufEinSpraches != null) ?
+                    Instance.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+                // View Childs
+                List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Data;
+
+                // Edit Elements
+                List<GruArtAufEinSprache> EditChilds =
+                    (from VC in ViewChilds
+                     join WSC in WSChilds on VC.Id equals WSC.Id into Join
+                     from J in Join
+                     select VC
+                    ).ToList();
+
+                // Delete Elements
+                List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
+                WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
+
+                // Add Elements
+                List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
+                AddChilds = AddChilds.Select(X =>
+                    new GruArtAufEinSprache
+                    {
+                        Id = X.Id,
+                        IdSprache = X.IdSprache,
+                        IdAufgabe = Instance.Id,
+                        GruArtAufEinzelnutzen = Instance,
+                        ExtensionData = X.ExtensionData,
+                        GruSprachen = X.GruSprachen,
+                        Uebersetzung = X.Uebersetzung,
+                        OTimeStamp = X.OTimeStamp
+                    }
+                    ).ToList();
+                WSChilds.AddRange(AddChilds);
+
+                // Remove Empty Elements From View
+                WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
+
+                // Update Parent
+                Instance.GruArtAufEinSpraches = WSChilds.ToArray();
+            }
+            return ReturnValue;
+        }
+
         public bool SaveChanges()
         {
             bool ReturnValue = false;

@@ -268,48 +268,12 @@ namespace UI.Modules.Grundlagen
                     string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                     // Workspace Item
                     Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return (Id > 0 && X.Id == Id) || X.Aufgabe == Aufgabe; };
-                    GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
-                    // Workspace Childs
-                    List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
-                        GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
-                    // View2 Childs
-                    BindingSource Source2 = (BindingSource)this.dataGridView2.DataSource;
-                    List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Source2.List;
-
-                    // Edit Elements
-                    List<GruArtAufEinSprache> EditChilds =
-                        (from VC in ViewChilds
-                         join WSC in WSChilds on VC.Id equals WSC.Id into Join
-                         from J in Join
-                         select VC
-                        ).ToList();
-
-                    // Delete Elements
-                    List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
-                    WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
-
-                    // Add Elements
-                    List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
-                    AddChilds = AddChilds.Select(X =>
-                        new GruArtAufEinSprache
-                        {
-                            Id = X.Id,
-                            IdSprache = X.IdSprache,
-                            IdAufgabe = GruArtAufEinzelnutzen.Id,
-                            GruArtAufEinzelnutzen = GruArtAufEinzelnutzen,
-                            ExtensionData = X.ExtensionData,
-                            GruSprachen = X.GruSprachen,
-                            Uebersetzung = X.Uebersetzung,
-                            OTimeStamp = X.OTimeStamp
-                        }
-                        ).ToList();
-                    WSChilds.AddRange(AddChilds);
-
-                    // Remove Empty Elements From View
-                    WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
-
-                    // Update Parent
-                    GruArtAufEinzelnutzen.GruArtAufEinSpraches = WSChilds.ToArray();
+                    GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
+                    // View Childs
+                    BindingSource Source = (BindingSource)this.dataGridView2.DataSource;
+                    List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Source.List;
+                    // Save Changes
+                    Workspace.SaveElement(Instance, ViewChilds);
                 }
             }
         }
