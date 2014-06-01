@@ -249,10 +249,10 @@ namespace UI.Modules.Grundlagen
                 string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                 // Parent Item
                 Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return (Id > 0 && X.Id == Id) || X.Aufgabe == Aufgabe; };
-                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
+                GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                 // Child Items
-                List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
-                    GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
+                List<GruArtAufEinSprache> Collection = (Instance.GruArtAufEinSpraches != null) ?
+                    Instance.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
                 return Collection;
             }
             return null;
