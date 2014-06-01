@@ -33,6 +33,6 @@ namespace UI.Shared
                 return (IList)Formatter.Deserialize(Stream);
             }
             return null;
-        } 
+        }
     }
 }

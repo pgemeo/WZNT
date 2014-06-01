@@ -22,6 +22,20 @@ namespace UI.Modules.Grundlagen
         protected Workspace Workspace;
 
         // 
+        // Workspace
+        //
+        protected void InitializeWorkspace(TreeNode Node)
+        {
+            Workspace = new Workspace(null);
+
+            if (Node.Text.Equals("Aufgaben Einzelnutzen"))
+            {
+                // Workspace
+                Workspace = new Workspace(typeof(GruArtAufEinzelnutzen));
+            }
+        }
+
+        // 
         // Constructor
         // 
         public Werkzeugnummerntool()
@@ -200,8 +214,8 @@ namespace UI.Modules.Grundlagen
         protected void InitializeGridView1(TreeNode Node)
         {
             ResetGridView1();
-            Workspace = new Workspace();
-            Workspace.List = GetGridView1Collection(Node);
+            InitializeWorkspace(Node);
+            // Binding
             DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace.List);
         }
         protected void InitializeGridView2(DataGridViewRow GridView1SelectedRow)
@@ -220,27 +234,16 @@ namespace UI.Modules.Grundlagen
         {
             DataBindingSource.Set(this.bindingSource2, this.dataGridView2, null);
         }
-        protected IList GetGridView1Collection(TreeNode Node)
-        {
-            if (Node.Text.Equals("Aufgaben Einzelnutzen"))
-            {
-                List<GruArtAufEinzelnutzen> Collection = DbManager.GetListGruArtAufEinzelnutzen();
-                return Collection;
-            }
-            return null;
-        }
         protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
         {
-            Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
-            if (Type == typeof(GruArtAufEinzelnutzen))
+            if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
             {
                 // Get Cell Values
                 int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                 string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
-                // Workspace
-                List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace.List;
                 // Parent Item
-                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+                Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return X.Id == Id || X.Aufgabe == Aufgabe; };
+                GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                 // Child Items
                 List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
                     GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
@@ -248,24 +251,18 @@ namespace UI.Modules.Grundlagen
             }
             return null;
         }
-        protected void UpdateWorkspaceAfterLeaveDataGridView2()
+        protected void UpdateWorkspaceAfterLeaveDataGridView2(DataGridViewRow GridView1SelectedRow)
         {
-            // Get Selected Row
-            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
-                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
-                this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
-                Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
-                if (Type == typeof(GruArtAufEinzelnutzen))
+                if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
                     int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                     string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
-                    // Workspace
-                    List<GruArtAufEinzelnutzen> WS = (List<GruArtAufEinzelnutzen>)Workspace.List;
                     // Workspace Item
-                    GruArtAufEinzelnutzen GruArtAufEinzelnutzen = WS.Single(X => X.Id == Id || X.Aufgabe == Aufgabe);
+                    Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return X.Id == Id || X.Aufgabe == Aufgabe; };
+                    GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                     // Workspace Childs
                     List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
                         GruArtAufEinzelnutzen.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
@@ -318,8 +315,7 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
-                Type Type = GlobalFunctions.GetListElementsType(Workspace.List);
-                if (Type == typeof(GruArtAufEinzelnutzen))
+                if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
                     int Id = (int)GridView1SelectedRow.Cells[0].Value;
@@ -366,7 +362,11 @@ namespace UI.Modules.Grundlagen
                 // End Edit
                 this.dataGridView2.EndEdit();
             }
-            UpdateWorkspaceAfterLeaveDataGridView2();
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            UpdateWorkspaceAfterLeaveDataGridView2(GridView1SelectedRow);
         }
         private void DataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
@@ -386,9 +386,7 @@ namespace UI.Modules.Grundlagen
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            Type Type1 = GlobalFunctions.GetListElementsType(Workspace.List);
-            Type BaseType1 = GlobalFunctions.GetListElementsType(((BindingSource)this.dataGridView1.DataSource).List);
-            if (Type1 == typeof(GruArtAufEinzelnutzen) && Type1 == BaseType1)
+            if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
             {
                 List<GruArtAufEinzelnutzen> Elements1 = (List<GruArtAufEinzelnutzen>)Workspace.List;
                 BindingSource Source1 = (BindingSource)this.dataGridView1.DataSource;
