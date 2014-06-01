@@ -196,6 +196,7 @@ namespace UI.Modules.Grundlagen
             //
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
             this.dataGridView1.RowEnter += DataGridView1_RowEnter;
+            this.dataGridView1.Leave += DataGridView1_Leave;
             // !IMPORTANT: Cell Formatting is important for data binding
             this.dataGridView1.CellFormatting += DataGridView_CellFormatting;
             //
@@ -242,7 +243,7 @@ namespace UI.Modules.Grundlagen
                 int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                 string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                 // Parent Item
-                Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return X.Id == Id || X.Aufgabe == Aufgabe; };
+                Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return (Id > 0 && X.Id == Id) || X.Aufgabe == Aufgabe; };
                 GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                 // Child Items
                 List<GruArtAufEinSprache> Collection = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
@@ -261,7 +262,7 @@ namespace UI.Modules.Grundlagen
                     int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
                     string Aufgabe = (string)GridView1SelectedRow.Cells[1].Value;
                     // Workspace Item
-                    Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return X.Id == Id || X.Aufgabe == Aufgabe; };
+                    Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return (Id > 0 && X.Id == Id) || X.Aufgabe == Aufgabe; };
                     GruArtAufEinzelnutzen GruArtAufEinzelnutzen = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                     // Workspace Childs
                     List<GruArtAufEinSprache> WSChilds = (GruArtAufEinzelnutzen.GruArtAufEinSpraches != null) ?
@@ -345,10 +346,27 @@ namespace UI.Modules.Grundlagen
             if (Dialog == DialogResult.No)
                 e.Cancel = true;
         }
+        private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView DataGridView = (DataGridView)sender;
+            if (DataGridView.Columns[e.ColumnIndex].DataPropertyName.Contains("."))
+                e.Value = System.Web.UI.DataBinder.Eval(
+                    DataGridView.Rows[e.RowIndex].DataBoundItem,
+                    DataGridView.Columns[e.ColumnIndex].DataPropertyName);
+        }
         private void DataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView GridView = (DataGridView)sender;
             InitializeGridView2(GridView.Rows[e.RowIndex]);
+        }
+        private void DataGridView1_Leave(object sender, EventArgs e)
+        {
+            // Check Dirty Row
+            if (this.dataGridView1.IsCurrentRowDirty)
+            {
+                // End Edit
+                this.dataGridView1.EndEdit();
+            }
         }
         private void DataGridView2_Leave(object sender, EventArgs e)
         {
@@ -372,15 +390,7 @@ namespace UI.Modules.Grundlagen
                 this.dataGridView1.CurrentCell.OwningRow : null;
             UpdateDataGridView2OnBeginEdit(e.RowIndex, GridView1SelectedRow);
         }
-        private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            DataGridView DataGridView = (DataGridView)sender;
-            if (DataGridView.Columns[e.ColumnIndex].DataPropertyName.Contains("."))
-                e.Value = System.Web.UI.DataBinder.Eval(
-                    DataGridView.Rows[e.RowIndex].DataBoundItem,
-                    DataGridView.Columns[e.ColumnIndex].DataPropertyName);
-        }
-
+        
         //
         // Handlers Buttons
         //
