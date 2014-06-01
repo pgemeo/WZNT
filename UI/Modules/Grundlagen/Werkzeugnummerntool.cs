@@ -307,12 +307,8 @@ namespace UI.Modules.Grundlagen
                 }
             }
         }
-        protected void UpdateDataGridView2OnBeginEdit(int RowIndex) 
+        protected void UpdateDataGridView2OnBeginEdit(int RowIndex, DataGridViewRow GridView1SelectedRow) 
         {
-            // Get Selected Row
-            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
-                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
-                this.dataGridView1.CurrentCell.OwningRow : null;
             if (GridView1SelectedRow != null)
             {
                 if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
@@ -370,7 +366,11 @@ namespace UI.Modules.Grundlagen
         }
         private void DataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            UpdateDataGridView2OnBeginEdit(e.RowIndex);
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            UpdateDataGridView2OnBeginEdit(e.RowIndex, GridView1SelectedRow);
         }
         private void DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
