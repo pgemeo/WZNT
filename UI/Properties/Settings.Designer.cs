@@ -32,7 +32,7 @@ namespace UI.Properties {
 			<DataGridViewColumn>
 				<HeaderText>Id</HeaderText>
 				<DataPropertyName>Id</DataPropertyName>
-				<Visible>true</Visible>
+				<Visible>false</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
 				<HeaderText>Aufgabe</HeaderText>
@@ -46,7 +46,7 @@ namespace UI.Properties {
 			<DataGridViewColumn>
 				<HeaderText>Id</HeaderText>
 				<DataPropertyName>Id</DataPropertyName>
-				<Visible>true</Visible>
+				<Visible>false</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
 				<HeaderText>IdSprache</HeaderText>
@@ -56,7 +56,7 @@ namespace UI.Properties {
 			<DataGridViewColumn>
 				<HeaderText>IdAufgabe</HeaderText>
 				<DataPropertyName>IdAufgabe</DataPropertyName>
-				<Visible>true</Visible>
+				<Visible>false</Visible>
 			</DataGridViewColumn>
 			<DataGridViewColumn>
 				<HeaderText>Uebersetzung</HeaderText>
