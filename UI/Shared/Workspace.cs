@@ -68,27 +68,27 @@ namespace UI.Shared
                 if (Type == typeof(GruArtAufEinzelnutzen))
                 {
                     GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Element;
-                    // Workspace Childs
-                    List<GruArtAufEinSprache> WSChilds = (Instance != null && Instance.GruArtAufEinSpraches != null) ?
+                    // Workspace Children
+                    List<GruArtAufEinSprache> WSChildren = (Instance != null && Instance.GruArtAufEinSpraches != null) ?
                         Instance.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
-                    // View Childs
-                    List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Data;
+                    // View Children
+                    List<GruArtAufEinSprache> ViewChildren = (List<GruArtAufEinSprache>)Data;
 
-                    // Edit Elements
-                    List<GruArtAufEinSprache> EditChilds =
-                        (from VC in ViewChilds
-                         join WSC in WSChilds on VC.Id equals WSC.Id into Join
+                    // Modified Elements
+                    List<GruArtAufEinSprache> ModifiedChildren =
+                        (from VC in ViewChildren
+                         join WSC in WSChildren on VC.Id equals WSC.Id into Join
                          from J in Join
                          select VC
                         ).ToList();
 
-                    // Delete Elements
-                    List<GruArtAufEinSprache> DeleteChilds = WSChilds.Except(ViewChilds).ToList();
-                    WSChilds.RemoveAll(X => DeleteChilds.Contains(X));
+                    // Deleted Elements
+                    List<GruArtAufEinSprache> DeletedChildren = WSChildren.Except(ViewChildren).ToList();
+                    WSChildren.RemoveAll(X => DeletedChildren.Contains(X));
 
                     // Add Elements
-                    List<GruArtAufEinSprache> AddChilds = ViewChilds.Except(WSChilds).ToList();
-                    AddChilds = AddChilds.Select(X =>
+                    List<GruArtAufEinSprache> AddedChildren = ViewChildren.Except(WSChildren).ToList();
+                    AddedChildren = AddedChildren.Select(X =>
                         new GruArtAufEinSprache
                         {
                             Id = X.Id,
@@ -98,13 +98,13 @@ namespace UI.Shared
                             OTimeStamp = X.OTimeStamp
                         }
                         ).ToList();
-                    WSChilds.AddRange(AddChilds);
+                    WSChildren.AddRange(AddedChildren);
 
                     // Remove Empty Elements From View
-                    WSChilds.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
+                    WSChildren.RemoveAll(X => X.Id == 0 && X.IdSprache == 0);
 
                     // Update Parent
-                    Instance.GruArtAufEinSpraches = WSChilds.ToArray();
+                    Instance.GruArtAufEinSpraches = WSChildren.ToArray();
 
                     // Return Value
                     ReturnValue = true;
