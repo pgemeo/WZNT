@@ -19,11 +19,7 @@ namespace UI.Shared
         public Workspace(Type Type)
         {
             this._Type = Type;
-            if (Type == typeof(GruArtAufEinzelnutzen))
-            {
-                this._List = DbManager.GetListGruArtAufEinzelnutzen();
-                this._Original = GlobalFunctions.CloneList(this._List);
-            }
+            Initialize();
         }
         
         public IList List
@@ -126,7 +122,7 @@ namespace UI.Shared
                      from J in Join
                      select E
                     ).ToList();
-                MessageBox.Show(String.Format("Edit {0} element(s).", EditElements.Count));
+                //MessageBox.Show(String.Format("Edit {0} element(s).", EditElements.Count));
 
                 // Finding Insert Elements
                 List<GruArtAufEinzelnutzen> InsertElements = 
@@ -136,7 +132,7 @@ namespace UI.Shared
                      where J == null && E != null
                      select E
                     ).ToList();
-                MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements.Count));
+                //MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements.Count));
 
                 // Finding Delete Elements
                 List<GruArtAufEinzelnutzen> DeleteElements = 
@@ -146,7 +142,7 @@ namespace UI.Shared
                      where J == null && B != null
                      select B
                     ).ToList();
-                MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
+                //MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
 
                 // Db
                 int Ins = DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
@@ -155,8 +151,26 @@ namespace UI.Shared
                 MessageBox.Show(String.Format("{0} element(s) has been deleted.", Del));
                 int Upd = DbManager.UpdateGruArtAufEinzelnutzen(EditElements);
                 MessageBox.Show(String.Format("{0} element(s) has been updated.", Upd));
+
+                Refresh();
+
+                ReturnValue = true;
             }
             return ReturnValue;
+        }
+
+        private void Initialize()
+        {
+            if (Type == typeof(GruArtAufEinzelnutzen))
+            {
+                this._List = DbManager.GetListGruArtAufEinzelnutzen();
+                this._Original = GlobalFunctions.CloneList(this._List);
+            }
+        }
+
+        private void Refresh()
+        {
+            Initialize();
         }
     }
 }
