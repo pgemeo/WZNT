@@ -149,8 +149,12 @@ namespace UI.Shared
                 MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
 
                 // Db
-                DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
-                DbManager.EditGruArtAufEinzelnutzen(EditElements);
+                int Ins = DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
+                MessageBox.Show(String.Format("{0} element(s) has been inserted.", Ins));
+                int Del = DbManager.DeleteGruArtAufEinzelnutzen(DeleteElements);
+                MessageBox.Show(String.Format("{0} element(s) has been deleted.", Del));
+                int Upd = DbManager.UpdateGruArtAufEinzelnutzen(EditElements);
+                MessageBox.Show(String.Format("{0} element(s) has been updated.", Upd));
             }
             return ReturnValue;
         }

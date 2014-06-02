@@ -65,7 +65,9 @@
   </xs:element>
   <xs:element name="InsertGruArtAufEinzelnutzenResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertGruArtAufEinzelnutzenResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="InsertListOfGruArtAufEinzelnutzen">
@@ -77,32 +79,50 @@
   </xs:element>
   <xs:element name="InsertListOfGruArtAufEinzelnutzenResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertListOfGruArtAufEinzelnutzenResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EditListOfGruArtAufEinzelnutzen">
+  <xs:element name="UpdateListOfGruArtAufEinzelnutzen">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="List" nillable="true" type="q7:ArrayOfGruArtAufEinzelnutzen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="EditListOfGruArtAufEinzelnutzenResponse">
+  <xs:element name="UpdateListOfGruArtAufEinzelnutzenResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateListOfGruArtAufEinzelnutzenResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteListOfGruArtAufEinzelnutzen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="List" nillable="true" type="q8:ArrayOfGruArtAufEinzelnutzen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteListOfGruArtAufEinzelnutzenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteListOfGruArtAufEinzelnutzenResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetListGruArtAufEinSprache">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="Instance" nillable="true" type="q8:GruArtAufEinzelnutzen" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="Instance" nillable="true" type="q9:GruArtAufEinzelnutzen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetListGruArtAufEinSpracheResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q9:ArrayOfGruArtAufEinSprache" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q10:ArrayOfGruArtAufEinSprache" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

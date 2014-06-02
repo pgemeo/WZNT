@@ -27,17 +27,19 @@ namespace Services
                 return Client.GetGruArtAufEinzelnutzen(Id);
             }
         }
-        public static void InsertGruArtAufEinzelnutzen(GruArtAufEinzelnutzen Instance)
+        public static int InsertGruArtAufEinzelnutzen(GruArtAufEinzelnutzen Instance)
         {
+            int Rows = 0;
             using (TransactionScope Transaction = new TransactionScope(TransactionScopeOption.RequiresNew))
             {
                 try
                 {
                     using (WZNTServices.ServiceClient Client = new ServiceClient())
                     {
-                        Client.InsertGruArtAufEinzelnutzen(Instance);
+                        Rows = Client.InsertGruArtAufEinzelnutzen(Instance);
                         Transaction.Complete();
                     }
+                    return Rows;
                 }
                 catch (Exception ex)
                 {
@@ -46,18 +48,25 @@ namespace Services
                 }
             }
         }
-        public static void InsertGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
+        public static int InsertGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                Client.InsertListOfGruArtAufEinzelnutzen(List.ToArray());
+                return Client.InsertListOfGruArtAufEinzelnutzen(List.ToArray());
             }
         }
-        public static void EditGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
+        public static int UpdateGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                Client.EditListOfGruArtAufEinzelnutzen(List.ToArray());
+                return Client.UpdateListOfGruArtAufEinzelnutzen(List.ToArray());
+            }
+        }
+        public static int DeleteGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                return Client.DeleteListOfGruArtAufEinzelnutzen(List.ToArray());
             }
         }
 

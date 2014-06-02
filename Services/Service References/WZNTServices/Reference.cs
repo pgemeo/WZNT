@@ -1495,22 +1495,28 @@ namespace Services.WZNTServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse")]
         [System.ServiceModel.TransactionFlowAttribute(System.ServiceModel.TransactionFlowOption.Mandatory)]
-        void InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
+        int InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse")]
-        System.Threading.Tasks.Task InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
+        System.Threading.Tasks.Task<int> InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzenResponse")]
-        void InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        int InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzenResponse")]
-        System.Threading.Tasks.Task InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        System.Threading.Tasks.Task<int> InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzenResponse")]
-        void EditListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/UpdateListOfGruArtAufEinzelnutzenResponse")]
+        int UpdateListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzenResponse")]
-        System.Threading.Tasks.Task EditListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/UpdateListOfGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task<int> UpdateListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/DeleteListOfGruArtAufEinzelnutzenResponse")]
+        int DeleteListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/DeleteListOfGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task<int> DeleteListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
         Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
@@ -1590,28 +1596,36 @@ namespace Services.WZNTServices {
             return base.Channel.GetGruArtAufEinzelnutzenAsync(Id);
         }
         
-        public void InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
-            base.Channel.InsertGruArtAufEinzelnutzen(Instance);
+        public int InsertGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
+            return base.Channel.InsertGruArtAufEinzelnutzen(Instance);
         }
         
-        public System.Threading.Tasks.Task InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
+        public System.Threading.Tasks.Task<int> InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
             return base.Channel.InsertGruArtAufEinzelnutzenAsync(Instance);
         }
         
-        public void InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
-            base.Channel.InsertListOfGruArtAufEinzelnutzen(List);
+        public int InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.InsertListOfGruArtAufEinzelnutzen(List);
         }
         
-        public System.Threading.Tasks.Task InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+        public System.Threading.Tasks.Task<int> InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
             return base.Channel.InsertListOfGruArtAufEinzelnutzenAsync(List);
         }
         
-        public void EditListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
-            base.Channel.EditListOfGruArtAufEinzelnutzen(List);
+        public int UpdateListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.UpdateListOfGruArtAufEinzelnutzen(List);
         }
         
-        public System.Threading.Tasks.Task EditListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
-            return base.Channel.EditListOfGruArtAufEinzelnutzenAsync(List);
+        public System.Threading.Tasks.Task<int> UpdateListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.UpdateListOfGruArtAufEinzelnutzenAsync(List);
+        }
+        
+        public int DeleteListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.DeleteListOfGruArtAufEinzelnutzen(List);
+        }
+        
+        public System.Threading.Tasks.Task<int> DeleteListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.DeleteListOfGruArtAufEinzelnutzenAsync(List);
         }
         
         public Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
