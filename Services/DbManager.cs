@@ -17,7 +17,7 @@ namespace Services
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                return Client.GetListGruArtAufEinzelnutzen().ToList();
+                return Client.GetGruArtAufEinzelnutzenList().ToList();
             }
         }
         public static GruArtAufEinzelnutzen GetGruArtAufEinzelnutzen(int Id)
@@ -36,7 +36,7 @@ namespace Services
                 {
                     using (WZNTServices.ServiceClient Client = new ServiceClient())
                     {
-                        Rows = Client.InsertGruArtAufEinzelnutzen(Instance);
+                        Client.InsertGruArtAufEinzelnutzen(Instance);
                         Transaction.Complete();
                     }
                     return Rows;
@@ -52,21 +52,24 @@ namespace Services
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                return Client.InsertListOfGruArtAufEinzelnutzen(List.ToArray());
+                Client.InsertGruArtAufEinzelnutzenList(List.ToArray());
+                return 0;
             }
         }
         public static int UpdateGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                return Client.UpdateListOfGruArtAufEinzelnutzen(List.ToArray());
+                //return Client.UpdateListOfGruArtAufEinzelnutzen(List.ToArray());
+                return 0;
             }
         }
         public static int DeleteGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                return Client.DeleteListOfGruArtAufEinzelnutzen(List.ToArray());
+                Client.RemoveGruArtAufEinzelnutzenList(List.ToArray());
+                return 0;
             }
         }
 
