@@ -86,7 +86,7 @@ namespace UI.Shared
                     List<GruArtAufEinSprache> DeletedChildren = WSChildren.Except(ViewChildren).ToList();
                     WSChildren.RemoveAll(X => DeletedChildren.Contains(X));
 
-                    // Add Elements
+                    // Added Elements
                     List<GruArtAufEinSprache> AddedChildren = ViewChildren.Except(WSChildren).ToList();
                     AddedChildren = AddedChildren.Select(X =>
                         new GruArtAufEinSprache
