@@ -96,9 +96,6 @@ namespace UI.Shared
                         Id = X.Id,
                         IdSprache = X.IdSprache,
                         IdAufgabe = Instance.Id,
-                        GruArtAufEinzelnutzen = Instance,
-                        ExtensionData = X.ExtensionData,
-                        GruSprachen = X.GruSprachen,
                         Uebersetzung = X.Uebersetzung,
                         OTimeStamp = X.OTimeStamp
                     }
@@ -121,6 +118,7 @@ namespace UI.Shared
             {
                 List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
                 List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
+                
                 // Finding Edit Elements
                 List<GruArtAufEinzelnutzen> EditElements =
                     (from E in Elements
@@ -149,6 +147,10 @@ namespace UI.Shared
                      select B
                     ).ToList();
                 MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
+
+                // Db
+                DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
+                DbManager.EditGruArtAufEinzelnutzen(EditElements);
             }
             return ReturnValue;
         }

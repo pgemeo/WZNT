@@ -68,17 +68,41 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="InsertListOfGruArtAufEinzelnutzen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="List" nillable="true" type="q6:ArrayOfGruArtAufEinzelnutzen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertListOfGruArtAufEinzelnutzenResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditListOfGruArtAufEinzelnutzen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="List" nillable="true" type="q7:ArrayOfGruArtAufEinzelnutzen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditListOfGruArtAufEinzelnutzenResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetListGruArtAufEinSprache">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GruArtAufEinzelnutzen" nillable="true" type="q6:GruArtAufEinzelnutzen" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="Instance" nillable="true" type="q8:GruArtAufEinzelnutzen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetListGruArtAufEinSpracheResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q7:ArrayOfGruArtAufEinSprache" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q9:ArrayOfGruArtAufEinSprache" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

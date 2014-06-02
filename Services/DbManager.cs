@@ -46,6 +46,20 @@ namespace Services
                 }
             }
         }
+        public static void InsertGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.InsertListOfGruArtAufEinzelnutzen(List.ToArray());
+            }
+        }
+        public static void EditGruArtAufEinzelnutzen(List<GruArtAufEinzelnutzen> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.EditListOfGruArtAufEinzelnutzen(List.ToArray());
+            }
+        }
 
         //
         // GruArtAufEinSprache

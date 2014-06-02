@@ -1500,11 +1500,23 @@ namespace Services.WZNTServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse")]
         System.Threading.Tasks.Task InsertGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
-        Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzenResponse")]
+        void InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/InsertListOfGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzenResponse")]
+        void EditListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/EditListOfGruArtAufEinzelnutzenResponse")]
+        System.Threading.Tasks.Task EditListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
-        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen);
+        Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -1586,12 +1598,28 @@ namespace Services.WZNTServices {
             return base.Channel.InsertGruArtAufEinzelnutzenAsync(Instance);
         }
         
-        public Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen) {
-            return base.Channel.GetListGruArtAufEinSprache(GruArtAufEinzelnutzen);
+        public void InsertListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            base.Channel.InsertListOfGruArtAufEinzelnutzen(List);
         }
         
-        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen GruArtAufEinzelnutzen) {
-            return base.Channel.GetListGruArtAufEinSpracheAsync(GruArtAufEinzelnutzen);
+        public System.Threading.Tasks.Task InsertListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.InsertListOfGruArtAufEinzelnutzenAsync(List);
+        }
+        
+        public void EditListOfGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            base.Channel.EditListOfGruArtAufEinzelnutzen(List);
+        }
+        
+        public System.Threading.Tasks.Task EditListOfGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] List) {
+            return base.Channel.EditListOfGruArtAufEinzelnutzenAsync(List);
+        }
+        
+        public Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
+            return base.Channel.GetListGruArtAufEinSprache(Instance);
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen Instance) {
+            return base.Channel.GetListGruArtAufEinSpracheAsync(Instance);
         }
         
         public double ParsePixels(string File1, string File2) {
