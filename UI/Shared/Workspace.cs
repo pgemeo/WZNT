@@ -171,12 +171,9 @@ namespace UI.Shared
                 List<GruArtAufEinzelnutzen> DeleteElements = (List<GruArtAufEinzelnutzen>)Deleted;
                 List<GruArtAufEinzelnutzen> EditElements = (List<GruArtAufEinzelnutzen>)Modified;
                 // Db Operations
-                int Ins = DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
-                MessageBox.Show(String.Format("{0} element(s) has been inserted.", Ins));
-                int Del = DbManager.DeleteGruArtAufEinzelnutzen(DeleteElements);
-                MessageBox.Show(String.Format("{0} element(s) has been deleted.", Del));
-                int Upd = DbManager.UpdateGruArtAufEinzelnutzen(EditElements);
-                MessageBox.Show(String.Format("{0} element(s) has been updated.", Upd));
+                DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
+                DbManager.DeleteGruArtAufEinzelnutzen(DeleteElements);
+                DbManager.UpdateGruArtAufEinzelnutzen(EditElements);
                 // Refresh Workspace
                 Refresh();
                 // Return
