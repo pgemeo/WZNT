@@ -372,6 +372,7 @@ namespace UI.Modules.Grundlagen
                 if (Workspace.SaveChanges())
                 {
                     MessageBox.Show("All changes have been saved!");
+                    InitializeGridView1(treeView1.SelectedNode);
                 }
             }
         }
