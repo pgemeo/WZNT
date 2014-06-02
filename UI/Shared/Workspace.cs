@@ -67,7 +67,7 @@ namespace UI.Shared
             {
                 GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Element;
                 // Workspace Childs
-                List<GruArtAufEinSprache> WSChilds = (Instance.GruArtAufEinSpraches != null) ?
+                List<GruArtAufEinSprache> WSChilds = (Instance != null && Instance.GruArtAufEinSpraches != null) ?
                     Instance.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
                 // View Childs
                 List<GruArtAufEinSprache> ViewChilds = (List<GruArtAufEinSprache>)Data;
@@ -110,50 +110,22 @@ namespace UI.Shared
         public bool SaveChanges()
         {
             bool ReturnValue = false;
+
             if (Type == typeof(GruArtAufEinzelnutzen))
             {
-                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
-                List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
-                
-                // Finding Edit Elements
-                List<GruArtAufEinzelnutzen> EditElements =
-                    (from E in Elements
-                     join B in BaseElements on E.Id equals B.Id into Join
-                     from J in Join
-                     select E
-                    ).ToList();
-                //MessageBox.Show(String.Format("Edit {0} element(s).", EditElements.Count));
-
-                // Finding Insert Elements
-                List<GruArtAufEinzelnutzen> InsertElements = 
-                    (from E in Elements
-                     join B in BaseElements on E.Id equals B.Id into Join
-                     from J in Join.DefaultIfEmpty()
-                     where J == null && E != null
-                     select E
-                    ).ToList();
-                //MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements.Count));
-
-                // Finding Delete Elements
-                List<GruArtAufEinzelnutzen> DeleteElements = 
-                    (from B in BaseElements
-                     join E in Elements on B.Id equals E.Id into Join
-                     from J in Join.DefaultIfEmpty()
-                     where J == null && B != null
-                     select B
-                    ).ToList();
-                //MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
-
-                // Db
+                List<GruArtAufEinzelnutzen> InsertElements = (List<GruArtAufEinzelnutzen>)Added;
+                List<GruArtAufEinzelnutzen> DeleteElements = (List<GruArtAufEinzelnutzen>)Deleted;
+                List<GruArtAufEinzelnutzen> EditElements = (List<GruArtAufEinzelnutzen>)Modified;
+                // Db Operations
                 int Ins = DbManager.InsertGruArtAufEinzelnutzen(InsertElements);
                 MessageBox.Show(String.Format("{0} element(s) has been inserted.", Ins));
                 int Del = DbManager.DeleteGruArtAufEinzelnutzen(DeleteElements);
                 MessageBox.Show(String.Format("{0} element(s) has been deleted.", Del));
                 int Upd = DbManager.UpdateGruArtAufEinzelnutzen(EditElements);
                 MessageBox.Show(String.Format("{0} element(s) has been updated.", Upd));
-
+                // Refresh Workspace
                 Refresh();
-
+                // Return
                 ReturnValue = true;
             }
             return ReturnValue;
@@ -171,6 +143,74 @@ namespace UI.Shared
         private void Refresh()
         {
             Initialize();
+        }
+
+        public IList Deleted
+        {
+            get
+            {
+                IList IList = null;
+                if (Type == typeof(GruArtAufEinzelnutzen))
+                {
+                    List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                    List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
+                    // Finding Deletes
+                    IList = 
+                        (from B in BaseElements
+                         join E in Elements on B.Id equals E.Id into Join
+                         from J in Join.DefaultIfEmpty()
+                         where J == null && B != null
+                         select B
+                        ).ToList();
+                    //MessageBox.Show(String.Format("Delete {0} element(s).", DeleteElements.Count));
+                }
+                return IList;
+            }
+        }
+
+        public IList Added
+        {
+            get
+            {
+                IList IList = null;
+                if (Type == typeof(GruArtAufEinzelnutzen))
+                {
+                    List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                    List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
+                    // Finding Inserts
+                    IList =
+                        (from E in Elements
+                         join B in BaseElements on E.Id equals B.Id into Join
+                         from J in Join.DefaultIfEmpty()
+                         where J == null && E != null
+                         select E
+                        ).ToList();
+                    //MessageBox.Show(String.Format("Insert {0} element(s).", InsertElements.Count));
+                }
+                return IList;
+            }
+        }
+
+        public IList Modified
+        {
+            get
+            {
+                IList IList = null;
+                if (Type == typeof(GruArtAufEinzelnutzen))
+                {
+                    List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                    List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
+                    // Finding Edits
+                    IList =
+                        (from E in Elements
+                         join B in BaseElements on E.Id equals B.Id into Join
+                         from J in Join
+                         select E
+                        ).ToList();
+                    //MessageBox.Show(String.Format("Edit {0} element(s).", EditElements.Count));
+                }
+                return IList;
+            }
         }
     }
 }

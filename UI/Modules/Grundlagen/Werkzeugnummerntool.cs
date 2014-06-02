@@ -251,7 +251,7 @@ namespace UI.Modules.Grundlagen
                 Predicate<GruArtAufEinzelnutzen> Predicate = (GruArtAufEinzelnutzen X) => { return (Id > 0 && X.Id == Id) || X.Aufgabe == Aufgabe; };
                 GruArtAufEinzelnutzen Instance = (GruArtAufEinzelnutzen)Workspace.FindElement(Predicate);
                 // Child Items
-                List<GruArtAufEinSprache> Collection = (Instance.GruArtAufEinSpraches != null) ?
+                List<GruArtAufEinSprache> Collection = (Instance != null && Instance.GruArtAufEinSpraches != null) ?
                     Instance.GruArtAufEinSpraches.ToList() : new List<GruArtAufEinSprache>();
                 return Collection;
             }
