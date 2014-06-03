@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost/WZNTServices/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -20,29 +20,29 @@
   <wsdl:message name="IService_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_GetGruArtAufEinzelnutzenList_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetGruArtAufEinzelnutzenList" />
+  <wsdl:message name="IService_CreateGruArtAufEinzelnutzen_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruArtAufEinzelnutzen" />
   </wsdl:message>
-  <wsdl:message name="IService_GetGruArtAufEinzelnutzenList_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetGruArtAufEinzelnutzenListResponse" />
+  <wsdl:message name="IService_CreateGruArtAufEinzelnutzen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruArtAufEinzelnutzenResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_GetGruArtAufEinzelnutzen_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetGruArtAufEinzelnutzen" />
+  <wsdl:message name="IService_CreateGruArtAufEinzelnutzenList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruArtAufEinzelnutzenList" />
   </wsdl:message>
-  <wsdl:message name="IService_GetGruArtAufEinzelnutzen_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetGruArtAufEinzelnutzenResponse" />
+  <wsdl:message name="IService_CreateGruArtAufEinzelnutzenList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_InsertGruArtAufEinzelnutzen_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertGruArtAufEinzelnutzen" />
+  <wsdl:message name="IService_ReadGruArtAufEinzelnutzenList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinzelnutzenList" />
   </wsdl:message>
-  <wsdl:message name="IService_InsertGruArtAufEinzelnutzen_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertGruArtAufEinzelnutzenResponse" />
+  <wsdl:message name="IService_ReadGruArtAufEinzelnutzenList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_InsertGruArtAufEinzelnutzenList_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertGruArtAufEinzelnutzenList" />
+  <wsdl:message name="IService_ReadGruArtAufEinzelnutzen_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinzelnutzen" />
   </wsdl:message>
-  <wsdl:message name="IService_InsertGruArtAufEinzelnutzenList_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertGruArtAufEinzelnutzenListResponse" />
+  <wsdl:message name="IService_ReadGruArtAufEinzelnutzen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinzelnutzenResponse" />
   </wsdl:message>
   <wsdl:message name="IService_UpdateGruArtAufEinzelnutzenList_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateGruArtAufEinzelnutzenList" />
@@ -50,11 +50,11 @@
   <wsdl:message name="IService_UpdateGruArtAufEinzelnutzenList_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_RemoveGruArtAufEinzelnutzenList_InputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveGruArtAufEinzelnutzenList" />
+  <wsdl:message name="IService_DeleteGruArtAufEinzelnutzenList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruArtAufEinzelnutzenList" />
   </wsdl:message>
-  <wsdl:message name="IService_RemoveGruArtAufEinzelnutzenList_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveGruArtAufEinzelnutzenListResponse" />
+  <wsdl:message name="IService_DeleteGruArtAufEinzelnutzenList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
   <wsdl:message name="IService_GetListGruArtAufEinSprache_InputMessage">
     <wsdl:part name="parameters" element="tns:GetListGruArtAufEinSprache" />
@@ -83,29 +83,29 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetDataUsingDataContract" message="tns:IService_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDataUsingDataContractResponse" message="tns:IService_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetGruArtAufEinzelnutzenList">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzenList" message="tns:IService_GetGruArtAufEinzelnutzenList_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzenListResponse" message="tns:IService_GetGruArtAufEinzelnutzenList_OutputMessage" />
+    <wsdl:operation name="CreateGruArtAufEinzelnutzen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzen" message="tns:IService_CreateGruArtAufEinzelnutzen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenResponse" message="tns:IService_CreateGruArtAufEinzelnutzen_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetGruArtAufEinzelnutzen">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzen" message="tns:IService_GetGruArtAufEinzelnutzen_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetGruArtAufEinzelnutzenResponse" message="tns:IService_GetGruArtAufEinzelnutzen_OutputMessage" />
+    <wsdl:operation name="CreateGruArtAufEinzelnutzenList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenList" message="tns:IService_CreateGruArtAufEinzelnutzenList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenListResponse" message="tns:IService_CreateGruArtAufEinzelnutzenList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="InsertGruArtAufEinzelnutzen">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen" message="tns:IService_InsertGruArtAufEinzelnutzen_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenResponse" message="tns:IService_InsertGruArtAufEinzelnutzen_OutputMessage" />
+    <wsdl:operation name="ReadGruArtAufEinzelnutzenList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenList" message="tns:IService_ReadGruArtAufEinzelnutzenList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenListResponse" message="tns:IService_ReadGruArtAufEinzelnutzenList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="InsertGruArtAufEinzelnutzenList">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenList" message="tns:IService_InsertGruArtAufEinzelnutzenList_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenListResponse" message="tns:IService_InsertGruArtAufEinzelnutzenList_OutputMessage" />
+    <wsdl:operation name="ReadGruArtAufEinzelnutzen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzen" message="tns:IService_ReadGruArtAufEinzelnutzen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenResponse" message="tns:IService_ReadGruArtAufEinzelnutzen_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateGruArtAufEinzelnutzenList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenList" message="tns:IService_UpdateGruArtAufEinzelnutzenList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenListResponse" message="tns:IService_UpdateGruArtAufEinzelnutzenList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveGruArtAufEinzelnutzenList">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/RemoveGruArtAufEinzelnutzenList" message="tns:IService_RemoveGruArtAufEinzelnutzenList_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/RemoveGruArtAufEinzelnutzenListResponse" message="tns:IService_RemoveGruArtAufEinzelnutzenList_OutputMessage" />
+    <wsdl:operation name="DeleteGruArtAufEinzelnutzenList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList" message="tns:IService_DeleteGruArtAufEinzelnutzenList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse" message="tns:IService_DeleteGruArtAufEinzelnutzenList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetListGruArtAufEinSprache">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/GetListGruArtAufEinSprache" message="tns:IService_GetListGruArtAufEinSprache_InputMessage" />
@@ -140,8 +140,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetGruArtAufEinzelnutzenList">
-      <soap:operation soapAction="http://tempuri.org/IService/GetGruArtAufEinzelnutzenList" style="document" />
+    <wsdl:operation name="CreateGruArtAufEinzelnutzen">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzen" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -149,8 +149,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetGruArtAufEinzelnutzen">
-      <soap:operation soapAction="http://tempuri.org/IService/GetGruArtAufEinzelnutzen" style="document" />
+    <wsdl:operation name="CreateGruArtAufEinzelnutzenList">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -158,8 +158,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertGruArtAufEinzelnutzen">
-      <soap:operation soapAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzen" style="document" />
+    <wsdl:operation name="ReadGruArtAufEinzelnutzenList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -167,8 +167,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertGruArtAufEinzelnutzenList">
-      <soap:operation soapAction="http://tempuri.org/IService/InsertGruArtAufEinzelnutzenList" style="document" />
+    <wsdl:operation name="ReadGruArtAufEinzelnutzen">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruArtAufEinzelnutzen" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -185,8 +185,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="RemoveGruArtAufEinzelnutzenList">
-      <soap:operation soapAction="http://tempuri.org/IService/RemoveGruArtAufEinzelnutzenList" style="document" />
+    <wsdl:operation name="DeleteGruArtAufEinzelnutzenList">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
