@@ -13,7 +13,7 @@ using UI.Workspaces;
 
 namespace UI.Interfaces
 {
-    public class WsInterfaceGruArtAufEinzelnutzen : WsInterface
+    public class WsInterfaceGruArtAufEinzelnutzen : WsInterfaceTemplate
     {
         protected BindingSource _BSParent;
         protected BindingSource _BSChildren;

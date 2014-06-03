@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.flPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -43,15 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModTitle = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.btNew = new System.Windows.Forms.Button();
-            this.btEdit = new System.Windows.Forms.Button();
-            this.btSave = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btCancel = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.flowLayoutContent = new System.Windows.Forms.FlowLayoutPanel();
             this.flPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -64,11 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // flPanelTop
@@ -234,101 +220,19 @@
             this.treeView1.Size = new System.Drawing.Size(250, 385);
             this.treeView1.TabIndex = 0;
             // 
-            // btNew
+            // flowLayoutContent
             // 
-            this.btNew.Location = new System.Drawing.Point(0, 0);
-            this.btNew.Margin = new System.Windows.Forms.Padding(0);
-            this.btNew.Name = "btNew";
-            this.btNew.Size = new System.Drawing.Size(75, 25);
-            this.btNew.TabIndex = 8;
-            this.btNew.Text = "Neu";
-            this.btNew.UseVisualStyleBackColor = true;
-            this.btNew.Click += new System.EventHandler(this.btNew_Click);
-            // 
-            // btEdit
-            // 
-            this.btEdit.Location = new System.Drawing.Point(75, 0);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(0);
-            this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(75, 25);
-            this.btEdit.TabIndex = 9;
-            this.btEdit.Text = "Ändern";
-            this.btEdit.UseVisualStyleBackColor = true;
-            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
-            // 
-            // btSave
-            // 
-            this.btSave.Location = new System.Drawing.Point(150, 0);
-            this.btSave.Margin = new System.Windows.Forms.Padding(0);
-            this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(75, 25);
-            this.btSave.TabIndex = 10;
-            this.btSave.Text = "Speichern";
-            this.btSave.UseVisualStyleBackColor = true;
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btNew);
-            this.flowLayoutPanel1.Controls.Add(this.btEdit);
-            this.flowLayoutPanel1.Controls.Add(this.btSave);
-            this.flowLayoutPanel1.Controls.Add(this.btCancel);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(330, 510);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(350, 25);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
-            // btCancel
-            // 
-            this.btCancel.Location = new System.Drawing.Point(225, 0);
-            this.btCancel.Margin = new System.Windows.Forms.Padding(0);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(75, 25);
-            this.btCancel.TabIndex = 11;
-            this.btCancel.Text = "Abbrechen";
-            this.btCancel.UseVisualStyleBackColor = true;
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(355, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(250, 340);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Services.WZNTServices.GruArtAufEinzelnutzen);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.DataSource = this.bindingSource2;
-            this.dataGridView2.Location = new System.Drawing.Point(660, 150);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(250, 170);
-            this.dataGridView2.TabIndex = 13;
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(Services.WZNTServices.GruArtAufEinSprache);
+            this.flowLayoutContent.Location = new System.Drawing.Point(350, 150);
+            this.flowLayoutContent.Name = "flowLayoutContent";
+            this.flowLayoutContent.Size = new System.Drawing.Size(555, 385);
+            this.flowLayoutContent.TabIndex = 7;
             // 
             // Werkzeugnummerntool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 562);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1008, 605);
+            this.Controls.Add(this.flowLayoutContent);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -348,11 +252,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,14 +272,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblModTitle;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button btNew;
-        private System.Windows.Forms.Button btEdit;
-        private System.Windows.Forms.Button btSave;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btCancel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.BindingSource bindingSource2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutContent;
     }
 }

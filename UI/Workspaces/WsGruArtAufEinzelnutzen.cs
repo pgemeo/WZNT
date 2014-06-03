@@ -11,7 +11,7 @@ using UI.Shared;
 
 namespace UI.Workspaces
 {
-    public class WsGruArtAufEinzelnutzen : Workspace
+    public class WsGruArtAufEinzelnutzen : WsTemplate
     {
         protected override IList Deleted
         {

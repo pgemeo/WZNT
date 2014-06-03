@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UI.Interfaces
 {
-    public class WsInterfaceUnknown : WsInterface
+    public class WsInterfaceUnknown : WsInterfaceTemplate
     {
 
     }

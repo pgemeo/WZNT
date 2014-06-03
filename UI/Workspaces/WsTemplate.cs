@@ -11,12 +11,12 @@ using UI.Shared;
 
 namespace UI.Workspaces
 {
-    public abstract class Workspace
+    public abstract class WsTemplate
     {
         protected IList _List;
         protected IList _Original;
         
-        protected Workspace()
+        protected WsTemplate()
         {
             Initialize();
         }

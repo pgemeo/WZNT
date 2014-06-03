@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-using UI.Interfaces;
-
+using UI.Controls;
 
 namespace UI.Modules.Grundlagen
 {
@@ -18,8 +17,8 @@ namespace UI.Modules.Grundlagen
         // 
         // Class Properties
         //
-        protected WsInterface Workspace;
-
+        UserControlTemplate ContentControl;
+        
         // 
         // Constructor
         // 
@@ -29,7 +28,28 @@ namespace UI.Modules.Grundlagen
             InitializeTopMenu();
             InitializeTree();
             InitializeEvents();
-            InitializeWorkspace(treeView1.SelectedNode);
+            InitializeContent();
+        }
+
+        //
+        // Content
+        //
+        protected void InitializeContent()
+        {
+            // Clear Content
+            flowLayoutContent.Controls.Clear();
+            // Check New Content
+            if (this.treeView1.SelectedNode != null)
+            {
+                switch (this.treeView1.SelectedNode.Text)
+                {
+                    // Workspace
+                    case "Aufgaben Einzelnutzen":
+                        ContentControl = new UserControlGrundlagen(this.treeView1.SelectedNode);
+                        flowLayoutContent.Controls.Add(ContentControl);
+                        break;
+                }
+            }
         }
 
         // 
@@ -189,62 +209,9 @@ namespace UI.Modules.Grundlagen
                 case TreeViewAction.ByKeyboard:
                     break;
                 case TreeViewAction.ByMouse:
-                    InitializeWorkspace(e.Node);
+                    InitializeContent();
                     break;
             }
-        }
-
-        // 
-        // Workspace
-        //
-        protected void InitializeWorkspace(TreeNode Node)
-        {
-            if (Workspace != null)
-            {
-                // Clear Old
-                Workspace.Clear();
-            }
-            // Create New
-            Workspace = new WsInterfaceUnknown();
-            if (Node != null)
-            {
-                switch (Node.Text)
-                {
-                    // Workspace
-                    case "Aufgaben Einzelnutzen": 
-                        Workspace = new WsInterfaceGruArtAufEinzelnutzen(this.bindingSource1, this.dataGridView1, this.bindingSource2, this.dataGridView2);
-                        break;
-                }
-            }
-        }
-
-        //
-        // Buttons
-        //
-        private void btSave_Click(object sender, EventArgs e)
-        {
-            DialogResult Dialog = MessageBox.Show("Are you sure you want to save?", "Save confirmation",
-                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Dialog == DialogResult.Yes)
-            {
-                if (Workspace.Save())
-                {
-                    MessageBox.Show("All changes have been saved!");
-                    InitializeWorkspace(treeView1.SelectedNode);
-                }
-            }
-        }
-        private void btNew_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void btEdit_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void btCancel_Click(object sender, EventArgs e)
-        {
-            InitializeWorkspace(treeView1.SelectedNode);
         }
 
         //

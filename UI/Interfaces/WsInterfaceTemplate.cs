@@ -8,18 +8,18 @@ using UI.Workspaces;
 
 namespace UI.Interfaces
 {
-    public abstract class WsInterface
+    public abstract class WsInterfaceTemplate
     {
-        protected Workspace _Workspace;
+        protected WsTemplate _Workspace;
 
-        public WsInterface()
+        public WsInterfaceTemplate()
         {
             _Workspace = new WsUnknown();
         }
 
         protected virtual void Initialize()
         { }
-        protected Workspace Workspace
+        protected WsTemplate Workspace
         {
             get
             {

@@ -7,7 +7,8 @@ using UI.Shared;
 
 namespace UI.Workspaces
 {
-    public class WsUnknown : Workspace
+    public class WsUnknown : WsTemplate
     {
+
     }
 }
