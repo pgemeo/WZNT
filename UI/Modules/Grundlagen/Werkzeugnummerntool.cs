@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UI.Shared;
 using System.Collections;
+using UI.Shared;
+using UI.Workspaces;
 using Services;
 using Services.WZNTServices;
+
 
 namespace UI.Modules.Grundlagen
 {
@@ -26,12 +28,11 @@ namespace UI.Modules.Grundlagen
         //
         protected void InitializeWorkspace(TreeNode Node)
         {
-            Workspace = new Workspace(null);
-
+            Workspace = new WsUnknown();
             if (Node.Text.Equals("Aufgaben Einzelnutzen"))
             {
                 // Workspace
-                Workspace = new Workspace(typeof(GruArtAufEinzelnutzen));
+                Workspace = new WsGruArtAufEinzelnutzen();
             }
         }
 
@@ -242,7 +243,7 @@ namespace UI.Modules.Grundlagen
         
         protected IList GetGridView2Collection(DataGridViewRow GridView1SelectedRow)
         {
-            if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
+            if (Workspace.GetType() == typeof(WsGruArtAufEinzelnutzen))
             {
                 // Get Cell Values
                 int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
@@ -261,7 +262,7 @@ namespace UI.Modules.Grundlagen
         {
             if (GridView1SelectedRow != null)
             {
-                if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
+                if (Workspace.GetType() == typeof(WsGruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
                     int? Id = Convert.ToInt32(GridView1SelectedRow.Cells[0].Value);
@@ -281,7 +282,7 @@ namespace UI.Modules.Grundlagen
         {
             if (GridView1SelectedRow != null)
             {
-                if (Workspace.Type == typeof(GruArtAufEinzelnutzen))
+                if (Workspace.GetType() == typeof(WsGruArtAufEinzelnutzen))
                 {
                     // Get Cell Values
                     int Id = (int)GridView1SelectedRow.Cells[0].Value;

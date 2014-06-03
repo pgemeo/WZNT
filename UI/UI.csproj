@@ -69,7 +69,9 @@
     <Compile Include="Shared\BindingConfiguration.cs" />
     <Compile Include="Shared\DataBindingSource.cs" />
     <Compile Include="Shared\GlobalFunctions.cs" />
-    <Compile Include="Shared\Workspace.cs" />
+    <Compile Include="Workspaces\Workspace.cs" />
+    <Compile Include="Workspaces\WsGruArtAufEinzelnutzen.cs" />
+    <Compile Include="Workspaces\WsUnknown.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +108,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Interfaces\" />
     <Folder Include="Modules\Dateneingang\" />
     <Folder Include="Modules\Drucklärung\" />
   </ItemGroup>
