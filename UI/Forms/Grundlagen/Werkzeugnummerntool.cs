@@ -29,7 +29,7 @@ namespace UI.Modules.Grundlagen
             InitializeTopMenu();
             InitializeTree();
             InitializeEvents();
-            InitializeWorkspace(null);
+            InitializeWorkspace(treeView1.SelectedNode);
         }
 
         // 
