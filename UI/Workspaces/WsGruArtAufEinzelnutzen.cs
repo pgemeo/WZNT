@@ -44,7 +44,7 @@ namespace UI.Workspaces
                     (from E in Elements
                         join B in BaseElements on E.Id equals B.Id into Join
                         from J in Join.DefaultIfEmpty()
-                        where J == null && E != null
+                        where J == null && E != null && (E.Id == 0 && E.Aufgabe != null)
                         select E
                     ).ToList();
                 return IList;
