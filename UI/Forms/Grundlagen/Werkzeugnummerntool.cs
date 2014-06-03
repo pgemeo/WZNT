@@ -45,7 +45,7 @@ namespace UI.Modules.Grundlagen
                 {
                     // Workspace
                     case "Aufgaben Einzelnutzen":
-                        ContentControl = new UserControlGrundlagen(this.treeView1.SelectedNode);
+                        ContentControl = new UserControlGruArtAufEinzelnutzen();
                         flowLayoutContent.Controls.Add(ContentControl);
                         break;
                 }

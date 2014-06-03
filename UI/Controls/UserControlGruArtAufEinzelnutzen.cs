@@ -12,18 +12,16 @@ using UI.Shared;
 
 namespace UI.Controls
 {
-    public partial class UserControlGrundlagen : UserControlTemplate
+    public partial class UserControlGruArtAufEinzelnutzen : UserControlTemplate
     {
         // 
         // Class Properties
         //
         protected WsInterfaceTemplate Workspace;
-        protected TreeNode Node;
-
-        public UserControlGrundlagen(TreeNode Node)
+        
+        public UserControlGruArtAufEinzelnutzen()
         {
             InitializeComponent();
-            this.Node = Node;
             InitializeWorkspace();
         }
         
@@ -38,17 +36,7 @@ namespace UI.Controls
                 Workspace.Clear();
             }
             // Create New
-            Workspace = new WsInterfaceUnknown();
-            if (Node != null)
-            {
-                switch (Node.Text)
-                {
-                    // Workspace
-                    case "Aufgaben Einzelnutzen":
-                        Workspace = new WsInterfaceGruArtAufEinzelnutzen(this.bindingSource1, this.dataGridView1, this.bindingSource2, this.dataGridView2);
-                        break;
-                }
-            }
+            Workspace = new WsInterfaceGruArtAufEinzelnutzen(this.bindingSource1, this.dataGridView1, this.bindingSource2, this.dataGridView2);
         }
 
         //

@@ -1,6 +1,6 @@
 ﻿namespace UI.Controls
 {
-    partial class UserControlGrundlagen
+    partial class UserControlGruArtAufEinzelnutzen
     {
         /// <summary> 
         /// Required designer variable.
