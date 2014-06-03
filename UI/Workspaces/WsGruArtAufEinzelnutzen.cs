@@ -13,7 +13,7 @@ namespace UI.Workspaces
 {
     public class WsGruArtAufEinzelnutzen : Workspace
     {
-        public override IList Deleted
+        protected override IList Deleted
         {
             get
             {
@@ -32,7 +32,7 @@ namespace UI.Workspaces
             }
         }
 
-        public override IList Added
+        protected override IList Added
         {
             get
             {
@@ -51,7 +51,7 @@ namespace UI.Workspaces
             }
         }
 
-        public override IList Modified
+        protected override IList Modified
         {
             get
             {

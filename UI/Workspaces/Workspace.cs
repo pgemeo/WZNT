@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Services.WZNTServices;
 using Services;
+using UI.Shared;
 
 namespace UI.Workspaces
 {
@@ -15,19 +16,12 @@ namespace UI.Workspaces
         protected IList _List;
         protected IList _Original;
         
-        public Workspace()
+        protected Workspace()
         {
             Initialize();
         }
-        
-        public IList List
-        {
-            get {
-                return _List;
-            }
-        }
 
-        public IList Original
+        protected IList Original
         {
             get
             {
@@ -40,23 +34,13 @@ namespace UI.Workspaces
             Initialize();
         }
 
-        public bool SaveChanges()
-        {
-            bool ReturnValue = false;
-            // DDLs
-            ReturnValue = ActionSave();
-            // Refresh Workspace
-            Refresh();
-            return ReturnValue;
-        }
-
         protected virtual bool ActionSave()
         {
             bool ReturnValue = false;
             return ReturnValue;
         }
 
-        public virtual IList Deleted
+        protected virtual IList Deleted
         {
             get
             {
@@ -65,7 +49,7 @@ namespace UI.Workspaces
             }
         }
 
-        public virtual IList Added
+        protected virtual IList Added
         {
             get
             {
@@ -74,24 +58,13 @@ namespace UI.Workspaces
             }
         }
 
-        public virtual IList Modified
+        protected virtual IList Modified
         {
             get
             {
                 IList IList = null;
                 return IList;
             }
-        }
-
-        public virtual object FindElement<T>(Predicate<T> Predicate) where T : class
-        {
-            return null;
-        }
-
-        public virtual bool SaveElement(object Element, object Data)
-        {
-            bool ReturnValue = false;
-            return ReturnValue;
         }
 
         protected virtual void Initialize()
@@ -111,6 +84,39 @@ namespace UI.Workspaces
         {
             IList IList = null;
             return IList;
+        }
+
+        //
+        // Public
+        //
+        
+        public IList List
+        {
+            get
+            {
+                return _List;
+            }
+        }
+        
+        public bool SaveChanges()
+        {
+            bool ReturnValue = false;
+            // DDLs
+            ReturnValue = ActionSave();
+            // Refresh Workspace
+            Refresh();
+            return ReturnValue;
+        }
+
+        public virtual object FindElement<T>(Predicate<T> Predicate) where T : class
+        {
+            return null;
+        }
+
+        public virtual bool SaveElement(object Element, object Data)
+        {
+            bool ReturnValue = false;
+            return ReturnValue;
         }
     }
 }
