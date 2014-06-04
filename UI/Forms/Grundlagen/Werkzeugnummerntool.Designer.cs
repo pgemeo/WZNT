@@ -1,4 +1,5 @@
-﻿namespace UI.Modules.Grundlagen
+﻿using System.Windows.Forms;
+namespace UI.Modules.Grundlagen
 {
     partial class Werkzeugnummerntool
     {
@@ -253,7 +254,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
+            // FullScreen
+            this.WindowState = FormWindowState.Maximized;
         }
 
         #endregion
