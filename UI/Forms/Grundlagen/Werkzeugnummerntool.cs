@@ -38,7 +38,7 @@ namespace UI.Modules.Grundlagen
             {
                 switch (this.treeView1.SelectedNode.Text)
                 {
-                    // Workspace
+                    // User Control
                     case "Aufgaben Einzelnutzen":
                         UcGruArtAufEinzelnutzen Control = new UcGruArtAufEinzelnutzen();
                         flowLayoutContent.Controls.Add(Control);

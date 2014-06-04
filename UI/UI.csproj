@@ -64,9 +64,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\WsInterfaceGruArtAufEinzelnutzen.cs" />
-    <Compile Include="Interfaces\WsInterfaceTemplate.cs" />
-    <Compile Include="Interfaces\WsInterfaceUnknown.cs" />
     <Compile Include="Forms\Grundlagen\Werkzeugnummerntool.cs">
       <SubType>Form</SubType>
     </Compile>
