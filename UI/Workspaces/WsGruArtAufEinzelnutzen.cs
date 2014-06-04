@@ -217,7 +217,10 @@ namespace UI.Workspaces
         {
             get
             {
-                return DbManager.ReadGruSprachenList();
+                IList List = DbManager.ReadGruSprachenList();
+                // Empty Element
+                List.Insert(0, new GruSprachen() { Id = 0, Sprache = null });
+                return List;
             }
         }
     }
