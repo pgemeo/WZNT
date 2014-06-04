@@ -31,7 +31,6 @@ namespace UI.Modules.Grundlagen
         {
             this.flPanelTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,7 +45,6 @@ namespace UI.Modules.Grundlagen
             this.flowLayoutContent = new System.Windows.Forms.FlowLayoutPanel();
             this.flPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,7 +59,6 @@ namespace UI.Modules.Grundlagen
             // flPanelTop
             // 
             this.flPanelTop.Controls.Add(this.pictureBox3);
-            this.flPanelTop.Controls.Add(this.pictureBox4);
             this.flPanelTop.Controls.Add(this.pictureBox5);
             this.flPanelTop.Controls.Add(this.pictureBox6);
             this.flPanelTop.Location = new System.Drawing.Point(0, 0);
@@ -81,23 +78,11 @@ namespace UI.Modules.Grundlagen
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::UI.Properties.Resources.flag_germany;
-            this.pictureBox4.Location = new System.Drawing.Point(44, 3);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(10, 3, 0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::UI.Properties.Resources.flag_france;
-            this.pictureBox5.Location = new System.Drawing.Point(78, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(44, 3);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(10, 3, 0, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
@@ -109,7 +94,7 @@ namespace UI.Modules.Grundlagen
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::UI.Properties.Resources.flag_russia;
-            this.pictureBox6.Location = new System.Drawing.Point(112, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(78, 3);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(10, 3, 0, 0);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
@@ -240,9 +225,9 @@ namespace UI.Modules.Grundlagen
             this.Controls.Add(this.flPanelTop);
             this.Name = "Werkzeugnummerntool";
             this.Text = "Werkzeugnummerntool";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flPanelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -254,8 +239,7 @@ namespace UI.Modules.Grundlagen
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            // FullScreen
-            this.WindowState = FormWindowState.Maximized;
+
         }
 
         #endregion
@@ -265,7 +249,6 @@ namespace UI.Modules.Grundlagen
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;
