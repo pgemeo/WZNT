@@ -23,25 +23,25 @@ namespace UI.Modules.Grundlagen
             InitializeTopMenu();
             InitializeTree();
             InitializeEvents();
-            InitializeContent();
+            LoadContent();
         }
 
         //
         // Content
         //
-        protected void InitializeContent()
+        protected void LoadContent()
         {
             // Clear Content
             flowLayoutContent.Controls.Clear();
-            // Check New Content
+            // New Content
             if (this.treeView1.SelectedNode != null)
             {
                 switch (this.treeView1.SelectedNode.Text)
                 {
                     // Workspace
                     case "Aufgaben Einzelnutzen":
-                        UcGruArtAufEinzelnutzen ContentControl = new UcGruArtAufEinzelnutzen();
-                        flowLayoutContent.Controls.Add(ContentControl);
+                        UcGruArtAufEinzelnutzen Control = new UcGruArtAufEinzelnutzen();
+                        flowLayoutContent.Controls.Add(Control);
                         break;
                 }
             }
@@ -204,7 +204,7 @@ namespace UI.Modules.Grundlagen
                 case TreeViewAction.ByKeyboard:
                     break;
                 case TreeViewAction.ByMouse:
-                    InitializeContent();
+                    LoadContent();
                     break;
             }
         }

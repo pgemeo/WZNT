@@ -22,13 +22,13 @@ namespace UI.Controls
         public UcGruArtAufEinzelnutzen()
         {
             InitializeComponent();
-            InitializeWorkspace();
+            LoadWorkspace();
         }
         
         // 
         // Workspace
         //
-        protected void InitializeWorkspace()
+        protected void LoadWorkspace()
         {
             if (Workspace != null)
             {
@@ -51,7 +51,7 @@ namespace UI.Controls
                 if (Workspace.Save())
                 {
                     MessageBox.Show("All changes have been saved!");
-                    InitializeWorkspace();
+                    LoadWorkspace();
                 }
             }
         }
@@ -65,7 +65,7 @@ namespace UI.Controls
         }
         private void btCancel_Click(object sender, EventArgs e)
         {
-            InitializeWorkspace();
+            LoadWorkspace();
         }
     }
 }
