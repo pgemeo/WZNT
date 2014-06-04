@@ -17,7 +17,7 @@ namespace UI.Controls
         // 
         // Class Properties
         //
-        protected WsInterfaceTemplate Workspace;
+        protected WsInterfaceTemplate IWorkspace;
         
         public UcGruArtAufEinzelnutzen()
         {
@@ -30,13 +30,13 @@ namespace UI.Controls
         //
         protected void LoadWorkspace()
         {
-            if (Workspace != null)
+            if (IWorkspace != null)
             {
                 // Clear Old
-                Workspace.Clear();
+                IWorkspace.Clear();
             }
             // Create New
-            Workspace = new WsInterfaceGruArtAufEinzelnutzen(this.bindingSource1, this.dataGridView1, this.bindingSource2, this.dataGridView2);
+            IWorkspace = new WsInterfaceGruArtAufEinzelnutzen(this.bindingSource1, this.dataGridView1, this.bindingSource2, this.dataGridView2);
         }
 
         //
@@ -48,7 +48,7 @@ namespace UI.Controls
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.Yes)
             {
-                if (Workspace.Save())
+                if (IWorkspace.Save())
                 {
                     MessageBox.Show("All changes have been saved!");
                     LoadWorkspace();
