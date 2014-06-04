@@ -99,7 +99,7 @@ namespace UI.Controls
                 Columns.Add(Column);
             }
 
-            // IdSprache
+            // Aufgabe
             Column = new DataGridViewTextBoxColumn();
             {
                 Column.HeaderText = "Aufgabe";
@@ -149,7 +149,7 @@ namespace UI.Controls
                 Column.Visible = false;
                 Columns.Add(Column);
             }
-            
+
             // Sprache
             DataGridViewComboBoxColumn ComboBoxColumn = new DataGridViewComboBoxColumn();
             {
@@ -161,7 +161,7 @@ namespace UI.Controls
                 ComboBoxColumn.DataPropertyName = "IdSprache";
                 Columns.Add(ComboBoxColumn);
             }
-            
+                        
             // Uebersetzung
             Column = new DataGridViewTextBoxColumn();
             {
