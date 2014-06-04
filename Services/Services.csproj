@@ -93,6 +93,9 @@
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruArtAufEinzelnutzen.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruSprachen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WZNTServices\Reference.svcmap">

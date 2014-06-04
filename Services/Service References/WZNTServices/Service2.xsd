@@ -158,4 +158,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfGruArtAufEinzelnutzen" nillable="true" type="tns:ArrayOfGruArtAufEinzelnutzen" />
+  <xs:complexType name="ArrayOfGruSprachen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruSprachen" nillable="true" type="tns:ArrayOfGruSprachen" />
 </xs:schema>

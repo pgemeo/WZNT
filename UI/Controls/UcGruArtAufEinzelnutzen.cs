@@ -155,9 +155,10 @@ namespace UI.Controls
             {
                 ComboBoxColumn.FlatStyle = FlatStyle.Flat;
                 ComboBoxColumn.DataSource = Workspace.GruSprachens;
-                ComboBoxColumn.ValueMember = "IdSprache";
+                ComboBoxColumn.ValueMember = "Id";
                 ComboBoxColumn.DisplayMember = "Sprache";
                 ComboBoxColumn.HeaderText = "Sprache";
+                ComboBoxColumn.DataPropertyName = "IdSprache";
                 Columns.Add(ComboBoxColumn);
             }
             

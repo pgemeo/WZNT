@@ -1523,6 +1523,12 @@ namespace Services.WZNTServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
         System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
+        Services.WZNTServices.GruSprachen[] ReadGruSprachenList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
         
@@ -1633,6 +1639,14 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen model) {
             return base.Channel.GetListGruArtAufEinSpracheAsync(model);
+        }
+        
+        public Services.WZNTServices.GruSprachen[] ReadGruSprachenList() {
+            return base.Channel.ReadGruSprachenList();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync() {
+            return base.Channel.ReadGruSprachenListAsync();
         }
         
         public double ParsePixels(string File1, string File2) {

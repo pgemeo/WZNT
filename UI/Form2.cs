@@ -16,9 +16,9 @@ namespace UI
 
         public Form2()
         {
-            InitializeComponent();  
+            InitializeComponent();
 
-            mycollection = Services.DbManager.GetListGruArtAufEinzelnutzen();
+            mycollection = Services.DbManager.ReadGruArtAufEinzelnutzenList();
             gruArtAufEinzelnutzenBindingSource.DataSource = mycollection;
 
             /*

@@ -18,7 +18,7 @@ namespace UI.Workspaces
 
         public WsGruArtAufEinzelnutzen()
         {
-            this._List = DbManager.GetListGruArtAufEinzelnutzen();
+            this._List = DbManager.ReadGruArtAufEinzelnutzenList();
             this._Original = GlobalFunctions.CloneList(this._List);
         }
 
@@ -217,7 +217,7 @@ namespace UI.Workspaces
         {
             get
             {
-                return null;
+                return DbManager.ReadGruSprachenList();
             }
         }
     }
