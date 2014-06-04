@@ -12,14 +12,14 @@ using UI.Shared;
 
 namespace UI.Controls
 {
-    public partial class UserControlGruArtAufEinzelnutzen : UserControlTemplate
+    public partial class UcGruArtAufEinzelnutzen : UserControl
     {
         // 
         // Class Properties
         //
         protected WsInterfaceTemplate Workspace;
         
-        public UserControlGruArtAufEinzelnutzen()
+        public UcGruArtAufEinzelnutzen()
         {
             InitializeComponent();
             InitializeWorkspace();

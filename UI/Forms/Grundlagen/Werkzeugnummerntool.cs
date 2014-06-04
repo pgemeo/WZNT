@@ -13,12 +13,7 @@ using UI.Controls;
 namespace UI.Modules.Grundlagen
 {
     public partial class Werkzeugnummerntool : Form
-    {
-        // 
-        // Class Properties
-        //
-        UserControlTemplate ContentControl;
-        
+    {        
         // 
         // Constructor
         // 
@@ -45,7 +40,7 @@ namespace UI.Modules.Grundlagen
                 {
                     // Workspace
                     case "Aufgaben Einzelnutzen":
-                        ContentControl = new UserControlGruArtAufEinzelnutzen();
+                        UcGruArtAufEinzelnutzen ContentControl = new UcGruArtAufEinzelnutzen();
                         flowLayoutContent.Controls.Add(ContentControl);
                         break;
                 }
