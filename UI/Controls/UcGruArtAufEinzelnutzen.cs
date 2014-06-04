@@ -69,15 +69,113 @@ namespace UI.Controls
         
         private void BindView()
         {
-            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace.Data);
+            SetViewColumns();
+            SetViewRows();
         }
-        private void BindElementView(IList List)
+        private void BindElementView(IList Data)
         {
-            DataBindingSource.Set(this.bindingSource2, this.dataGridView2, List);
+            SetElementViewColumns();
+            SetElementViewRows(Data);
         }
         private void ResetElementView()
         {
             BindElementView(null);
+        }
+
+        private void SetViewColumns()
+        {
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            List<DataGridViewColumn> Columns = new List<DataGridViewColumn>();
+
+            // Id
+            DataGridViewColumn Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "Id";
+                Column.DataPropertyName = "Id";
+                Column.Visible = false;
+                Columns.Add(Column);
+            }
+
+            // IdSprache
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "Aufgabe";
+                Column.DataPropertyName = "Aufgabe";
+                Column.Visible = true;
+                Columns.Add(Column);
+            }
+
+            this.dataGridView1.Columns.AddRange(Columns.ToArray());
+        }
+        private void SetViewRows()
+        {
+            this.bindingSource1.DataSource = Workspace.Data;
+            this.dataGridView1.DataSource = this.bindingSource1;
+        }
+        private void SetElementViewColumns()
+        {
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.Columns.Clear();
+            this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            List<DataGridViewColumn> Columns = new List<DataGridViewColumn>();
+
+            // Id
+            DataGridViewColumn Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "Id";
+                Column.DataPropertyName = "Id";
+                Column.Visible = false;
+                Columns.Add(Column);
+            }
+            
+            // IdSprache
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "IdSprache";
+                Column.DataPropertyName = "IdSprache";
+                Column.Visible = false;
+                Columns.Add(Column);
+            }
+
+            // IdAufgabe
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "IdAufgabe";
+                Column.DataPropertyName = "IdAufgabe";
+                Column.Visible = false;
+                Columns.Add(Column);
+            }
+            
+            // Sprache
+            DataGridViewComboBoxColumn ComboBoxColumn = new DataGridViewComboBoxColumn();
+            {
+                ComboBoxColumn.FlatStyle = FlatStyle.Flat;
+                ComboBoxColumn.DataSource = Workspace.GruSprachens;
+                ComboBoxColumn.ValueMember = "IdSprache";
+                ComboBoxColumn.DisplayMember = "Sprache";
+                ComboBoxColumn.HeaderText = "Sprache";
+                Columns.Add(ComboBoxColumn);
+            }
+            
+            // Uebersetzung
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "Uebersetzung";
+                Column.DataPropertyName = "Uebersetzung";
+                Column.Visible = true;
+                Columns.Add(Column);
+            }
+            
+            this.dataGridView2.Columns.AddRange(Columns.ToArray());
+        }
+        private void SetElementViewRows(IList Data)
+        {
+            this.bindingSource2.DataSource = Data;
+            this.dataGridView2.DataSource = this.bindingSource2;
         }
 
         private void BindEvents()
