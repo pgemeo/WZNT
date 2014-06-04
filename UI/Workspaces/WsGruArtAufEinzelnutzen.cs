@@ -11,14 +11,39 @@ using UI.Shared;
 
 namespace UI.Workspaces
 {
-    public class WsGruArtAufEinzelnutzen : WsTemplate
+    public class WsGruArtAufEinzelnutzen
     {
-        protected override IList Deleted
+        protected IList _List;
+        protected IList _Original;
+
+        public WsGruArtAufEinzelnutzen()
+        {
+            this._List = DbManager.GetListGruArtAufEinzelnutzen();
+            this._Original = GlobalFunctions.CloneList(this._List);
+        }
+
+        public IList Data
+        {
+            get
+            {
+                return _List;
+            }
+        }
+
+        protected IList Original
+        {
+            get
+            {
+                return _Original;
+            }
+        }
+
+        protected IList Deleted
         {
             get
             {
                 IList IList = null;
-                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)Data;
                 List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
                 // Finding Deletes
                 IList =
@@ -32,12 +57,12 @@ namespace UI.Workspaces
             }
         }
 
-        protected override IList Added
+        protected IList Added
         {
             get
             {
                 IList IList = null;
-                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)Data;
                 List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
                 // Finding Inserts
                 IList =
@@ -51,12 +76,12 @@ namespace UI.Workspaces
             }
         }
 
-        protected override IList Modified
+        protected IList Modified
         {
             get
             {
                 IList IList = null;
-                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)List;
+                List<GruArtAufEinzelnutzen> Elements = (List<GruArtAufEinzelnutzen>)Data;
                 List<GruArtAufEinzelnutzen> BaseElements = (List<GruArtAufEinzelnutzen>)Original;
                 // Finding Edits
                 IList =
@@ -69,14 +94,14 @@ namespace UI.Workspaces
             }
         }
 
-        public override object FindElement<T>(Predicate<T> Predicate)
+        public object FindElement<T>(Predicate<T> Predicate)
         {
-            List<GruArtAufEinzelnutzen> Collection = (List<GruArtAufEinzelnutzen>)List;
+            List<GruArtAufEinzelnutzen> Collection = (List<GruArtAufEinzelnutzen>)Data;
             Predicate<GruArtAufEinzelnutzen> Filter = (Predicate as Predicate<GruArtAufEinzelnutzen>);
             return Collection.Find(Filter);
         }
 
-        public override bool SaveElement(object Element, object Data)
+        public bool SaveElement(object Element, object Data)
         {
             bool ReturnValue = false;
             if (Element != null)
@@ -106,7 +131,7 @@ namespace UI.Workspaces
             return ReturnValue;
         }
 
-        protected override bool ActionSave()
+        public bool SaveChanges()
         {
             bool ReturnValue = false;
             List<GruArtAufEinzelnutzen> InsertElements = (List<GruArtAufEinzelnutzen>)Added;
@@ -121,13 +146,7 @@ namespace UI.Workspaces
             return ReturnValue;
         }
 
-        protected override void Initialize()
-        {
-            this._List = DbManager.GetListGruArtAufEinzelnutzen();
-            this._Original = GlobalFunctions.CloneList(this._List);
-        }
-
-        protected override IList GetDeletedChildren(object Element, object Data)
+        protected IList GetDeletedChildren(object Element, object Data)
         {
             IList IList = null;
             if (Element != null)
@@ -144,7 +163,7 @@ namespace UI.Workspaces
             }
             return IList;
         }
-        protected override IList GetAddedChildren(object Element, object Data)
+        protected IList GetAddedChildren(object Element, object Data)
         {
             IList IList = null;
             if (Element != null)
@@ -171,7 +190,7 @@ namespace UI.Workspaces
             }
             return IList;
         }
-        protected override IList GetModifiedChildren(object Element, object Data)
+        protected IList GetModifiedChildren(object Element, object Data)
         {
             IList IList = null;
             if (Element != null)
@@ -192,6 +211,14 @@ namespace UI.Workspaces
                     ).ToList();
             }
             return IList;
+        }
+
+        public IList GruSprachens
+        {
+            get
+            {
+                return null;
+            }
         }
     }
 }

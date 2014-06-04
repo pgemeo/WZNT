@@ -19,7 +19,7 @@ namespace UI.Controls
         // 
         // Class Properties
         //
-        protected WsTemplate Workspace;
+        protected WsGruArtAufEinzelnutzen Workspace;
         
         public UcGruArtAufEinzelnutzen()
         {
@@ -69,7 +69,7 @@ namespace UI.Controls
         
         private void BindView()
         {
-            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace.List);
+            DataBindingSource.Set(this.bindingSource1, this.dataGridView1, Workspace.Data);
         }
         private void BindElementView(IList List)
         {
