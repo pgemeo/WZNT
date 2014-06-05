@@ -89,7 +89,7 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Grundlagen\Werkzeugnummerntool.fr-FR.resx">
+    <EmbeddedResource Include="Forms\Grundlagen\Werkzeugnummerntool.fr.resx">
       <DependentUpon>Werkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Grundlagen\Werkzeugnummerntool.resx">

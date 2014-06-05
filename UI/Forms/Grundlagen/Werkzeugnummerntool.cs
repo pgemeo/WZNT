@@ -47,7 +47,7 @@ namespace UI.Modules.Grundlagen
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Culture);
             LoadContent();
         }
-
+        
         //
         // Content
         //
@@ -74,7 +74,7 @@ namespace UI.Modules.Grundlagen
         // 
         protected void InitializeTopMenu()
         {
-            // TopMenuStrip
+            // New
             MenuStrip TopMenuStrip = new MenuStrip();
             TopMenuStrip.Location = new System.Drawing.Point(0, 0);
             TopMenuStrip.Name = "TopMenuStrip";

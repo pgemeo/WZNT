@@ -8,8 +8,8 @@ namespace UI.Shared
 {
     public class AppConstants
     {
-        public const string K_LANGUAGE_GERMAN = "de-DE";
-        public const string K_LANGUAGE_FRENCH = "fr-FR";
-        public const string K_LANGUAGE_RUSSIAN = "ru-RU";
+        public const string K_LANGUAGE_GERMAN = "de";
+        public const string K_LANGUAGE_FRENCH = "fr";
+        public const string K_LANGUAGE_RUSSIAN = "ru";
     }
 }
