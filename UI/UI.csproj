@@ -77,7 +77,7 @@
     <Compile Include="Shared\DataBindingSource.cs" />
     <Compile Include="Shared\GlobalFunctions.cs" />
     <Compile Include="Workspaces\WsGruArtAufEinzelnutzen.cs" />
-    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.fr-FR.resx">
+    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.fr.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.resx">

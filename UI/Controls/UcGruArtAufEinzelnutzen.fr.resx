@@ -117,17 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="btSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 0</value>
+  <data name="btEdit.Text" xml:space="preserve">
+    <value>Changement</value>
   </data>
-  <data name="btCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 0</value>
+  <data name="btSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 25</value>
+  <data name="btSave.Text" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="btCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btCancel.Text" xml:space="preserve">
+    <value>Abandonner</value>
   </data>
 </root>
