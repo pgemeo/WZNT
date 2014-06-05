@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Globalization;
+using System.Threading;
 using UI.Controls;
+using UI.Shared;
 
 namespace UI.Modules.Grundlagen
 {
@@ -20,10 +23,20 @@ namespace UI.Modules.Grundlagen
         public Werkzeugnummerntool()
         {
             InitializeComponent();
+            InitializeCulture();
             InitializeTopMenu();
             InitializeTree();
             InitializeEvents();
             LoadContent();
+        }
+
+        //
+        // Culture
+        //
+        protected void InitializeCulture()
+        {
+            // Sets the UI culture.
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(AppConstants.K_LANGUAGE_GERMAN);
         }
 
         //
