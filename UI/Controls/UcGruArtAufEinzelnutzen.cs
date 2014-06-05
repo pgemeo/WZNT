@@ -44,10 +44,6 @@ namespace UI.Controls
                 }
             }
         }
-        private void btNew_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btEdit_Click(object sender, EventArgs e)
         {
 

@@ -22,21 +22,30 @@ namespace UI.Modules.Grundlagen
         // 
         public Werkzeugnummerntool()
         {
+            Initialize();
+        }
+
+        //
+        // Initialize
+        //
+        protected void Initialize()
+        {
             InitializeComponent();
-            InitializeCulture();
+            InitializeEvents();
             InitializeTopMenu();
             InitializeTree();
-            InitializeEvents();
             LoadContent();
         }
 
         //
         // Culture
         //
-        protected void InitializeCulture()
+        protected void SetCulture(string Culture)
         {
             // Sets the UI culture.
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(AppConstants.K_LANGUAGE_GERMAN);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(Culture);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Culture);
+            LoadContent();
         }
 
         //
@@ -230,6 +239,25 @@ namespace UI.Modules.Grundlagen
             this.Activate();
             this.Dispose();
             this.Close();
+        }
+
+        //
+        // Flags
+        //
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Sets the UI culture.
+            SetCulture(AppConstants.K_LANGUAGE_FRENCH);
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            // Sets the UI culture.
+            SetCulture(AppConstants.K_LANGUAGE_GERMAN);
+        }
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            // Sets the UI culture.
+            SetCulture(AppConstants.K_LANGUAGE_RUSSIAN);
         }
     }
 }

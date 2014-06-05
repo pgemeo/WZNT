@@ -35,7 +35,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btNew = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
@@ -64,18 +63,11 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btNew);
             this.flowLayoutPanel1.Controls.Add(this.btEdit);
             this.flowLayoutPanel1.Controls.Add(this.btSave);
             this.flowLayoutPanel1.Controls.Add(this.btCancel);
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            // 
-            // btNew
-            // 
-            resources.ApplyResources(this.btNew, "btNew");
-            this.btNew.Name = "btNew";
-            this.btNew.UseVisualStyleBackColor = true;
             // 
             // btEdit
             // 
@@ -119,7 +111,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btNew;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btCancel;

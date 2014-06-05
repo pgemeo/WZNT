@@ -167,37 +167,10 @@
   <data name="&gt;&gt;dataGridView2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btNew.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btNew.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="btNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="btNew.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btNew.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="&gt;&gt;btNew.Name" xml:space="preserve">
-    <value>btNew</value>
-  </data>
-  <data name="&gt;&gt;btNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btNew.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;btNew.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 0</value>
-  </data>
   <data name="btEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
@@ -220,10 +193,10 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;btEdit.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="btSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 0</value>
+    <value>75, 0</value>
   </data>
   <data name="btSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -247,10 +220,10 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;btSave.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="btCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 0</value>
+    <value>150, 0</value>
   </data>
   <data name="btCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -274,13 +247,13 @@
     <value>flowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;btCancel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 350</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 25</value>
+    <value>280, 25</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
