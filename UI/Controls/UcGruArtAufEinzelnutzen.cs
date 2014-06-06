@@ -8,9 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using Services.WZNTServices;
 using UI.Shared;
 using UI.Workspaces;
-using Services.WZNTServices;
+using UI.ResFilesManagers;
+
 
 namespace UI.Controls
 {
@@ -98,7 +100,7 @@ namespace UI.Controls
             // Aufgabe
             Column = new DataGridViewTextBoxColumn();
             {
-                Column.HeaderText = "Aufgabe";
+                Column.HeaderText = ResUcGruArtAufEinzelnutzen.Aufgabe; // Read Resource File
                 Column.DataPropertyName = "Aufgabe";
                 Column.Visible = true;
                 Columns.Add(Column);

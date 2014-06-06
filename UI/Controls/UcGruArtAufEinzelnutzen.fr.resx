@@ -136,4 +136,7 @@
   <data name="btCancel.Text" xml:space="preserve">
     <value>Abandonner</value>
   </data>
+  <data name="Aufgabe" xml:space="preserve">
+    <value>Tâche</value>
+  </data>
 </root>
