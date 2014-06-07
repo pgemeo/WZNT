@@ -20,5 +20,21 @@ namespace UI.ResFilesManagers
                 return RManager.GetString("Aufgabe");
             }
         }
+        public static string Sprache
+        {
+            get
+            {
+                ResourceManager RManager = new ResourceManager(typeof(UcGruArtAufEinzelnutzen));
+                return RManager.GetString("Sprache");
+            }
+        }
+        public static string Uebersetzung
+        {
+            get
+            {
+                ResourceManager RManager = new ResourceManager(typeof(UcGruArtAufEinzelnutzen));
+                return RManager.GetString("Uebersetzung");
+            }
+        }
     }
 }

@@ -155,7 +155,7 @@ namespace UI.Controls
                 ComboBoxColumn.DataSource = Workspace.GruSprachens;
                 ComboBoxColumn.ValueMember = "Id";
                 ComboBoxColumn.DisplayMember = "Sprache";
-                ComboBoxColumn.HeaderText = "Sprache";
+                ComboBoxColumn.HeaderText = ResUcGruArtAufEinzelnutzen.Sprache; // Read Resource File
                 ComboBoxColumn.DataPropertyName = "IdSprache";
                 Columns.Add(ComboBoxColumn);
             }
@@ -163,7 +163,7 @@ namespace UI.Controls
             // Uebersetzung
             Column = new DataGridViewTextBoxColumn();
             {
-                Column.HeaderText = "Uebersetzung";
+                Column.HeaderText = ResUcGruArtAufEinzelnutzen.Uebersetzung; // Read Resource File
                 Column.DataPropertyName = "Uebersetzung";
                 Column.Visible = true;
                 Columns.Add(Column);

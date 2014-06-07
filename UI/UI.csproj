@@ -52,6 +52,12 @@
     <Compile Include="Controls\UcGruArtAufEinzelnutzen.Designer.cs">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UcWerkzeugnummerntool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcWerkzeugnummerntool.Designer.cs">
+      <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.fr.resx">
+      <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.resx">
+      <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

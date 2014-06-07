@@ -30,184 +30,155 @@ namespace UI.Modules.Grundlagen
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Werkzeugnummerntool));
-            this.flPanelTop = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblModTitle = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.flowLayoutContent = new System.Windows.Forms.FlowLayoutPanel();
-            this.flPanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.flowPanelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureFlag1 = new System.Windows.Forms.PictureBox();
+            this.pictureFlag2 = new System.Windows.Forms.PictureBox();
+            this.pictureFlag3 = new System.Windows.Forms.PictureBox();
+            this.panelToolbar = new System.Windows.Forms.Panel();
+            this.pictureConfigs = new System.Windows.Forms.PictureBox();
+            this.pictureSync = new System.Windows.Forms.PictureBox();
+            this.pictureHelp = new System.Windows.Forms.PictureBox();
+            this.pictureExit = new System.Windows.Forms.PictureBox();
+            this.pictureUndo = new System.Windows.Forms.PictureBox();
+            this.flowPanelContent = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowPanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag3)).BeginInit();
+            this.panelToolbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureConfigs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSync)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHelp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUndo)).BeginInit();
             this.SuspendLayout();
             // 
-            // flPanelTop
+            // flowPanelMenu
             // 
-            resources.ApplyResources(this.flPanelTop, "flPanelTop");
-            this.flPanelTop.Controls.Add(this.pictureBox3);
-            this.flPanelTop.Controls.Add(this.pictureBox5);
-            this.flPanelTop.Controls.Add(this.pictureBox6);
-            this.flPanelTop.Name = "flPanelTop";
+            this.flowPanelMenu.Controls.Add(this.pictureFlag1);
+            this.flowPanelMenu.Controls.Add(this.pictureFlag2);
+            this.flowPanelMenu.Controls.Add(this.pictureFlag3);
+            resources.ApplyResources(this.flowPanelMenu, "flowPanelMenu");
+            this.flowPanelMenu.Name = "flowPanelMenu";
             // 
-            // pictureBox3
+            // pictureFlag1
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::UI.Properties.Resources.flag_germany;
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureFlag1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureFlag1.Image = global::UI.Properties.Resources.flag_germany;
+            resources.ApplyResources(this.pictureFlag1, "pictureFlag1");
+            this.pictureFlag1.Name = "pictureFlag1";
+            this.pictureFlag1.TabStop = false;
+            this.pictureFlag1.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox5
+            // pictureFlag2
             // 
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::UI.Properties.Resources.flag_france;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureFlag2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureFlag2.Image = global::UI.Properties.Resources.flag_france;
+            resources.ApplyResources(this.pictureFlag2, "pictureFlag2");
+            this.pictureFlag2.Name = "pictureFlag2";
+            this.pictureFlag2.TabStop = false;
+            this.pictureFlag2.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox6
+            // pictureFlag3
             // 
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::UI.Properties.Resources.flag_russia;
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureFlag3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureFlag3.Image = global::UI.Properties.Resources.flag_russia;
+            resources.ApplyResources(this.pictureFlag3, "pictureFlag3");
+            this.pictureFlag3.Name = "pictureFlag3";
+            this.pictureFlag3.TabStop = false;
+            this.pictureFlag3.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // panel1
+            // panelToolbar
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Name = "panel1";
+            this.panelToolbar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelToolbar.Controls.Add(this.pictureConfigs);
+            this.panelToolbar.Controls.Add(this.pictureSync);
+            this.panelToolbar.Controls.Add(this.pictureHelp);
+            this.panelToolbar.Controls.Add(this.pictureExit);
+            this.panelToolbar.Controls.Add(this.pictureUndo);
+            resources.ApplyResources(this.panelToolbar, "panelToolbar");
+            this.panelToolbar.Name = "panelToolbar";
             // 
-            // pictureBox2
+            // pictureConfigs
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::UI.Properties.Resources.preferences;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.pictureConfigs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureConfigs.Image = global::UI.Properties.Resources.preferences;
+            resources.ApplyResources(this.pictureConfigs, "pictureConfigs");
+            this.pictureConfigs.Name = "pictureConfigs";
+            this.pictureConfigs.TabStop = false;
             // 
-            // pictureBox1
+            // pictureSync
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::UI.Properties.Resources.refresh;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.pictureSync.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureSync.Image = global::UI.Properties.Resources.refresh;
+            resources.ApplyResources(this.pictureSync, "pictureSync");
+            this.pictureSync.Name = "pictureSync";
+            this.pictureSync.TabStop = false;
             // 
-            // pictureBox8
+            // pictureHelp
             // 
-            resources.ApplyResources(this.pictureBox8, "pictureBox8");
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::UI.Properties.Resources.help;
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.TabStop = false;
+            this.pictureHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureHelp.Image = global::UI.Properties.Resources.help;
+            resources.ApplyResources(this.pictureHelp, "pictureHelp");
+            this.pictureHelp.Name = "pictureHelp";
+            this.pictureHelp.TabStop = false;
             // 
-            // pictureBox7
+            // pictureExit
             // 
-            resources.ApplyResources(this.pictureBox7, "pictureBox7");
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::UI.Properties.Resources.exit;
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.TabStop = false;
+            this.pictureExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureExit.Image = global::UI.Properties.Resources.exit;
+            resources.ApplyResources(this.pictureExit, "pictureExit");
+            this.pictureExit.Name = "pictureExit";
+            this.pictureExit.TabStop = false;
             // 
-            // pictureBox9
+            // pictureUndo
             // 
-            resources.ApplyResources(this.pictureBox9, "pictureBox9");
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::UI.Properties.Resources.undo;
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.TabStop = false;
+            this.pictureUndo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureUndo.Image = global::UI.Properties.Resources.undo;
+            resources.ApplyResources(this.pictureUndo, "pictureUndo");
+            this.pictureUndo.Name = "pictureUndo";
+            this.pictureUndo.TabStop = false;
             // 
-            // panel2
+            // flowPanelContent
             // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Controls.Add(this.lblModTitle);
-            this.panel2.Name = "panel2";
-            // 
-            // lblModTitle
-            // 
-            resources.ApplyResources(this.lblModTitle, "lblModTitle");
-            this.lblModTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblModTitle.Name = "lblModTitle";
-            // 
-            // treeView1
-            // 
-            resources.ApplyResources(this.treeView1, "treeView1");
-            this.treeView1.Name = "treeView1";
-            // 
-            // flowLayoutContent
-            // 
-            resources.ApplyResources(this.flowLayoutContent, "flowLayoutContent");
-            this.flowLayoutContent.Name = "flowLayoutContent";
+            resources.ApplyResources(this.flowPanelContent, "flowPanelContent");
+            this.flowPanelContent.Name = "flowPanelContent";
             // 
             // Werkzeugnummerntool
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutContent);
-            this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flPanelTop);
+            this.Controls.Add(this.flowPanelContent);
+            this.Controls.Add(this.panelToolbar);
+            this.Controls.Add(this.flowPanelMenu);
             this.Name = "Werkzeugnummerntool";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.flPanelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.flowPanelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFlag3)).EndInit();
+            this.panelToolbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureConfigs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureSync)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHelp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureUndo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flPanelTop;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblModTitle;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutContent;
+        private System.Windows.Forms.FlowLayoutPanel flowPanelMenu;
+        private System.Windows.Forms.PictureBox pictureSync;
+        private System.Windows.Forms.PictureBox pictureConfigs;
+        private System.Windows.Forms.PictureBox pictureFlag3;
+        private System.Windows.Forms.PictureBox pictureFlag2;
+        private System.Windows.Forms.PictureBox pictureFlag1;
+        private System.Windows.Forms.PictureBox pictureExit;
+        private System.Windows.Forms.PictureBox pictureUndo;
+        private System.Windows.Forms.PictureBox pictureHelp;
+        private System.Windows.Forms.Panel panelToolbar;
+        private FlowLayoutPanel flowPanelContent;
     }
 }
