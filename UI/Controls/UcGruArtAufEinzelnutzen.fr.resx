@@ -140,9 +140,9 @@
     <value>Tâche</value>
   </data>
   <data name="Sprache" xml:space="preserve">
-    <value>COL1</value>
+    <value>Langue</value>
   </data>
   <data name="Uebersetzung" xml:space="preserve">
-    <value>COL2</value>
+    <value>Traduction</value>
   </data>
 </root>

@@ -117,104 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 18</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Notions de base</value>
+  <data name="btEdit.Text" xml:space="preserve">
+    <value>замена</value>
   </data>
-  <data name="treeNode1" xml:space="preserve">
-    <value>Gestion</value>
+  <data name="btSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="treeNode11" xml:space="preserve">
-    <value>Données</value>
+  <data name="btSave.Text" xml:space="preserve">
+    <value>экономить</value>
   </data>
-  <data name="treeNode111" xml:space="preserve">
-    <value>Article</value>
+  <data name="btCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="treeNode1111" xml:space="preserve">
-    <value>Tâches copies simples</value>
+  <data name="btCancel.Text" xml:space="preserve">
+    <value>выкинуть</value>
   </data>
-  <data name="treeNode1112" xml:space="preserve">
-    <value>Basisart</value>
+  <data name="Aufgabe" xml:space="preserve">
+    <value>задача</value>
   </data>
-  <data name="treeNode1113" xml:space="preserve">
-    <value>Modèles d'impression</value>
+  <data name="Sprache" xml:space="preserve">
+    <value>язык</value>
   </data>
-  <data name="treeNode1114" xml:space="preserve">
-    <value>Forme de point</value>
-  </data>
-  <data name="treeNode1115" xml:space="preserve">
-    <value>Procédé d'impression</value>
-  </data>
-  <data name="treeNode1116" xml:space="preserve">
-    <value>Type de couleur</value>
-  </data>
-  <data name="treeNode112" xml:space="preserve">
-    <value>Outil</value>
-  </data>
-  <data name="treeNode1121" xml:space="preserve">
-    <value>Enregistrer des marques</value>
-  </data>
-  <data name="treeNode1122" xml:space="preserve">
-    <value>Des éléments de contrôle de l'impression</value>
-  </data>
-  <data name="treeNode1123" xml:space="preserve">
-    <value>Types d'outils</value>
-  </data>
-  <data name="treeNode1124" xml:space="preserve">
-    <value>Caractéristique du matériau</value>
-  </data>
-  <data name="treeNode113" xml:space="preserve">
-    <value>Machinerie</value>
-  </data>
-  <data name="treeNode1131" xml:space="preserve">
-    <value>Les groupes de machines</value>
-  </data>
-  <data name="treeNode1132" xml:space="preserve">
-    <value>Machinerie</value>
-  </data>
-  <data name="treeNode114" xml:space="preserve">
-    <value>Programme</value>
-  </data>
-  <data name="treeNode1141" xml:space="preserve">
-    <value>Raisons comptables</value>
-  </data>
-  <data name="treeNode1142" xml:space="preserve">
-    <value>Paramètre</value>
-  </data>
-  <data name="treeNode115" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="treeNode1151" xml:space="preserve">
-    <value>Copies simples</value>
-  </data>
-  <data name="treeNode1152" xml:space="preserve">
-    <value>Outils</value>
-  </data>
-  <data name="treeNode12" xml:space="preserve">
-    <value>Les paramètres du système</value>
-  </data>
-  <data name="treeNode121" xml:space="preserve">
-    <value>Emplacement / Mand.</value>
-  </data>
-  <data name="treeNode1211" xml:space="preserve">
-    <value>Sites / Clients</value>
-  </data>
-  <data name="treeNode122" xml:space="preserve">
-    <value>Paramètres DS-API</value>
-  </data>
-  <data name="treeNode1221" xml:space="preserve">
-    <value>L'article Mise à jour</value>
-  </data>
-  <data name="treeNode12211" xml:space="preserve">
-    <value>Les sources de données</value>
-  </data>
-  <data name="treeNode12212" xml:space="preserve">
-    <value>Contrôle de l'emploi</value>
-  </data>
-  <data name="treeNode13" xml:space="preserve">
-    <value>Autorisations</value>
+  <data name="Uebersetzung" xml:space="preserve">
+    <value>перевод</value>
   </data>
 </root>

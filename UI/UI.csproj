@@ -91,10 +91,16 @@
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
+      <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.fr.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.resx">
+      <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.ru-RU.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">

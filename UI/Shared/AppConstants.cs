@@ -10,6 +10,6 @@ namespace UI.Shared
     {
         public const string K_LANGUAGE_GERMAN = "de";
         public const string K_LANGUAGE_FRENCH = "fr";
-        public const string K_LANGUAGE_RUSSIAN = "ru";
+        public const string K_LANGUAGE_RUSSIAN = "ru-RU";
     }
 }

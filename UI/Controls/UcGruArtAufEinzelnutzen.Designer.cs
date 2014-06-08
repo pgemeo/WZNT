@@ -47,26 +47,26 @@
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             // 
             // dataGridView2
             // 
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
             // 
             // flowPanelButtons
             // 
+            resources.ApplyResources(this.flowPanelButtons, "flowPanelButtons");
             this.flowPanelButtons.Controls.Add(this.btEdit);
             this.flowPanelButtons.Controls.Add(this.btSave);
             this.flowPanelButtons.Controls.Add(this.btCancel);
-            resources.ApplyResources(this.flowPanelButtons, "flowPanelButtons");
             this.flowPanelButtons.Name = "flowPanelButtons";
             // 
             // btEdit
