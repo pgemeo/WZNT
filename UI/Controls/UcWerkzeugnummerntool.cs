@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.ResFilesManagers;
 
 namespace UI.Controls
 {
@@ -30,13 +31,11 @@ namespace UI.Controls
             // New Content
             if (this.treeView1.SelectedNode != null)
             {
-                switch (this.treeView1.SelectedNode.Text)
+                // User Control
+                if (this.treeView1.SelectedNode.Text.Equals(ResWerkzeugnummerntool.Node1111))
                 {
-                    // User Control
-                    case "Aufgaben Einzelnutzen":
-                        UcGruArtAufEinzelnutzen Control = new UcGruArtAufEinzelnutzen();
-                        flowLayoutContent.Controls.Add(Control);
-                        break;
+                    UcGruArtAufEinzelnutzen Control = new UcGruArtAufEinzelnutzen();
+                    flowLayoutContent.Controls.Add(Control);
                 }
             }
         }
@@ -58,85 +57,85 @@ namespace UI.Controls
         protected void InitializeTree()
         {
             // top parent
-            TreeNode Node = new TreeNode("Verwaltung");
+            TreeNode Node = new TreeNode(ResWerkzeugnummerntool.Node1);
             treeView1.Nodes.Add(Node);
             // level 1
-            TreeNode Child1 = new TreeNode("Stammdaten");
+            TreeNode Child1 = new TreeNode(ResWerkzeugnummerntool.Node11);
             Node.Nodes.Add(Child1);
             // level 2
-            TreeNode Child2 = new TreeNode("Artikel");
+            TreeNode Child2 = new TreeNode(ResWerkzeugnummerntool.Node111);
             Child1.Nodes.Add(Child2);
             // level 3
-            TreeNode Child3 = new TreeNode("Aufgaben Einzelnutzen");
+            TreeNode Child3 = new TreeNode(ResWerkzeugnummerntool.Node1111);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Basisart");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1112);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Druckvorlagen");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1113);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Punktform");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1114);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Druckverfahren");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1115);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Farbtyp");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1116);
             Child2.Nodes.Add(Child3);
             // level 2
-            Child2 = new TreeNode("Werkzeug");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node112);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Registermarken");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1121);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Druckkontrollelemente");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1122);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Werkzeugtypen");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1123);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("MaterialKennlinie");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1124);
             Child2.Nodes.Add(Child3);
             // level 2
-            Child2 = new TreeNode("Maschinen");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node113);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Maschinengruppen");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1131);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Maschinenpark");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1132);
             Child2.Nodes.Add(Child3);
             // level 2
-            Child2 = new TreeNode("Programm");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node114);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Abrechnungsgründe");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1141);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Parameter");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1142);
             Child2.Nodes.Add(Child3);
             // level 2
-            Child2 = new TreeNode("Export");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node115);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Einzelnutzen");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1151);
             Child2.Nodes.Add(Child3);
-            Child3 = new TreeNode("Werkzeuge");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1152);
             Child2.Nodes.Add(Child3);
             // level 1
-            Child1 = new TreeNode("Systemparameter");
+            Child1 = new TreeNode(ResWerkzeugnummerntool.Node12);
             Node.Nodes.Add(Child1);
             // level 2
-            Child2 = new TreeNode("Standorte/Mand.");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node121);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Standorte/Mandanten");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1211);
             Child2.Nodes.Add(Child3);
             // level 2
-            Child2 = new TreeNode("DS-APi-Einstellungen");
+            Child2 = new TreeNode(ResWerkzeugnummerntool.Node122);
             Child1.Nodes.Add(Child2);
             // level 3
-            Child3 = new TreeNode("Artikel-Update");
+            Child3 = new TreeNode(ResWerkzeugnummerntool.Node1221);
             Child2.Nodes.Add(Child3);
             // level 4
-            TreeNode Child4 = new TreeNode("Datenquellen");
+            TreeNode Child4 = new TreeNode(ResWerkzeugnummerntool.Node12211);
             Child3.Nodes.Add(Child4);
-            Child4 = new TreeNode("Jobsteuerung");
+            Child4 = new TreeNode(ResWerkzeugnummerntool.Node12212);
             Child3.Nodes.Add(Child4);
             // level 1
-            Child1 = new TreeNode("Berechtigungen");
+            Child1 = new TreeNode(ResWerkzeugnummerntool.Node13);
             Node.Nodes.Add(Child1);
         }
         protected void TreeView1_AfterSelect(System.Object sender, TreeViewEventArgs e)

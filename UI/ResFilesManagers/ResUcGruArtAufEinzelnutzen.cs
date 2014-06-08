@@ -10,13 +10,13 @@ namespace UI.ResFilesManagers
 {
     public class ResUcGruArtAufEinzelnutzen
     {
-        protected Type _Type = typeof(UcGruArtAufEinzelnutzen);
+        protected static Type _Type = typeof(UcGruArtAufEinzelnutzen);
+        protected static ResourceManager RManager = new ResourceManager(_Type);
         
         public static string Aufgabe
         {
             get
             {
-                ResourceManager RManager = new ResourceManager(typeof(UcGruArtAufEinzelnutzen));
                 return RManager.GetString("Aufgabe");
             }
         }
@@ -24,7 +24,6 @@ namespace UI.ResFilesManagers
         {
             get
             {
-                ResourceManager RManager = new ResourceManager(typeof(UcGruArtAufEinzelnutzen));
                 return RManager.GetString("Sprache");
             }
         }
@@ -32,7 +31,6 @@ namespace UI.ResFilesManagers
         {
             get
             {
-                ResourceManager RManager = new ResourceManager(typeof(UcGruArtAufEinzelnutzen));
                 return RManager.GetString("Uebersetzung");
             }
         }
