@@ -74,18 +74,21 @@
             resources.ApplyResources(this.btEdit, "btEdit");
             this.btEdit.Name = "btEdit";
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += btEdit_Click;
             // 
             // btSave
             // 
             resources.ApplyResources(this.btSave, "btSave");
             this.btSave.Name = "btSave";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += btSave_Click;
             // 
             // btCancel
             // 
             resources.ApplyResources(this.btCancel, "btCancel");
             this.btCancel.Name = "btCancel";
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += btCancel_Click;
             // 
             // UcGruArtAufEinzelnutzen
             // 

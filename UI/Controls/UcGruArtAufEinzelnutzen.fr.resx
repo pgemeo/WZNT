@@ -145,4 +145,19 @@
   <data name="Uebersetzung" xml:space="preserve">
     <value>Traduction</value>
   </data>
+  <data name="DeleteConfirmMsg" xml:space="preserve">
+    <value>Etes-vous sûr de vouloir supprimer cette ligne?</value>
+  </data>
+  <data name="DeleteConfirmTitle" xml:space="preserve">
+    <value>Confirmation de la suppression</value>
+  </data>
+  <data name="SaveConfirmMsg" xml:space="preserve">
+    <value>Etes-vous sûr de vouloir sauver?</value>
+  </data>
+  <data name="SaveConfirmTitle" xml:space="preserve">
+    <value>Enregistrer confirmation</value>
+  </data>
+  <data name="SaveSucceeded" xml:space="preserve">
+    <value>Tous les changements ont été enregistrés!</value>
+  </data>
 </root>

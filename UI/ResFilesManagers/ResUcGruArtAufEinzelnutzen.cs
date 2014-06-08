@@ -34,5 +34,40 @@ namespace UI.ResFilesManagers
                 return RManager.GetString("Uebersetzung");
             }
         }
+        public static string SaveConfirmMsg
+        {
+            get
+            {
+                return RManager.GetString("SaveConfirmMsg");
+            }
+        }
+        public static string SaveConfirmTitle
+        {
+            get
+            {
+                return RManager.GetString("SaveConfirmTitle");
+            }
+        }
+        public static string SaveSucceeded
+        {
+            get
+            {
+                return RManager.GetString("SaveSucceeded");
+            }
+        }
+        public static string DeleteConfirmMsg
+        {
+            get
+            {
+                return RManager.GetString("DeleteConfirmMsg");
+            }
+        }
+        public static string DeleteConfirmTitle
+        {
+            get
+            {
+                return RManager.GetString("DeleteConfirmTitle");
+            }
+        }
     }
 }

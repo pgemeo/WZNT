@@ -35,13 +35,13 @@ namespace UI.Controls
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show("Are you sure you want to save?", "Save confirmation",
+            DialogResult Dialog = MessageBox.Show(ResUcGruArtAufEinzelnutzen.SaveConfirmMsg, ResUcGruArtAufEinzelnutzen.SaveConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.Yes)
             {
                 if (Workspace.SaveChanges())
                 {
-                    MessageBox.Show("All changes have been saved!");
+                    MessageBox.Show(ResUcGruArtAufEinzelnutzen.SaveSucceeded);
                     InitializeWorkspace();
                 }
             }
@@ -246,7 +246,7 @@ namespace UI.Controls
 
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show("Are you sure you want to delete this row?", "Delete confirmation",
+            DialogResult Dialog = MessageBox.Show(ResUcGruArtAufEinzelnutzen.DeleteConfirmMsg, ResUcGruArtAufEinzelnutzen.DeleteConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.No)
                 e.Cancel = true;

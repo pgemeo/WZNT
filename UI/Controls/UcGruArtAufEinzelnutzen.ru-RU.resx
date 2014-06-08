@@ -139,6 +139,21 @@
   <data name="Aufgabe" xml:space="preserve">
     <value>задача</value>
   </data>
+  <data name="DeleteConfirmMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить эту линию?</value>
+  </data>
+  <data name="DeleteConfirmTitle" xml:space="preserve">
+    <value>Подтверждение удаления</value>
+  </data>
+  <data name="SaveConfirmMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите сохранить?</value>
+  </data>
+  <data name="SaveConfirmTitle" xml:space="preserve">
+    <value>Сохранить подтверждение</value>
+  </data>
+  <data name="SaveSucceeded" xml:space="preserve">
+    <value>Все изменения были сохранены!</value>
+  </data>
   <data name="Sprache" xml:space="preserve">
     <value>язык</value>
   </data>
