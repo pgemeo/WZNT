@@ -68,7 +68,7 @@ namespace UI.Modules.Grundlagen
             resources.ApplyResources(this.pictureFlag1, "pictureFlag1");
             this.pictureFlag1.Name = "pictureFlag1";
             this.pictureFlag1.TabStop = false;
-            this.pictureFlag1.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureFlag1.Click += new System.EventHandler(this.pictureFlag1_Click);
             // 
             // pictureFlag2
             // 
@@ -77,7 +77,7 @@ namespace UI.Modules.Grundlagen
             resources.ApplyResources(this.pictureFlag2, "pictureFlag2");
             this.pictureFlag2.Name = "pictureFlag2";
             this.pictureFlag2.TabStop = false;
-            this.pictureFlag2.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureFlag2.Click += new System.EventHandler(this.pictureFlag2_Click);
             // 
             // pictureFlag3
             // 
@@ -86,7 +86,7 @@ namespace UI.Modules.Grundlagen
             resources.ApplyResources(this.pictureFlag3, "pictureFlag3");
             this.pictureFlag3.Name = "pictureFlag3";
             this.pictureFlag3.TabStop = false;
-            this.pictureFlag3.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureFlag3.Click += new System.EventHandler(this.pictureFlag3_Click);
             // 
             // panelToolbar
             // 

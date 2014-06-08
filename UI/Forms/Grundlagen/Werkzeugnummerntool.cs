@@ -128,17 +128,17 @@ namespace UI.Modules.Grundlagen
         //
         // Flags
         //
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            // Sets the UI culture.
-            SetCulture(AppConstants.K_LANGUAGE_FRENCH);
-        }
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pictureFlag1_Click(object sender, EventArgs e)
         {
             // Sets the UI culture.
             SetCulture(AppConstants.K_LANGUAGE_GERMAN);
         }
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureFlag2_Click(object sender, EventArgs e)
+        {
+            // Sets the UI culture.
+            SetCulture(AppConstants.K_LANGUAGE_FRENCH);
+        }
+        private void pictureFlag3_Click(object sender, EventArgs e)
         {
             // Sets the UI culture.
             SetCulture(AppConstants.K_LANGUAGE_RUSSIAN);
