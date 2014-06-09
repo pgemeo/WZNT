@@ -38,35 +38,39 @@
             this.btCancel = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.flowPanelStandort = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxStandort = new System.Windows.Forms.ComboBox();
+            this.labelStandort = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.flowPanelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            this.flowPanelStandort.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             // 
             // dataGridView2
             // 
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
             // 
             // flowPanelButtons
             // 
-            resources.ApplyResources(this.flowPanelButtons, "flowPanelButtons");
             this.flowPanelButtons.Controls.Add(this.btEdit);
             this.flowPanelButtons.Controls.Add(this.btSave);
             this.flowPanelButtons.Controls.Add(this.btCancel);
+            resources.ApplyResources(this.flowPanelButtons, "flowPanelButtons");
             this.flowPanelButtons.Name = "flowPanelButtons";
             // 
             // btEdit
@@ -90,10 +94,30 @@
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += btCancel_Click;
             // 
+            // flowPanelStandort
+            // 
+            this.flowPanelStandort.Controls.Add(this.labelStandort);
+            this.flowPanelStandort.Controls.Add(this.comboBoxStandort);
+            resources.ApplyResources(this.flowPanelStandort, "flowPanelStandort");
+            this.flowPanelStandort.Name = "flowPanelStandort";
+            // 
+            // comboBoxStandort
+            // 
+            this.comboBoxStandort.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxStandort, "comboBoxStandort");
+            this.comboBoxStandort.Name = "comboBoxStandort";
+            // 
+            // labelStandort
+            // 
+            resources.ApplyResources(this.labelStandort, "labelStandort");
+            this.labelStandort.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelStandort.Name = "labelStandort";
+            // 
             // UcGruArtAufEinzelnutzen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowPanelStandort);
             this.Controls.Add(this.flowPanelButtons);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -103,6 +127,8 @@
             this.flowPanelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            this.flowPanelStandort.ResumeLayout(false);
+            this.flowPanelStandort.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -117,5 +143,8 @@
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.FlowLayoutPanel flowPanelStandort;
+        private System.Windows.Forms.Label labelStandort;
+        private System.Windows.Forms.ComboBox comboBoxStandort;
     }
 }

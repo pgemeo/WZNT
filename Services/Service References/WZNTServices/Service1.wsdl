@@ -56,17 +56,23 @@
   <wsdl:message name="IService_DeleteGruArtAufEinzelnutzenList_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_GetListGruArtAufEinSprache_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetListGruArtAufEinSprache" />
+  <wsdl:message name="IService_ReadGruArtAufEinSpracheList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinSpracheList" />
   </wsdl:message>
-  <wsdl:message name="IService_GetListGruArtAufEinSprache_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetListGruArtAufEinSpracheResponse" />
+  <wsdl:message name="IService_ReadGruArtAufEinSpracheList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtAufEinSpracheListResponse" />
   </wsdl:message>
   <wsdl:message name="IService_ReadGruSprachenList_InputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruSprachenList" />
   </wsdl:message>
   <wsdl:message name="IService_ReadGruSprachenList_OutputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruSprachenListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysStandortList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysStandortList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysStandortList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysStandortListResponse" />
   </wsdl:message>
   <wsdl:message name="IService_ParsePixels_InputMessage">
     <wsdl:part name="parameters" element="tns:ParsePixels" />
@@ -113,13 +119,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList" message="tns:IService_DeleteGruArtAufEinzelnutzenList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse" message="tns:IService_DeleteGruArtAufEinzelnutzenList_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetListGruArtAufEinSprache">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetListGruArtAufEinSprache" message="tns:IService_GetListGruArtAufEinSprache_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse" message="tns:IService_GetListGruArtAufEinSprache_OutputMessage" />
+    <wsdl:operation name="ReadGruArtAufEinSpracheList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheList" message="tns:IService_ReadGruArtAufEinSpracheList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheListResponse" message="tns:IService_ReadGruArtAufEinSpracheList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ReadGruSprachenList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSprachenList" message="tns:IService_ReadGruSprachenList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSprachenListResponse" message="tns:IService_ReadGruSprachenList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysStandortList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSysStandortList" message="tns:IService_ReadGruSysStandortList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSysStandortListResponse" message="tns:IService_ReadGruSysStandortList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ParsePixels">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ParsePixels" message="tns:IService_ParsePixels_InputMessage" />
@@ -204,8 +214,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetListGruArtAufEinSprache">
-      <soap:operation soapAction="http://tempuri.org/IService/GetListGruArtAufEinSprache" style="document" />
+    <wsdl:operation name="ReadGruArtAufEinSpracheList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruArtAufEinSpracheList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -215,6 +225,15 @@
     </wsdl:operation>
     <wsdl:operation name="ReadGruSprachenList">
       <soap:operation soapAction="http://tempuri.org/IService/ReadGruSprachenList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysStandortList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruSysStandortList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

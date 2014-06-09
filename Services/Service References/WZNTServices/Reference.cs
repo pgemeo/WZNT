@@ -95,6 +95,9 @@ namespace Services.WZNTServices {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -157,6 +160,19 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -193,6 +209,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UebersetzungField;
@@ -286,6 +305,19 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Uebersetzung {
             get {
                 return this.UebersetzungField;
@@ -343,6 +375,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SpracheField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -471,6 +506,19 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -507,6 +555,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UebersetzungField;
@@ -600,6 +651,19 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Uebersetzung {
             get {
                 return this.UebersetzungField;
@@ -641,13 +705,16 @@ namespace Services.WZNTServices {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdDruckvorlField;
+        private int IdDruckverfField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdSpracheField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UebSetDruckvField;
@@ -705,14 +772,14 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int IdDruckvorl {
+        public int IdDruckverf {
             get {
-                return this.IdDruckvorlField;
+                return this.IdDruckverfField;
             }
             set {
-                if ((this.IdDruckvorlField.Equals(value) != true)) {
-                    this.IdDruckvorlField = value;
-                    this.RaisePropertyChanged("IdDruckvorl");
+                if ((this.IdDruckverfField.Equals(value) != true)) {
+                    this.IdDruckverfField = value;
+                    this.RaisePropertyChanged("IdDruckverf");
                 }
             }
         }
@@ -739,6 +806,19 @@ namespace Services.WZNTServices {
                 if ((this.OTimeStampField.Equals(value) != true)) {
                     this.OTimeStampField = value;
                     this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
                 }
             }
         }
@@ -805,6 +885,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UebersetzungField;
@@ -898,6 +981,19 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Uebersetzung {
             get {
                 return this.UebersetzungField;
@@ -946,6 +1042,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UebAbrGrundField;
@@ -1039,6 +1138,19 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string UebAbrGrund {
             get {
                 return this.UebAbrGrundField;
@@ -1081,6 +1193,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1144,6 +1259,19 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1173,6 +1301,9 @@ namespace Services.WZNTServices {
         private Services.WZNTServices.GruArtDruckVerSprache[] GruArtDruckVerSprachesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaCfg[] GruMaCfgsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1180,6 +1311,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1231,6 +1365,19 @@ namespace Services.WZNTServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaCfg[] GruMaCfgs {
+            get {
+                return this.GruMaCfgsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaCfgsField, value) != true)) {
+                    this.GruMaCfgsField = value;
+                    this.RaisePropertyChanged("GruMaCfgs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id {
             get {
                 return this.IdField;
@@ -1269,6 +1416,1262 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruMaCfg", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruMaCfg : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> BaugruppeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] BildField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruArtDruckverf GruArtDruckverfField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaschinen GruMaschinenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruWerkzRegMarke GruWerkzRegMarkeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdDruckverfahrenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMaschineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdRegistermarkenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Baugruppe {
+            get {
+                return this.BaugruppeField;
+            }
+            set {
+                if ((this.BaugruppeField.Equals(value) != true)) {
+                    this.BaugruppeField = value;
+                    this.RaisePropertyChanged("Baugruppe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Bild {
+            get {
+                return this.BildField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BildField, value) != true)) {
+                    this.BildField = value;
+                    this.RaisePropertyChanged("Bild");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruArtDruckverf GruArtDruckverf {
+            get {
+                return this.GruArtDruckverfField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruArtDruckverfField, value) != true)) {
+                    this.GruArtDruckverfField = value;
+                    this.RaisePropertyChanged("GruArtDruckverf");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaschinen GruMaschinen {
+            get {
+                return this.GruMaschinenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaschinenField, value) != true)) {
+                    this.GruMaschinenField = value;
+                    this.RaisePropertyChanged("GruMaschinen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruWerkzRegMarke GruWerkzRegMarke {
+            get {
+                return this.GruWerkzRegMarkeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruWerkzRegMarkeField, value) != true)) {
+                    this.GruWerkzRegMarkeField = value;
+                    this.RaisePropertyChanged("GruWerkzRegMarke");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdDruckverfahren {
+            get {
+                return this.IdDruckverfahrenField;
+            }
+            set {
+                if ((this.IdDruckverfahrenField.Equals(value) != true)) {
+                    this.IdDruckverfahrenField = value;
+                    this.RaisePropertyChanged("IdDruckverfahren");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMaschine {
+            get {
+                return this.IdMaschineField;
+            }
+            set {
+                if ((this.IdMaschineField.Equals(value) != true)) {
+                    this.IdMaschineField = value;
+                    this.RaisePropertyChanged("IdMaschine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRegistermarken {
+            get {
+                return this.IdRegistermarkenField;
+            }
+            set {
+                if ((this.IdRegistermarkenField.Equals(value) != true)) {
+                    this.IdRegistermarkenField = value;
+                    this.RaisePropertyChanged("IdRegistermarken");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruMaschinen", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruMaschinen : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AnzBaugruppeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaCfg[] GruMaCfgsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaTypenDruKz[] GruMaTypenDruKzsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaschMaGruppe GruMaschMaGruppeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMaGruppeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdRegisterMaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaschineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AnzBaugruppe {
+            get {
+                return this.AnzBaugruppeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AnzBaugruppeField, value) != true)) {
+                    this.AnzBaugruppeField = value;
+                    this.RaisePropertyChanged("AnzBaugruppe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaCfg[] GruMaCfgs {
+            get {
+                return this.GruMaCfgsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaCfgsField, value) != true)) {
+                    this.GruMaCfgsField = value;
+                    this.RaisePropertyChanged("GruMaCfgs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaTypenDruKz[] GruMaTypenDruKzs {
+            get {
+                return this.GruMaTypenDruKzsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaTypenDruKzsField, value) != true)) {
+                    this.GruMaTypenDruKzsField = value;
+                    this.RaisePropertyChanged("GruMaTypenDruKzs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaschMaGruppe GruMaschMaGruppe {
+            get {
+                return this.GruMaschMaGruppeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaschMaGruppeField, value) != true)) {
+                    this.GruMaschMaGruppeField = value;
+                    this.RaisePropertyChanged("GruMaschMaGruppe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMaGruppe {
+            get {
+                return this.IdMaGruppeField;
+            }
+            set {
+                if ((this.IdMaGruppeField.Equals(value) != true)) {
+                    this.IdMaGruppeField = value;
+                    this.RaisePropertyChanged("IdMaGruppe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRegisterMa {
+            get {
+                return this.IdRegisterMaField;
+            }
+            set {
+                if ((this.IdRegisterMaField.Equals(value) != true)) {
+                    this.IdRegisterMaField = value;
+                    this.RaisePropertyChanged("IdRegisterMa");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Maschine {
+            get {
+                return this.MaschineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaschineField, value) != true)) {
+                    this.MaschineField = value;
+                    this.RaisePropertyChanged("Maschine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruWerkzRegMarke", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruWerkzRegMarke : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AnzeichnungField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaCfg[] GruMaCfgsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruWerkzRegMarkePos[] GruWerkzRegMarkePosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Anzeichnung {
+            get {
+                return this.AnzeichnungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AnzeichnungField, value) != true)) {
+                    this.AnzeichnungField = value;
+                    this.RaisePropertyChanged("Anzeichnung");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaCfg[] GruMaCfgs {
+            get {
+                return this.GruMaCfgsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaCfgsField, value) != true)) {
+                    this.GruMaCfgsField = value;
+                    this.RaisePropertyChanged("GruMaCfgs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruWerkzRegMarkePos[] GruWerkzRegMarkePos {
+            get {
+                return this.GruWerkzRegMarkePosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruWerkzRegMarkePosField, value) != true)) {
+                    this.GruWerkzRegMarkePosField = value;
+                    this.RaisePropertyChanged("GruWerkzRegMarkePos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruMaschMaGruppe", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruMaschMaGruppe : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BeschreibungField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaschinen[] GruMaschinensField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaGruppeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Beschreibung {
+            get {
+                return this.BeschreibungField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BeschreibungField, value) != true)) {
+                    this.BeschreibungField = value;
+                    this.RaisePropertyChanged("Beschreibung");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaschinen[] GruMaschinens {
+            get {
+                return this.GruMaschinensField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaschinensField, value) != true)) {
+                    this.GruMaschinensField = value;
+                    this.RaisePropertyChanged("GruMaschinens");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MaGruppe {
+            get {
+                return this.MaGruppeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaGruppeField, value) != true)) {
+                    this.MaGruppeField = value;
+                    this.RaisePropertyChanged("MaGruppe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruMaTypenDruKz", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruMaTypenDruKz : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> FdKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaschinen GruMaschinenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruWerkzWTypen GruWerkzWTypenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> HpKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMaschineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdWzTypField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IjKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> KpKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> OdKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> SdKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> StKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> TdKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> ZsKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> FdKz {
+            get {
+                return this.FdKzField;
+            }
+            set {
+                if ((this.FdKzField.Equals(value) != true)) {
+                    this.FdKzField = value;
+                    this.RaisePropertyChanged("FdKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaschinen GruMaschinen {
+            get {
+                return this.GruMaschinenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaschinenField, value) != true)) {
+                    this.GruMaschinenField = value;
+                    this.RaisePropertyChanged("GruMaschinen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruWerkzWTypen GruWerkzWTypen {
+            get {
+                return this.GruWerkzWTypenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruWerkzWTypenField, value) != true)) {
+                    this.GruWerkzWTypenField = value;
+                    this.RaisePropertyChanged("GruWerkzWTypen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> HpKz {
+            get {
+                return this.HpKzField;
+            }
+            set {
+                if ((this.HpKzField.Equals(value) != true)) {
+                    this.HpKzField = value;
+                    this.RaisePropertyChanged("HpKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMaschine {
+            get {
+                return this.IdMaschineField;
+            }
+            set {
+                if ((this.IdMaschineField.Equals(value) != true)) {
+                    this.IdMaschineField = value;
+                    this.RaisePropertyChanged("IdMaschine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdWzTyp {
+            get {
+                return this.IdWzTypField;
+            }
+            set {
+                if ((this.IdWzTypField.Equals(value) != true)) {
+                    this.IdWzTypField = value;
+                    this.RaisePropertyChanged("IdWzTyp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IjKz {
+            get {
+                return this.IjKzField;
+            }
+            set {
+                if ((this.IjKzField.Equals(value) != true)) {
+                    this.IjKzField = value;
+                    this.RaisePropertyChanged("IjKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> KpKz {
+            get {
+                return this.KpKzField;
+            }
+            set {
+                if ((this.KpKzField.Equals(value) != true)) {
+                    this.KpKzField = value;
+                    this.RaisePropertyChanged("KpKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> OdKz {
+            get {
+                return this.OdKzField;
+            }
+            set {
+                if ((this.OdKzField.Equals(value) != true)) {
+                    this.OdKzField = value;
+                    this.RaisePropertyChanged("OdKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> SdKz {
+            get {
+                return this.SdKzField;
+            }
+            set {
+                if ((this.SdKzField.Equals(value) != true)) {
+                    this.SdKzField = value;
+                    this.RaisePropertyChanged("SdKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> StKz {
+            get {
+                return this.StKzField;
+            }
+            set {
+                if ((this.StKzField.Equals(value) != true)) {
+                    this.StKzField = value;
+                    this.RaisePropertyChanged("StKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> TdKz {
+            get {
+                return this.TdKzField;
+            }
+            set {
+                if ((this.TdKzField.Equals(value) != true)) {
+                    this.TdKzField = value;
+                    this.RaisePropertyChanged("TdKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> ZsKz {
+            get {
+                return this.ZsKzField;
+            }
+            set {
+                if ((this.ZsKzField.Equals(value) != true)) {
+                    this.ZsKzField = value;
+                    this.RaisePropertyChanged("ZsKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruWerkzWTypen", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruWerkzWTypen : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruMaTypenDruKz[] GruMaTypenDruKzsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MatchcodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MaterialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> MaxBreiteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> MaxLfmField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> TypField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruMaTypenDruKz[] GruMaTypenDruKzs {
+            get {
+                return this.GruMaTypenDruKzsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruMaTypenDruKzsField, value) != true)) {
+                    this.GruMaTypenDruKzsField = value;
+                    this.RaisePropertyChanged("GruMaTypenDruKzs");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Matchcode {
+            get {
+                return this.MatchcodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MatchcodeField, value) != true)) {
+                    this.MatchcodeField = value;
+                    this.RaisePropertyChanged("Matchcode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Material {
+            get {
+                return this.MaterialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MaterialField, value) != true)) {
+                    this.MaterialField = value;
+                    this.RaisePropertyChanged("Material");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> MaxBreite {
+            get {
+                return this.MaxBreiteField;
+            }
+            set {
+                if ((this.MaxBreiteField.Equals(value) != true)) {
+                    this.MaxBreiteField = value;
+                    this.RaisePropertyChanged("MaxBreite");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> MaxLfm {
+            get {
+                return this.MaxLfmField;
+            }
+            set {
+                if ((this.MaxLfmField.Equals(value) != true)) {
+                    this.MaxLfmField = value;
+                    this.RaisePropertyChanged("MaxLfm");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Typ {
+            get {
+                return this.TypField;
+            }
+            set {
+                if ((this.TypField.Equals(value) != true)) {
+                    this.TypField = value;
+                    this.RaisePropertyChanged("Typ");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruWerkzRegMarkePos", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruWerkzRegMarkePos : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AbstandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Services.WZNTServices.GruWerkzRegMarke GruWerkzRegMarkeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdRegMField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Abstand {
+            get {
+                return this.AbstandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AbstandField, value) != true)) {
+                    this.AbstandField = value;
+                    this.RaisePropertyChanged("Abstand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Services.WZNTServices.GruWerkzRegMarke GruWerkzRegMarke {
+            get {
+                return this.GruWerkzRegMarkeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GruWerkzRegMarkeField, value) != true)) {
+                    this.GruWerkzRegMarkeField = value;
+                    this.RaisePropertyChanged("GruWerkzRegMarke");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRegM {
+            get {
+                return this.IdRegMField;
+            }
+            set {
+                if ((this.IdRegMField.Equals(value) != true)) {
+                    this.IdRegMField = value;
+                    this.RaisePropertyChanged("IdRegM");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Pos {
+            get {
+                return this.PosField;
+            }
+            set {
+                if ((this.PosField.Equals(value) != true)) {
+                    this.PosField = value;
+                    this.RaisePropertyChanged("Pos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1299,6 +2702,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1362,6 +2768,19 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1392,6 +2811,9 @@ namespace Services.WZNTServices {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1455,6 +2877,112 @@ namespace Services.WZNTServices {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruSysStandort", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruSysStandort : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Standort {
+            get {
+                return this.StandortField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortField, value) != true)) {
+                    this.StandortField = value;
+                    this.RaisePropertyChanged("Standort");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortId {
+            get {
+                return this.StandortIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortIdField, value) != true)) {
+                    this.StandortIdField = value;
+                    this.RaisePropertyChanged("StandortId");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1482,22 +3010,22 @@ namespace Services.WZNTServices {
         System.Threading.Tasks.Task<Services.WZNTServices.CompositeType> GetDataUsingDataContractAsync(Services.WZNTServices.CompositeType Composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenResponse")]
-        void CreateGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen model);
+        bool CreateGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenResponse")]
-        System.Threading.Tasks.Task CreateGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen model);
+        System.Threading.Tasks.Task<bool> CreateGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenListResponse")]
-        void CreateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        bool CreateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/CreateGruArtAufEinzelnutzenListResponse")]
-        System.Threading.Tasks.Task CreateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        System.Threading.Tasks.Task<bool> CreateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenListResponse")]
-        Services.WZNTServices.GruArtAufEinzelnutzen[] ReadGruArtAufEinzelnutzenList();
+        Services.WZNTServices.GruArtAufEinzelnutzen[] ReadGruArtAufEinzelnutzenList(string locationId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenListResponse")]
-        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> ReadGruArtAufEinzelnutzenListAsync();
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> ReadGruArtAufEinzelnutzenListAsync(string locationId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinzelnutzen", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinzelnutzenResponse")]
         Services.WZNTServices.GruArtAufEinzelnutzen ReadGruArtAufEinzelnutzen(int Id);
@@ -1506,28 +3034,34 @@ namespace Services.WZNTServices {
         System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen> ReadGruArtAufEinzelnutzenAsync(int Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenListResponse")]
-        void UpdateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        bool UpdateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/UpdateGruArtAufEinzelnutzenListResponse")]
-        System.Threading.Tasks.Task UpdateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        System.Threading.Tasks.Task<bool> UpdateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse")]
-        void DeleteGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        bool DeleteGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse")]
-        System.Threading.Tasks.Task DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
+        System.Threading.Tasks.Task<bool> DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
-        Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen model);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheList", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinSpracheListResponse")]
+        Services.WZNTServices.GruArtAufEinSprache[] ReadGruArtAufEinSpracheList(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetListGruArtAufEinSprache", ReplyAction="http://tempuri.org/IService/GetListGruArtAufEinSpracheResponse")]
-        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen model);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
-        Services.WZNTServices.GruSprachen[] ReadGruSprachenList();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheList", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinSpracheListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> ReadGruArtAufEinSpracheListAsync(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
-        System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync();
+        Services.WZNTServices.GruSprachen[] ReadGruSprachenList(string locationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync(string locationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysStandortList", ReplyAction="http://tempuri.org/IService/ReadGruSysStandortListResponse")]
+        Services.WZNTServices.GruSysStandort[] ReadGruSysStandortList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysStandortList", ReplyAction="http://tempuri.org/IService/ReadGruSysStandortListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSysStandort[]> ReadGruSysStandortListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -1585,28 +3119,28 @@ namespace Services.WZNTServices {
             return base.Channel.GetDataUsingDataContractAsync(Composite);
         }
         
-        public void CreateGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen model) {
-            base.Channel.CreateGruArtAufEinzelnutzen(model);
+        public bool CreateGruArtAufEinzelnutzen(Services.WZNTServices.GruArtAufEinzelnutzen model) {
+            return base.Channel.CreateGruArtAufEinzelnutzen(model);
         }
         
-        public System.Threading.Tasks.Task CreateGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen model) {
+        public System.Threading.Tasks.Task<bool> CreateGruArtAufEinzelnutzenAsync(Services.WZNTServices.GruArtAufEinzelnutzen model) {
             return base.Channel.CreateGruArtAufEinzelnutzenAsync(model);
         }
         
-        public void CreateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
-            base.Channel.CreateGruArtAufEinzelnutzenList(models);
+        public bool CreateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+            return base.Channel.CreateGruArtAufEinzelnutzenList(models);
         }
         
-        public System.Threading.Tasks.Task CreateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+        public System.Threading.Tasks.Task<bool> CreateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
             return base.Channel.CreateGruArtAufEinzelnutzenListAsync(models);
         }
         
-        public Services.WZNTServices.GruArtAufEinzelnutzen[] ReadGruArtAufEinzelnutzenList() {
-            return base.Channel.ReadGruArtAufEinzelnutzenList();
+        public Services.WZNTServices.GruArtAufEinzelnutzen[] ReadGruArtAufEinzelnutzenList(string locationId) {
+            return base.Channel.ReadGruArtAufEinzelnutzenList(locationId);
         }
         
-        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> ReadGruArtAufEinzelnutzenListAsync() {
-            return base.Channel.ReadGruArtAufEinzelnutzenListAsync();
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinzelnutzen[]> ReadGruArtAufEinzelnutzenListAsync(string locationId) {
+            return base.Channel.ReadGruArtAufEinzelnutzenListAsync(locationId);
         }
         
         public Services.WZNTServices.GruArtAufEinzelnutzen ReadGruArtAufEinzelnutzen(int Id) {
@@ -1617,36 +3151,44 @@ namespace Services.WZNTServices {
             return base.Channel.ReadGruArtAufEinzelnutzenAsync(Id);
         }
         
-        public void UpdateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
-            base.Channel.UpdateGruArtAufEinzelnutzenList(models);
+        public bool UpdateGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+            return base.Channel.UpdateGruArtAufEinzelnutzenList(models);
         }
         
-        public System.Threading.Tasks.Task UpdateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+        public System.Threading.Tasks.Task<bool> UpdateGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
             return base.Channel.UpdateGruArtAufEinzelnutzenListAsync(models);
         }
         
-        public void DeleteGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
-            base.Channel.DeleteGruArtAufEinzelnutzenList(models);
+        public bool DeleteGruArtAufEinzelnutzenList(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+            return base.Channel.DeleteGruArtAufEinzelnutzenList(models);
         }
         
-        public System.Threading.Tasks.Task DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
+        public System.Threading.Tasks.Task<bool> DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
             return base.Channel.DeleteGruArtAufEinzelnutzenListAsync(models);
         }
         
-        public Services.WZNTServices.GruArtAufEinSprache[] GetListGruArtAufEinSprache(Services.WZNTServices.GruArtAufEinzelnutzen model) {
-            return base.Channel.GetListGruArtAufEinSprache(model);
+        public Services.WZNTServices.GruArtAufEinSprache[] ReadGruArtAufEinSpracheList(Services.WZNTServices.GruArtAufEinzelnutzen model) {
+            return base.Channel.ReadGruArtAufEinSpracheList(model);
         }
         
-        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> GetListGruArtAufEinSpracheAsync(Services.WZNTServices.GruArtAufEinzelnutzen model) {
-            return base.Channel.GetListGruArtAufEinSpracheAsync(model);
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtAufEinSprache[]> ReadGruArtAufEinSpracheListAsync(Services.WZNTServices.GruArtAufEinzelnutzen model) {
+            return base.Channel.ReadGruArtAufEinSpracheListAsync(model);
         }
         
-        public Services.WZNTServices.GruSprachen[] ReadGruSprachenList() {
-            return base.Channel.ReadGruSprachenList();
+        public Services.WZNTServices.GruSprachen[] ReadGruSprachenList(string locationId) {
+            return base.Channel.ReadGruSprachenList(locationId);
         }
         
-        public System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync() {
-            return base.Channel.ReadGruSprachenListAsync();
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync(string locationId) {
+            return base.Channel.ReadGruSprachenListAsync(locationId);
+        }
+        
+        public Services.WZNTServices.GruSysStandort[] ReadGruSysStandortList() {
+            return base.Channel.ReadGruSysStandortList();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSysStandort[]> ReadGruSysStandortListAsync() {
+            return base.Channel.ReadGruSysStandortListAsync();
         }
         
         public double ParsePixels(string File1, string File2) {

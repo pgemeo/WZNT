@@ -39,7 +39,9 @@
   </xs:element>
   <xs:element name="CreateGruArtAufEinzelnutzenResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateGruArtAufEinzelnutzenResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateGruArtAufEinzelnutzenList">
@@ -51,12 +53,16 @@
   </xs:element>
   <xs:element name="CreateGruArtAufEinzelnutzenListResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateGruArtAufEinzelnutzenListResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ReadGruArtAufEinzelnutzenList">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationId" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ReadGruArtAufEinzelnutzenListResponse">
@@ -89,7 +95,9 @@
   </xs:element>
   <xs:element name="UpdateGruArtAufEinzelnutzenListResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateGruArtAufEinzelnutzenListResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="DeleteGruArtAufEinzelnutzenList">
@@ -101,32 +109,48 @@
   </xs:element>
   <xs:element name="DeleteGruArtAufEinzelnutzenListResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteGruArtAufEinzelnutzenListResult" type="xs:boolean" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetListGruArtAufEinSprache">
+  <xs:element name="ReadGruArtAufEinSpracheList">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="model" nillable="true" type="q9:GruArtAufEinzelnutzen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetListGruArtAufEinSpracheResponse">
+  <xs:element name="ReadGruArtAufEinSpracheListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="GetListGruArtAufEinSpracheResult" nillable="true" type="q10:ArrayOfGruArtAufEinSprache" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruArtAufEinSpracheListResult" nillable="true" type="q10:ArrayOfGruArtAufEinSprache" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ReadGruSprachenList">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationId" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ReadGruSprachenListResponse">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSprachenListResult" nillable="true" type="q11:ArrayOfGruSprachen" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadGruSysStandortList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadGruSysStandortListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysStandortListResult" nillable="true" type="q12:ArrayOfGruSysStandort" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

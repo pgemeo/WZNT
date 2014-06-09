@@ -6,6 +6,7 @@
       <xs:element minOccurs="0" name="GruArtAufEinSpraches" nillable="true" type="tns:ArrayOfGruArtAufEinSprache" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruArtAufEinzelnutzen" nillable="true" type="tns:GruArtAufEinzelnutzen" />
@@ -23,6 +24,7 @@
       <xs:element minOccurs="0" name="IdAufgabe" type="xs:int" />
       <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -38,6 +40,7 @@
       <xs:element minOccurs="0" name="Iso" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Sprache" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruSprachen" nillable="true" type="tns:GruSprachen" />
@@ -55,6 +58,7 @@
       <xs:element minOccurs="0" name="IdBasisart" type="xs:int" />
       <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -65,6 +69,7 @@
       <xs:element minOccurs="0" name="GruArtBasisArtSpraches" nillable="true" type="tns:ArrayOfGruArtBasisArtSprache" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruArtBasisart" nillable="true" type="tns:GruArtBasisart" />
@@ -79,9 +84,10 @@
       <xs:element minOccurs="0" name="GruArtDruckverf" nillable="true" type="tns:GruArtDruckverf" />
       <xs:element minOccurs="0" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="IdDruckvorl" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDruckverf" type="xs:int" />
       <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UebSetDruckv" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UebSetKurzz" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -92,12 +98,138 @@
       <xs:element minOccurs="0" name="Auflosung" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Druckverfahren" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="GruArtDruckVerSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVerSprache" />
+      <xs:element minOccurs="0" name="GruMaCfgs" nillable="true" type="tns:ArrayOfGruMaCfg" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Kurzzeichen" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruArtDruckverf" nillable="true" type="tns:GruArtDruckverf" />
+  <xs:complexType name="ArrayOfGruMaCfg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruMaCfg" nillable="true" type="tns:GruMaCfg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruMaCfg" nillable="true" type="tns:ArrayOfGruMaCfg" />
+  <xs:complexType name="GruMaCfg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Baugruppe" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Bild" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="GruArtDruckverf" nillable="true" type="tns:GruArtDruckverf" />
+      <xs:element minOccurs="0" name="GruMaschinen" nillable="true" type="tns:GruMaschinen" />
+      <xs:element minOccurs="0" name="GruWerkzRegMarke" nillable="true" type="tns:GruWerkzRegMarke" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDruckverfahren" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMaschine" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRegistermarken" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruMaCfg" nillable="true" type="tns:GruMaCfg" />
+  <xs:complexType name="GruMaschinen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnzBaugruppe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruMaCfgs" nillable="true" type="tns:ArrayOfGruMaCfg" />
+      <xs:element minOccurs="0" name="GruMaTypenDruKzs" nillable="true" type="tns:ArrayOfGruMaTypenDruKz" />
+      <xs:element minOccurs="0" name="GruMaschMaGruppe" nillable="true" type="tns:GruMaschMaGruppe" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMaGruppe" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRegisterMa" type="xs:int" />
+      <xs:element minOccurs="0" name="Maschine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruMaschinen" nillable="true" type="tns:GruMaschinen" />
+  <xs:complexType name="ArrayOfGruMaTypenDruKz">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruMaTypenDruKz" nillable="true" type="tns:GruMaTypenDruKz" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruMaTypenDruKz" nillable="true" type="tns:ArrayOfGruMaTypenDruKz" />
+  <xs:complexType name="GruMaTypenDruKz">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FdKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GruMaschinen" nillable="true" type="tns:GruMaschinen" />
+      <xs:element minOccurs="0" name="GruWerkzWTypen" nillable="true" type="tns:GruWerkzWTypen" />
+      <xs:element minOccurs="0" name="HpKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMaschine" type="xs:int" />
+      <xs:element minOccurs="0" name="IdWzTyp" type="xs:int" />
+      <xs:element minOccurs="0" name="IjKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KpKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OdKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SdKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TdKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ZsKz" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruMaTypenDruKz" nillable="true" type="tns:GruMaTypenDruKz" />
+  <xs:complexType name="GruWerkzWTypen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GruMaTypenDruKzs" nillable="true" type="tns:ArrayOfGruMaTypenDruKz" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Matchcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxBreite" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MaxLfm" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Typ" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruWerkzWTypen" nillable="true" type="tns:GruWerkzWTypen" />
+  <xs:complexType name="GruMaschMaGruppe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Beschreibung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruMaschinens" nillable="true" type="tns:ArrayOfGruMaschinen" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MaGruppe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruMaschMaGruppe" nillable="true" type="tns:GruMaschMaGruppe" />
+  <xs:complexType name="ArrayOfGruMaschinen">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruMaschinen" nillable="true" type="tns:GruMaschinen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruMaschinen" nillable="true" type="tns:ArrayOfGruMaschinen" />
+  <xs:complexType name="GruWerkzRegMarke">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anzeichnung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruMaCfgs" nillable="true" type="tns:ArrayOfGruMaCfg" />
+      <xs:element minOccurs="0" name="GruWerkzRegMarkePos" nillable="true" type="tns:ArrayOfGruWerkzRegMarkePos" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruWerkzRegMarke" nillable="true" type="tns:GruWerkzRegMarke" />
+  <xs:complexType name="ArrayOfGruWerkzRegMarkePos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruWerkzRegMarkePos" nillable="true" type="tns:GruWerkzRegMarkePos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruWerkzRegMarkePos" nillable="true" type="tns:ArrayOfGruWerkzRegMarkePos" />
+  <xs:complexType name="GruWerkzRegMarkePos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Abstand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GruWerkzRegMarke" nillable="true" type="tns:GruWerkzRegMarke" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRegM" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Pos" type="xs:int" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruWerkzRegMarkePos" nillable="true" type="tns:GruWerkzRegMarkePos" />
   <xs:complexType name="ArrayOfGruArtDruckVorlSprache">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtDruckVorlSprache" nillable="true" type="tns:GruArtDruckVorlSprache" />
@@ -112,6 +244,7 @@
       <xs:element minOccurs="0" name="IdDruckvorl" type="xs:int" />
       <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Uebersetzung" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -122,6 +255,7 @@
       <xs:element minOccurs="0" name="GruArtDruckVorlSpraches" nillable="true" type="tns:ArrayOfGruArtDruckVorlSprache" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruArtDruckvorl" nillable="true" type="tns:GruArtDruckvorl" />
@@ -139,6 +273,7 @@
       <xs:element minOccurs="0" name="IdAbrGrund" type="xs:int" />
       <xs:element minOccurs="0" name="IdSprache" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="UebAbrGrund" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -149,6 +284,7 @@
       <xs:element minOccurs="0" name="GruProgAbrgruSpraches" nillable="true" type="tns:ArrayOfGruProgAbrgruSprache" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruProgAbrgru" nillable="true" type="tns:GruProgAbrgru" />
@@ -164,4 +300,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfGruSprachen" nillable="true" type="tns:ArrayOfGruSprachen" />
+  <xs:complexType name="ArrayOfGruSysStandort">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSysStandort" nillable="true" type="tns:GruSysStandort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruSysStandort" nillable="true" type="tns:ArrayOfGruSysStandort" />
+  <xs:complexType name="GruSysStandort">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Standort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandortId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruSysStandort" nillable="true" type="tns:GruSysStandort" />
 </xs:schema>
