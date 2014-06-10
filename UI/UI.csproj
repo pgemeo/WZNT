@@ -105,7 +105,16 @@
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruSysStandort.de.resx">
+      <DependentUpon>UcGruSysStandort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruSysStandort.fr.resx">
+      <DependentUpon>UcGruSysStandort.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruSysStandort.resx">
+      <DependentUpon>UcGruSysStandort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruSysStandort.ru-RU.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.de.resx">
