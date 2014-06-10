@@ -129,7 +129,7 @@ namespace UI.Controls
             {
                 Column.HeaderText = "StandortKZ";
                 Column.DataPropertyName = "StandortKZ";
-                Column.Visible = true;
+                Column.Visible = false;
                 Columns.Add(Column);
             }
 
@@ -201,7 +201,7 @@ namespace UI.Controls
             {
                 Column.HeaderText = "StandortKZ";
                 Column.DataPropertyName = "StandortKZ";
-                Column.Visible = true;
+                Column.Visible = false;
                 Columns.Add(Column);
             }
             
