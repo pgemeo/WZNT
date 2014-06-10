@@ -19,9 +19,18 @@ namespace UI.Workspaces
 
         public WsGruArtAufEinzelnutzen(string StandortId)
         {
-            this._StandortId = StandortId;
-            this._List = DbManager.ReadGruArtAufEinzelnutzenList(this._StandortId);
-            this._Original = GlobalFunctions.CloneList(this._List);
+            if (StandortId != null)
+            {
+                this._StandortId = StandortId;
+                this._List = DbManager.ReadGruArtAufEinzelnutzenList(this._StandortId);
+                this._Original = GlobalFunctions.CloneList(this._List);
+            }
+            else
+            {
+                _List = null;
+                _Original = null;
+                _StandortId = null;
+            }
         }
 
         public string StandortId
