@@ -81,5 +81,26 @@ namespace Services
                 return Client.ReadGruSysStandortList().ToList();
             }
         }
+        public static void InsertGruSysStandort(List<GruSysStandort> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.CreateGruSysStandortList(List.ToArray());
+            }
+        }
+        public static void UpdateGruSysStandort(List<GruSysStandort> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.UpdateGruSysStandortList(List.ToArray());
+            }
+        }
+        public static void DeleteGruSysStandort(List<GruSysStandort> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.DeleteGruSysStandortList(List.ToArray());
+            }
+        }
     }
 }

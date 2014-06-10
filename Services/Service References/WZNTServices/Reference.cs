@@ -3057,11 +3057,29 @@ namespace Services.WZNTServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSprachenList", ReplyAction="http://tempuri.org/IService/ReadGruSprachenListResponse")]
         System.Threading.Tasks.Task<Services.WZNTServices.GruSprachen[]> ReadGruSprachenListAsync(string locationId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysStandortList", ReplyAction="http://tempuri.org/IService/CreateGruSysStandortListResponse")]
+        bool CreateGruSysStandortList(Services.WZNTServices.GruSysStandort[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysStandortList", ReplyAction="http://tempuri.org/IService/CreateGruSysStandortListResponse")]
+        System.Threading.Tasks.Task<bool> CreateGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysStandortList", ReplyAction="http://tempuri.org/IService/ReadGruSysStandortListResponse")]
         Services.WZNTServices.GruSysStandort[] ReadGruSysStandortList();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysStandortList", ReplyAction="http://tempuri.org/IService/ReadGruSysStandortListResponse")]
         System.Threading.Tasks.Task<Services.WZNTServices.GruSysStandort[]> ReadGruSysStandortListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysStandortList", ReplyAction="http://tempuri.org/IService/UpdateGruSysStandortListResponse")]
+        bool UpdateGruSysStandortList(Services.WZNTServices.GruSysStandort[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysStandortList", ReplyAction="http://tempuri.org/IService/UpdateGruSysStandortListResponse")]
+        System.Threading.Tasks.Task<bool> UpdateGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysStandortList", ReplyAction="http://tempuri.org/IService/DeleteGruSysStandortListResponse")]
+        bool DeleteGruSysStandortList(Services.WZNTServices.GruSysStandort[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysStandortList", ReplyAction="http://tempuri.org/IService/DeleteGruSysStandortListResponse")]
+        System.Threading.Tasks.Task<bool> DeleteGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -3183,12 +3201,36 @@ namespace Services.WZNTServices {
             return base.Channel.ReadGruSprachenListAsync(locationId);
         }
         
+        public bool CreateGruSysStandortList(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.CreateGruSysStandortList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.CreateGruSysStandortListAsync(models);
+        }
+        
         public Services.WZNTServices.GruSysStandort[] ReadGruSysStandortList() {
             return base.Channel.ReadGruSysStandortList();
         }
         
         public System.Threading.Tasks.Task<Services.WZNTServices.GruSysStandort[]> ReadGruSysStandortListAsync() {
             return base.Channel.ReadGruSysStandortListAsync();
+        }
+        
+        public bool UpdateGruSysStandortList(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.UpdateGruSysStandortList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.UpdateGruSysStandortListAsync(models);
+        }
+        
+        public bool DeleteGruSysStandortList(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.DeleteGruSysStandortList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models) {
+            return base.Channel.DeleteGruSysStandortListAsync(models);
         }
         
         public double ParsePixels(string File1, string File2) {

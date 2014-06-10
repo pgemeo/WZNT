@@ -68,11 +68,29 @@
   <wsdl:message name="IService_ReadGruSprachenList_OutputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruSprachenListResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysStandortList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysStandortList" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysStandortList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysStandortListResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_ReadGruSysStandortList_InputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruSysStandortList" />
   </wsdl:message>
   <wsdl:message name="IService_ReadGruSysStandortList_OutputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruSysStandortListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysStandortList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysStandortList" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysStandortList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysStandortListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysStandortList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysStandortList" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysStandortList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysStandortListResponse" />
   </wsdl:message>
   <wsdl:message name="IService_ParsePixels_InputMessage">
     <wsdl:part name="parameters" element="tns:ParsePixels" />
@@ -127,9 +145,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSprachenList" message="tns:IService_ReadGruSprachenList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSprachenListResponse" message="tns:IService_ReadGruSprachenList_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="CreateGruSysStandortList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateGruSysStandortList" message="tns:IService_CreateGruSysStandortList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateGruSysStandortListResponse" message="tns:IService_CreateGruSysStandortList_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ReadGruSysStandortList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSysStandortList" message="tns:IService_ReadGruSysStandortList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSysStandortListResponse" message="tns:IService_ReadGruSysStandortList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysStandortList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGruSysStandortList" message="tns:IService_UpdateGruSysStandortList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGruSysStandortListResponse" message="tns:IService_UpdateGruSysStandortList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysStandortList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruSysStandortList" message="tns:IService_DeleteGruSysStandortList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruSysStandortListResponse" message="tns:IService_DeleteGruSysStandortList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ParsePixels">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ParsePixels" message="tns:IService_ParsePixels_InputMessage" />
@@ -232,8 +262,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CreateGruSysStandortList">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateGruSysStandortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="ReadGruSysStandortList">
       <soap:operation soapAction="http://tempuri.org/IService/ReadGruSysStandortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysStandortList">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateGruSysStandortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysStandortList">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteGruSysStandortList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

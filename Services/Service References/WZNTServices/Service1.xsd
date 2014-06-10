@@ -142,6 +142,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CreateGruSysStandortList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q12:ArrayOfGruSysStandort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGruSysStandortListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateGruSysStandortListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ReadGruSysStandortList">
     <xs:complexType>
       <xs:sequence />
@@ -150,7 +164,35 @@
   <xs:element name="ReadGruSysStandortListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysStandortListResult" nillable="true" type="q12:ArrayOfGruSysStandort" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysStandortListResult" nillable="true" type="q13:ArrayOfGruSysStandort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGruSysStandortList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q14:ArrayOfGruSysStandort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGruSysStandortListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateGruSysStandortListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGruSysStandortList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q15:ArrayOfGruSysStandort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGruSysStandortListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteGruSysStandortListResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -101,9 +101,9 @@ namespace UI.Workspaces
             List<GruSysStandort> DeleteElements = (List<GruSysStandort>)Deleted;
             List<GruSysStandort> EditElements = (List<GruSysStandort>)Modified;
             // Db Operations
-            //DbManager.InsertGruSysStandort(InsertElements);
-            //DbManager.DeleteGruSysStandort(DeleteElements);
-            //DbManager.UpdateGruSysStandort(EditElements);
+            DbManager.InsertGruSysStandort(InsertElements);
+            DbManager.DeleteGruSysStandort(DeleteElements);
+            DbManager.UpdateGruSysStandort(EditElements);
             // Return
             ReturnValue = true;
             return ReturnValue;
