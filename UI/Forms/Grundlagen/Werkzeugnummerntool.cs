@@ -31,6 +31,7 @@ namespace UI.Modules.Grundlagen
         protected void Initialize()
         {
             InitializeComponent();
+            SetCulture(AppConstants.K_LANGUAGE_GERMAN);
             InitializeEvents();
             InitializeTopMenu();
             LoadContent();

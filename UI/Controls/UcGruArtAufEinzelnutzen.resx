@@ -122,7 +122,7 @@
     <value>0, 50</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 290</value>
+    <value>280, 175</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
@@ -141,10 +141,10 @@
     <value>3</value>
   </data>
   <data name="dataGridView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 50</value>
+    <value>0, 230</value>
   </data>
   <data name="dataGridView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 145</value>
+    <value>280, 110</value>
   </data>
   <data name="dataGridView2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -270,6 +270,21 @@
   <data name="bindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>154, 17</value>
   </data>
+  <data name="labelStandort.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStandort.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt, style=Bold</value>
+  </data>
+  <data name="labelStandort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="labelStandort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 18</value>
+  </data>
+  <data name="labelStandort.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;labelStandort.Name" xml:space="preserve">
     <value>labelStandort</value>
   </data>
@@ -280,6 +295,15 @@
     <value>flowPanelStandort</value>
   </data>
   <data name="&gt;&gt;labelStandort.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboBoxStandort.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 21</value>
+  </data>
+  <data name="comboBoxStandort.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 21</value>
+  </data>
+  <data name="comboBoxStandort.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;comboBoxStandort.Name" xml:space="preserve">
@@ -315,33 +339,6 @@
   <data name="&gt;&gt;flowPanelStandort.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="comboBoxStandort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 21</value>
-  </data>
-  <data name="comboBoxStandort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 21</value>
-  </data>
-  <data name="comboBoxStandort.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelStandort.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelStandort.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt, style=Bold</value>
-  </data>
-  <data name="labelStandort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="labelStandort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 18</value>
-  </data>
-  <data name="labelStandort.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelStandort.Text" xml:space="preserve">
-    <value>Standortauswahl</value>
-  </data>
   <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -368,17 +365,5 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Aufgabe" xml:space="preserve">
-    <value>Aufgabe</value>
-  </data>
-  <data name="Sprache" xml:space="preserve">
-    <value>Sprache</value>
-  </data>
-  <data name="Standortauswahl" xml:space="preserve">
-    <value>Standortauswahl</value>
-  </data>
-  <data name="Uebersetzung" xml:space="preserve">
-    <value>Uebersetzung</value>
   </data>
 </root>

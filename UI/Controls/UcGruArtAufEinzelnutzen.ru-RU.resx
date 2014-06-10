@@ -160,4 +160,10 @@
   <data name="Uebersetzung" xml:space="preserve">
     <value>перевод</value>
   </data>
+  <data name="labelStandort.Text" xml:space="preserve">
+    <value>Standortauswahl</value>
+  </data>
+  <data name="Standortauswahl" xml:space="preserve">
+    <value>Standortauswahl</value>
+  </data>
 </root>

@@ -192,9 +192,6 @@
   <data name="panelTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>860, 30</value>
   </data>
-  <data name="labelTitle.Text" xml:space="preserve">
-    <value>Grundlagen</value>
-  </data>
   <data name="&gt;&gt;panelTitle.Name" xml:space="preserve">
     <value>panelTitle</value>
   </data>
@@ -239,98 +236,5 @@
   </data>
   <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="treeNode1" xml:space="preserve">
-    <value>Verwaltung</value>
-  </data>
-  <data name="treeNode11" xml:space="preserve">
-    <value>Stammdaten</value>
-  </data>
-  <data name="treeNode111" xml:space="preserve">
-    <value>Artikel</value>
-  </data>
-  <data name="treeNode1111" xml:space="preserve">
-    <value>Aufgaben Einzelnutzen</value>
-  </data>
-  <data name="treeNode1112" xml:space="preserve">
-    <value>Basisart</value>
-  </data>
-  <data name="treeNode1113" xml:space="preserve">
-    <value>Druckvorlagen</value>
-  </data>
-  <data name="treeNode1114" xml:space="preserve">
-    <value>Punktform</value>
-  </data>
-  <data name="treeNode1115" xml:space="preserve">
-    <value>Druckverfahren</value>
-  </data>
-  <data name="treeNode1116" xml:space="preserve">
-    <value>Farbtyp</value>
-  </data>
-  <data name="treeNode112" xml:space="preserve">
-    <value>Werkzeug</value>
-  </data>
-  <data name="treeNode1121" xml:space="preserve">
-    <value>Registermarken</value>
-  </data>
-  <data name="treeNode1122" xml:space="preserve">
-    <value>Druckkontrollelemente</value>
-  </data>
-  <data name="treeNode1123" xml:space="preserve">
-    <value>Werkzeugtypen</value>
-  </data>
-  <data name="treeNode1124" xml:space="preserve">
-    <value>MaterialKennlinie</value>
-  </data>
-  <data name="treeNode113" xml:space="preserve">
-    <value>Maschinen</value>
-  </data>
-  <data name="treeNode1131" xml:space="preserve">
-    <value>Maschinengruppen</value>
-  </data>
-  <data name="treeNode1132" xml:space="preserve">
-    <value>Maschinenpark</value>
-  </data>
-  <data name="treeNode114" xml:space="preserve">
-    <value>Programm</value>
-  </data>
-  <data name="treeNode1141" xml:space="preserve">
-    <value>Abrechnungsgründe</value>
-  </data>
-  <data name="treeNode1142" xml:space="preserve">
-    <value>Parameter</value>
-  </data>
-  <data name="treeNode115" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="treeNode1151" xml:space="preserve">
-    <value>Einzelnutzen</value>
-  </data>
-  <data name="treeNode1152" xml:space="preserve">
-    <value>Werkzeuge</value>
-  </data>
-  <data name="treeNode12" xml:space="preserve">
-    <value>Systemparameter</value>
-  </data>
-  <data name="treeNode121" xml:space="preserve">
-    <value>Standorte/Mand.</value>
-  </data>
-  <data name="treeNode1211" xml:space="preserve">
-    <value>Standorte/Mandanten</value>
-  </data>
-  <data name="treeNode122" xml:space="preserve">
-    <value>DS-APi-Einstellungen</value>
-  </data>
-  <data name="treeNode1221" xml:space="preserve">
-    <value>Artikel-Update</value>
-  </data>
-  <data name="treeNode12211" xml:space="preserve">
-    <value>Datenquellen</value>
-  </data>
-  <data name="treeNode12212" xml:space="preserve">
-    <value>Jobsteuerung</value>
-  </data>
-  <data name="treeNode13" xml:space="preserve">
-    <value>Berechtigungen</value>
   </data>
 </root>

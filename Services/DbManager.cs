@@ -13,11 +13,11 @@ namespace Services
         //
         // GruArtAufEinzelnutzen
         //
-        public static List<GruArtAufEinzelnutzen> ReadGruArtAufEinzelnutzenList()
+        public static List<GruArtAufEinzelnutzen> ReadGruArtAufEinzelnutzenList(string StandortId)
         {
             using (WZNTServices.ServiceClient Client = new ServiceClient())
             {
-                return Client.ReadGruArtAufEinzelnutzenList(null).ToList();
+                return Client.ReadGruArtAufEinzelnutzenList(StandortId).ToList();
             }
         }
         public static GruArtAufEinzelnutzen ReadGruArtAufEinzelnutzen(int Id)

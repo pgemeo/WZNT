@@ -15,11 +15,21 @@ namespace UI.Workspaces
     {
         protected IList _List;
         protected IList _Original;
+        protected string _StandortId;
 
-        public WsGruArtAufEinzelnutzen()
+        public WsGruArtAufEinzelnutzen(string StandortId)
         {
-            this._List = DbManager.ReadGruArtAufEinzelnutzenList();
+            this._StandortId = StandortId;
+            this._List = DbManager.ReadGruArtAufEinzelnutzenList(this._StandortId);
             this._Original = GlobalFunctions.CloneList(this._List);
+        }
+
+        public string StandortId
+        {
+            get
+            {
+                return _StandortId;
+            }
         }
 
         public IList Data

@@ -18,7 +18,7 @@ namespace UI
         {
             InitializeComponent();
 
-            mycollection = Services.DbManager.ReadGruArtAufEinzelnutzenList();
+            mycollection = Services.DbManager.ReadGruArtAufEinzelnutzenList(null);
             gruArtAufEinzelnutzenBindingSource.DataSource = mycollection;
 
             /*

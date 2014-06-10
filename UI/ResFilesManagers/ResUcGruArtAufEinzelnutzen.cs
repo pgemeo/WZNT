@@ -12,7 +12,14 @@ namespace UI.ResFilesManagers
     {
         protected static Type _Type = typeof(UcGruArtAufEinzelnutzen);
         protected static ResourceManager RManager = new ResourceManager(_Type);
-        
+
+        public static string Standortauswahl
+        {
+            get
+            {
+                return RManager.GetString("Standortauswahl");
+            }
+        }
         public static string Aufgabe
         {
             get

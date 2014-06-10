@@ -12,6 +12,7 @@ using Services.WZNTServices;
 using UI.Shared;
 using UI.Workspaces;
 using UI.ResFilesManagers;
+using Services;
 
 
 namespace UI.Controls
@@ -26,6 +27,7 @@ namespace UI.Controls
         public UcGruArtAufEinzelnutzen()
         {
             InitializeComponent();
+            InitializeFilter();
             BindEvents();
             InitializeWorkspace();
         }
@@ -54,6 +56,22 @@ namespace UI.Controls
         {
             InitializeWorkspace();
         }
+        private void comboBoxStandort_SelectedValueChanged(object sender, EventArgs e)
+        {
+            InitializeWorkspace();
+        }
+
+        //
+        // Filter
+        //
+        protected void InitializeFilter()
+        {
+            this.labelStandort.Text = ResUcGruArtAufEinzelnutzen.Standortauswahl;
+            this.comboBoxStandort.FlatStyle = FlatStyle.Flat;
+            this.comboBoxStandort.DataSource = DbManager.ReadGruSysStandortList();
+            this.comboBoxStandort.ValueMember = "StandortId";
+            this.comboBoxStandort.DisplayMember = "StandortId";
+        }
 
         // 
         // Workspace
@@ -61,7 +79,7 @@ namespace UI.Controls
 
         protected void InitializeWorkspace()
         {
-            Workspace = new WsGruArtAufEinzelnutzen();
+            Workspace = new WsGruArtAufEinzelnutzen(Convert.ToString(this.comboBoxStandort.SelectedValue));
             BindView();
         }
         
@@ -103,6 +121,15 @@ namespace UI.Controls
                 Column.HeaderText = ResUcGruArtAufEinzelnutzen.Aufgabe; // Read Resource File
                 Column.DataPropertyName = "Aufgabe";
                 Column.Visible = true;
+                Columns.Add(Column);
+            }
+
+            // StandortKZ
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "StandortKZ";
+                Column.DataPropertyName = "StandortKZ";
+                Column.Visible = false;
                 Columns.Add(Column);
             }
 
@@ -168,6 +195,15 @@ namespace UI.Controls
                 Column.Visible = true;
                 Columns.Add(Column);
             }
+
+            // StandortKZ
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = "StandortKZ";
+                Column.DataPropertyName = "StandortKZ";
+                Column.Visible = false;
+                Columns.Add(Column);
+            }
             
             this.dataGridView2.Columns.AddRange(Columns.ToArray());
         }
@@ -179,6 +215,14 @@ namespace UI.Controls
 
         private void BindEvents()
         {
+            //
+            // Buttons
+            //
+            this.btEdit.Click += btEdit_Click;
+            this.btSave.Click += btSave_Click;
+            this.btCancel.Click += btCancel_Click;
+            this.comboBoxStandort.SelectedValueChanged += comboBoxStandort_SelectedValueChanged;
+
             //
             // _DGVParent
             //
@@ -209,7 +253,9 @@ namespace UI.Controls
                 {
                     // Get Cell Values
                     int Id = (int)ParentSelectedRow.Cells[0].Value;
+                    string StandortKZ = (string)ParentSelectedRow.Cells[2].Value;
                     this.dataGridView2.Rows[RowIndex].Cells[2].Value = Convert.ToString(Id);
+                    this.dataGridView2.Rows[RowIndex].Cells[5].Value = Convert.ToString(StandortKZ);
                 }
             }
         }

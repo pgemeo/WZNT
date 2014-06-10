@@ -117,39 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btEdit.Text" xml:space="preserve">
-    <value>Changement</value>
-  </data>
-  <data name="btSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btSave.Text" xml:space="preserve">
-    <value>Sauver</value>
-  </data>
-  <data name="btCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="Aufgabe" xml:space="preserve">
+    <value>Aufgabe</value>
   </data>
   <data name="btCancel.Text" xml:space="preserve">
-    <value>Abandonner</value>
+    <value>Abbrechen</value>
   </data>
-  <data name="Aufgabe" xml:space="preserve">
-    <value>Tâche</value>
+  <data name="btEdit.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
   </data>
-  <data name="Sprache" xml:space="preserve">
-    <value>Langue</value>
-  </data>
-  <data name="Uebersetzung" xml:space="preserve">
-    <value>Traduction</value>
+  <data name="btSave.Text" xml:space="preserve">
+    <value>Speichern</value>
   </data>
   <data name="DeleteConfirmMsg" xml:space="preserve">
     <value>Etes-vous sûr de vouloir supprimer cette ligne?</value>
   </data>
   <data name="DeleteConfirmTitle" xml:space="preserve">
     <value>Confirmation de la suppression</value>
+  </data>
+  <data name="labelStandort.Text" xml:space="preserve">
+    <value>Standortauswahl</value>
   </data>
   <data name="SaveConfirmMsg" xml:space="preserve">
     <value>Etes-vous sûr de vouloir sauver?</value>
@@ -160,10 +147,13 @@
   <data name="SaveSucceeded" xml:space="preserve">
     <value>Tous les changements ont été enregistrés!</value>
   </data>
-  <data name="labelStandort.Text" xml:space="preserve">
-    <value>Standortauswahl</value>
+  <data name="Sprache" xml:space="preserve">
+    <value>Sprache</value>
   </data>
   <data name="Standortauswahl" xml:space="preserve">
     <value>Standortauswahl</value>
+  </data>
+  <data name="Uebersetzung" xml:space="preserve">
+    <value>Uebersetzung</value>
   </data>
 </root>

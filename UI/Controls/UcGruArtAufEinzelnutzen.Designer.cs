@@ -39,8 +39,8 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.flowPanelStandort = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBoxStandort = new System.Windows.Forms.ComboBox();
             this.labelStandort = new System.Windows.Forms.Label();
+            this.comboBoxStandort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.flowPanelButtons.SuspendLayout();
@@ -78,21 +78,18 @@
             resources.ApplyResources(this.btEdit, "btEdit");
             this.btEdit.Name = "btEdit";
             this.btEdit.UseVisualStyleBackColor = true;
-            this.btEdit.Click += btEdit_Click;
             // 
             // btSave
             // 
             resources.ApplyResources(this.btSave, "btSave");
             this.btSave.Name = "btSave";
             this.btSave.UseVisualStyleBackColor = true;
-            this.btSave.Click += btSave_Click;
             // 
             // btCancel
             // 
             resources.ApplyResources(this.btCancel, "btCancel");
             this.btCancel.Name = "btCancel";
             this.btCancel.UseVisualStyleBackColor = true;
-            this.btCancel.Click += btCancel_Click;
             // 
             // flowPanelStandort
             // 
@@ -101,17 +98,17 @@
             resources.ApplyResources(this.flowPanelStandort, "flowPanelStandort");
             this.flowPanelStandort.Name = "flowPanelStandort";
             // 
-            // comboBoxStandort
-            // 
-            this.comboBoxStandort.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxStandort, "comboBoxStandort");
-            this.comboBoxStandort.Name = "comboBoxStandort";
-            // 
             // labelStandort
             // 
             resources.ApplyResources(this.labelStandort, "labelStandort");
             this.labelStandort.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelStandort.Name = "labelStandort";
+            // 
+            // comboBoxStandort
+            // 
+            this.comboBoxStandort.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxStandort, "comboBoxStandort");
+            this.comboBoxStandort.Name = "comboBoxStandort";
             // 
             // UcGruArtAufEinzelnutzen
             // 

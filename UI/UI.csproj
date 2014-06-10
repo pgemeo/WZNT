@@ -85,6 +85,9 @@
     <Compile Include="Shared\DataBindingSource.cs" />
     <Compile Include="Shared\GlobalFunctions.cs" />
     <Compile Include="Workspaces\WsGruArtAufEinzelnutzen.cs" />
+    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.de.resx">
+      <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.fr.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.de.resx">
+      <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.fr.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
@@ -108,9 +114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Grundlagen\Werkzeugnummerntool.fr.resx">
-      <DependentUpon>Werkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Grundlagen\Werkzeugnummerntool.resx">
       <DependentUpon>Werkzeugnummerntool.cs</DependentUpon>
