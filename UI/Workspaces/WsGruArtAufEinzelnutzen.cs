@@ -19,7 +19,7 @@ namespace UI.Workspaces
 
         public WsGruArtAufEinzelnutzen(string StandortId)
         {
-            if (StandortId != null)
+            if (StandortId != null && StandortId.Length > 0)
             {
                 this._StandortId = StandortId;
                 this._List = DbManager.ReadGruArtAufEinzelnutzenList(this._StandortId);
