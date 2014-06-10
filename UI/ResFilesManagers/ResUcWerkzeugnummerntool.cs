@@ -8,7 +8,7 @@ using UI.Controls;
 
 namespace UI.ResFilesManagers
 {
-    public class ResWerkzeugnummerntool
+    public class ResUcWerkzeugnummerntool
     {
         protected static Type _Type = typeof(UcWerkzeugnummerntool);
         protected static ResourceManager RManager = new ResourceManager(_Type);
