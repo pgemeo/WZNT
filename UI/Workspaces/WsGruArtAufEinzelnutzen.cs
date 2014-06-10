@@ -194,7 +194,8 @@ namespace UI.Workspaces
                             IdSprache = X.IdSprache,
                             IdAufgabe = Instance.Id,
                             Uebersetzung = X.Uebersetzung,
-                            OTimeStamp = X.OTimeStamp
+                            OTimeStamp = X.OTimeStamp,
+                            StandortKz = X.StandortKz
                         }
                     ).ToList();
             }
