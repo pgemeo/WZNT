@@ -129,7 +129,7 @@ namespace UI.Controls
             {
                 Column.HeaderText = "StandortKZ";
                 Column.DataPropertyName = "StandortKZ";
-                Column.Visible = false;
+                Column.Visible = true;
                 Columns.Add(Column);
             }
 
@@ -201,7 +201,7 @@ namespace UI.Controls
             {
                 Column.HeaderText = "StandortKZ";
                 Column.DataPropertyName = "StandortKZ";
-                Column.Visible = false;
+                Column.Visible = true;
                 Columns.Add(Column);
             }
             
@@ -229,6 +229,7 @@ namespace UI.Controls
             this.dataGridView1.UserDeletingRow += DataGridView_UserDeletingRow;
             this.dataGridView1.RowEnter += _DGVParent_RowEnter;
             this.dataGridView1.Leave += _DGVParent_Leave;
+            this.dataGridView1.CellBeginEdit += _DGVParent_CellBeginEdit;
             // !IMPORTANT: Cell Formatting is important for data binding
             this.dataGridView1.CellFormatting += DataGridView_CellFormatting;
             //
@@ -245,6 +246,10 @@ namespace UI.Controls
         // Handlers
         //
 
+        private void UpdateDataGridViewParentOnBeginEdit(int RowIndex, DataGridViewRow ParentSelectedRow)
+        {
+            ParentSelectedRow.Cells[2].Value = this.comboBoxStandort.SelectedValue;
+        }
         private void UpdateDataGridViewChildrenOnBeginEdit(int RowIndex, DataGridViewRow ParentSelectedRow)
         {
             if (ParentSelectedRow != null)
@@ -318,6 +323,14 @@ namespace UI.Controls
                 // End Edit
                 this.dataGridView1.EndEdit();
             }
+        }
+        private void _DGVParent_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            // Get Selected Row
+            DataGridViewRow GridView1SelectedRow = (this.dataGridView1.SelectedRows.Count == 1) ?
+                this.dataGridView1.SelectedRows[0] : (this.dataGridView1.CurrentCell != null) ?
+                this.dataGridView1.CurrentCell.OwningRow : null;
+            UpdateDataGridViewParentOnBeginEdit(e.RowIndex, GridView1SelectedRow);
         }
         private void _DGVChildren_Leave(object sender, EventArgs e)
         {
