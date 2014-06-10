@@ -105,6 +105,9 @@
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruSysStandort.resx">
+      <DependentUpon>UcGruSysStandort.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.de.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>

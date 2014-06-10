@@ -37,6 +37,11 @@ namespace UI.Controls
                     UcGruArtAufEinzelnutzen Control = new UcGruArtAufEinzelnutzen();
                     flowLayoutContent.Controls.Add(Control);
                 }
+                else if (this.treeView1.SelectedNode.Text.Equals(ResUcWerkzeugnummerntool.Node1211))
+                {
+                    UcGruSysStandort Control = new UcGruSysStandort();
+                    flowLayoutContent.Controls.Add(Control);
+                }
             }
         }
 
