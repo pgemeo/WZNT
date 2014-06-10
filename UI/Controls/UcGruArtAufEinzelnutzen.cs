@@ -22,7 +22,7 @@ namespace UI.Controls
         // 
         // Class Properties
         //
-        protected WsGruArtAufEinzelnutzen Workspace;
+        protected WsGruArtAufEinzelnutzen Workspace = new WsGruArtAufEinzelnutzen(null);
         
         public UcGruArtAufEinzelnutzen()
         {
@@ -68,7 +68,7 @@ namespace UI.Controls
         {
             this.labelStandort.Text = ResUcGruArtAufEinzelnutzen.Standortauswahl;
             this.comboBoxStandort.FlatStyle = FlatStyle.Flat;
-            this.comboBoxStandort.DataSource = DbManager.ReadGruSysStandortList();
+            this.comboBoxStandort.DataSource = Workspace.GruSysStandorts;
             this.comboBoxStandort.ValueMember = "StandortId";
             this.comboBoxStandort.DisplayMember = "StandortId";
         }

@@ -234,5 +234,14 @@ namespace UI.Workspaces
                 return List;
             }
         }
+
+        public IList GruSysStandorts
+        {
+            get
+            {
+                IList List = DbManager.ReadGruSysStandortList();
+                return List;
+            }
+        }
     }
 }
