@@ -33,7 +33,7 @@ namespace UI.Controls
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show(ResUcGruSysStandort.SaveConfirmMsg, ResUcGruSysStandort.SaveConfirmTitle,
+            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobl.SaveConfirmMsg, ResUcGruSysAPiJobl.SaveConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.Yes)
             {
@@ -162,7 +162,7 @@ namespace UI.Controls
         
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show(ResUcGruSysStandort.DeleteConfirmMsg, ResUcGruSysStandort.DeleteConfirmTitle,
+            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobl.DeleteConfirmMsg, ResUcGruSysAPiJobl.DeleteConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.No)
                 e.Cancel = true;
