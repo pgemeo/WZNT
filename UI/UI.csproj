@@ -52,6 +52,12 @@
     <Compile Include="Controls\UcGruArtAufEinzelnutzen.Designer.cs">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UcGruSysAPiJobl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcGruSysAPiJobl.Designer.cs">
+      <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UcGruSysStandort.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +90,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResFilesManagers\ResUcGruSysAPiJobl.cs" />
     <Compile Include="ResFilesManagers\ResUcGruSysStandort.cs" />
     <Compile Include="ResFilesManagers\ResUcGruArtAufEinzelnutzen.cs" />
     <Compile Include="ResFilesManagers\ResUcWerkzeugnummerntool.cs" />
@@ -92,6 +99,7 @@
     <Compile Include="Shared\DataBindingSource.cs" />
     <Compile Include="Shared\GlobalFunctions.cs" />
     <Compile Include="Workspaces\WsGruArtAufEinzelnutzen.cs" />
+    <Compile Include="Workspaces\WsGruSysAPiJobl.cs" />
     <Compile Include="Workspaces\WsGruSysStandort.cs" />
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.de.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
