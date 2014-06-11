@@ -42,6 +42,11 @@ namespace UI.Controls
                     UcGruSysStandort Control = new UcGruSysStandort();
                     flowLayoutContent.Controls.Add(Control);
                 }
+                else if (this.treeView1.SelectedNode.Text.Equals(ResUcWerkzeugnummerntool.Node12212))
+                {
+                    UcGruSysAPiJobl Control = new UcGruSysAPiJobl();
+                    flowLayoutContent.Controls.Add(Control);
+                }
             }
         }
 
