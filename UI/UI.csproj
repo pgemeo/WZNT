@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcGruSysAPiJobl.resx">
+      <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\UcGruSysStandort.de.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcGruSysAPiJobl));
+            this.SuspendLayout();
+            // 
+            // UcGruSysAPiJobl
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "UcGruSysAPiJobl";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
