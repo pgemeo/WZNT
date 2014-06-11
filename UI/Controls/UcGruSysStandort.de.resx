@@ -133,7 +133,7 @@
     <value>Tous les changements ont été enregistrés!</value>
   </data>
   <data name="Standort" xml:space="preserve">
-    <value>Beszcehicrhenibuunng</value>
+    <value>Bezeichnung</value>
   </data>
   <data name="StandortId" xml:space="preserve">
     <value>StandortID</value>

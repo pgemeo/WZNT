@@ -133,9 +133,9 @@
     <value>Tous les changements ont été enregistrés!</value>
   </data>
   <data name="Standort" xml:space="preserve">
-    <value>Standort</value>
+    <value>Bezeichnung</value>
   </data>
   <data name="StandortId" xml:space="preserve">
-    <value>StandortId</value>
+    <value>StandortID</value>
   </data>
 </root>
