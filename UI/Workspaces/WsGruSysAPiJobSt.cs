@@ -132,6 +132,7 @@ namespace UI.Workspaces
             get
             {
                 IList List = DbManager.ReadGruSysAPiJoblList();
+                List.Insert(0, new GruSysAPiJobl());
                 return List;
             }
         }
