@@ -122,13 +122,7 @@ namespace UI.Workspaces
         {
             get
             {
-                IList List = new List<string>();
-                List.Add("1h");
-                List.Add("6h");
-                List.Add("12h");
-                List.Add("24h");
-                List.Add("48h");
-                List.Add("168h");
+                IList List = DbManager.ReadGruSysAPiJobStFrequenzList();
                 return List;
             }
         }

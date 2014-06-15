@@ -304,6 +304,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ReadGruSysAPiJobStFrequenzList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadGruSysAPiJobStFrequenzListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJobStFrequenzListResult" nillable="true" type="q24:ArrayOfGruSysAPiJobStFrequenz" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ParsePixels">
     <xs:complexType>
       <xs:sequence>

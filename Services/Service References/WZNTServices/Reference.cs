@@ -1473,6 +1473,9 @@ namespace Services.WZNTServices {
         private int IdMaschineField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdMaschinenGrpField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdRegistermarkenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1591,6 +1594,19 @@ namespace Services.WZNTServices {
                 if ((this.IdMaschineField.Equals(value) != true)) {
                     this.IdMaschineField = value;
                     this.RaisePropertyChanged("IdMaschine");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdMaschinenGrp {
+            get {
+                return this.IdMaschinenGrpField;
+            }
+            set {
+                if ((this.IdMaschinenGrpField.Equals(value) != true)) {
+                    this.IdMaschinenGrpField = value;
+                    this.RaisePropertyChanged("IdMaschinenGrp");
                 }
             }
         }
@@ -3275,6 +3291,83 @@ namespace Services.WZNTServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruSysAPiJobStFrequenz", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruSysAPiJobStFrequenz : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FrequenzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Frequenz {
+            get {
+                return this.FrequenzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FrequenzField, value) != true)) {
+                    this.FrequenzField = value;
+                    this.RaisePropertyChanged("Frequenz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WZNTServices.IService")]
     public interface IService {
@@ -3410,6 +3503,12 @@ namespace Services.WZNTServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/DeleteGruSysAPiJobStListResponse")]
         System.Threading.Tasks.Task<bool> DeleteGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJobStFrequenzList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJobStFrequenzListResponse")]
+        Services.WZNTServices.GruSysAPiJobStFrequenz[] ReadGruSysAPiJobStFrequenzList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJobStFrequenzList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJobStFrequenzListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobStFrequenz[]> ReadGruSysAPiJobStFrequenzListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -3625,6 +3724,14 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task<bool> DeleteGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models) {
             return base.Channel.DeleteGruSysAPiJobStListAsync(models);
+        }
+        
+        public Services.WZNTServices.GruSysAPiJobStFrequenz[] ReadGruSysAPiJobStFrequenzList() {
+            return base.Channel.ReadGruSysAPiJobStFrequenzList();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobStFrequenz[]> ReadGruSysAPiJobStFrequenzListAsync() {
+            return base.Channel.ReadGruSysAPiJobStFrequenzListAsync();
         }
         
         public double ParsePixels(string File1, string File2) {

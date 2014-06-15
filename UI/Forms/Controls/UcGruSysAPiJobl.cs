@@ -14,17 +14,17 @@ using Services;
 
 namespace UI.Controls
 {
-    public partial class UcGruSysAPiJobSt : UserControl
+    public partial class UcGruSysAPiJobl : UserControl
     {
         // 
         // Class Properties
         //
-        protected WsGruSysAPiJobSt Workspace = new WsGruSysAPiJobSt();
+        protected WsGruSysAPiJobl Workspace = new WsGruSysAPiJobl();
 
         // 
         // Constructor
         //
-        public UcGruSysAPiJobSt()
+        public UcGruSysAPiJobl()
         {
             InitializeComponent();
             BindEvents();
@@ -36,7 +36,7 @@ namespace UI.Controls
         //
         private void btSave_Click(object sender, EventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobSt.SaveConfirmMsg, ResUcGruSysAPiJobSt.SaveConfirmTitle,
+            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobl.SaveConfirmMsg, ResUcGruSysAPiJobl.SaveConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.Yes)
             {
@@ -62,7 +62,7 @@ namespace UI.Controls
 
         protected void InitializeWorkspace()
         {
-            Workspace = new WsGruSysAPiJobSt();
+            Workspace = new WsGruSysAPiJobl();
             BindView();
         }
 
@@ -89,43 +89,40 @@ namespace UI.Controls
             }
 
             // JobId
-            DataGridViewComboBoxColumn ComboBoxColumn = new DataGridViewComboBoxColumn();
-            {
-                ComboBoxColumn.FlatStyle = FlatStyle.Flat;
-                ComboBoxColumn.DataSource = Workspace.JobIds;
-                ComboBoxColumn.ValueMember = "JOB_ID";
-                ComboBoxColumn.DisplayMember = "JOB_ID";
-                ComboBoxColumn.HeaderText = ResUcGruSysAPiJobSt.JobId; // Read Resource File
-                ComboBoxColumn.DataPropertyName = "JOB_ID";
-                Columns.Add(ComboBoxColumn);
-            }
-
-            // Frequenz
-            ComboBoxColumn = new DataGridViewComboBoxColumn();
-            {
-                ComboBoxColumn.FlatStyle = FlatStyle.Flat;
-                ComboBoxColumn.DataSource = Workspace.Frequenzs;
-                ComboBoxColumn.ValueMember = "Frequenz";
-                ComboBoxColumn.DisplayMember = "Frequenz";
-                ComboBoxColumn.HeaderText = ResUcGruSysAPiJobSt.Frequenz; // Read Resource File
-                ComboBoxColumn.DataPropertyName = "Frequenz";
-                Columns.Add(ComboBoxColumn);
-            }
-
-            // Startdatum
             Column = new DataGridViewTextBoxColumn();
             {
-                Column.HeaderText = ResUcGruSysAPiJobSt.Startdatum; // Read Resource File
-                Column.DataPropertyName = "Startdatum";
+                Column.HeaderText = ResUcGruSysAPiJobl.JobId; // Read Resource File
+                Column.DataPropertyName = "JobId";
                 Column.Visible = true;
                 Columns.Add(Column);
             }
 
-            // Startzeit
+            // JoebBezeichnung
             Column = new DataGridViewTextBoxColumn();
             {
-                Column.HeaderText = ResUcGruSysAPiJobSt.Startzeit; // Read Resource File
-                Column.DataPropertyName = "Startzeit";
+                Column.HeaderText = ResUcGruSysAPiJobl.JobBezeichnung; // Read Resource File
+                Column.DataPropertyName = "JobBez";
+                Column.Visible = true;
+                Columns.Add(Column);
+            }
+
+            // StandortKz
+            DataGridViewComboBoxColumn ComboBoxColumn = new DataGridViewComboBoxColumn();
+            {
+                ComboBoxColumn.FlatStyle = FlatStyle.Flat;
+                ComboBoxColumn.DataSource = Workspace.GruSysStandorts;
+                ComboBoxColumn.ValueMember = "StandortId";
+                ComboBoxColumn.DisplayMember = "StandortId";
+                ComboBoxColumn.HeaderText = ResUcGruSysAPiJobl.StandortId; // Read Resource File
+                ComboBoxColumn.DataPropertyName = "StandortKz";
+                Columns.Add(ComboBoxColumn);
+            }
+
+            // ParameterDatei
+            Column = new DataGridViewTextBoxColumn();
+            {
+                Column.HeaderText = ResUcGruSysAPiJobl.ParameterDatei; // Read Resource File
+                Column.DataPropertyName = "Parameterdatei";
                 Column.Visible = true;
                 Columns.Add(Column);
             }
@@ -134,8 +131,8 @@ namespace UI.Controls
             DataGridViewCheckBoxColumn CheckBoxColumn = new DataGridViewCheckBoxColumn();
             {
                 CheckBoxColumn.FlatStyle = FlatStyle.Flat;
-                CheckBoxColumn.HeaderText = ResUcGruSysAPiJobSt.AktivKZ; // Read Resource File
-                CheckBoxColumn.DataPropertyName = "AktivKZ";
+                CheckBoxColumn.HeaderText = ResUcGruSysAPiJobl.AktivKZ; // Read Resource File
+                CheckBoxColumn.DataPropertyName = "AktivKz";
                 Columns.Add(CheckBoxColumn);
             }
 
@@ -170,7 +167,7 @@ namespace UI.Controls
         //
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobSt.DeleteConfirmMsg, ResUcGruSysAPiJobSt.DeleteConfirmTitle,
+            DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobl.DeleteConfirmMsg, ResUcGruSysAPiJobl.DeleteConfirmTitle,
                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Dialog == DialogResult.No)
                 e.Cancel = true;

@@ -122,6 +122,7 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IdDruckverfahren" type="xs:int" />
       <xs:element minOccurs="0" name="IdMaschine" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMaschinenGrp" type="xs:int" />
       <xs:element minOccurs="0" name="IdRegistermarken" type="xs:int" />
       <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
@@ -351,4 +352,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruSysAPiJobSt" nillable="true" type="tns:GruSysAPiJobSt" />
+  <xs:complexType name="ArrayOfGruSysAPiJobStFrequenz">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSysAPiJobStFrequenz" nillable="true" type="tns:GruSysAPiJobStFrequenz" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruSysAPiJobStFrequenz" nillable="true" type="tns:ArrayOfGruSysAPiJobStFrequenz" />
+  <xs:complexType name="GruSysAPiJobStFrequenz">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Frequenz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruSysAPiJobStFrequenz" nillable="true" type="tns:GruSysAPiJobStFrequenz" />
 </xs:schema>

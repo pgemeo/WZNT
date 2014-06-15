@@ -166,5 +166,16 @@ namespace Services
                 Client.DeleteGruSysAPiJobStList(List.ToArray());
             }
         }
+
+        //
+        // GruSysAPiJobStFrequenz
+        //
+        public static List<GruSysAPiJobStFrequenz> ReadGruSysAPiJobStFrequenzList()
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                return Client.ReadGruSysAPiJobStFrequenzList().ToList();
+            }
+        }
     }
 }

@@ -102,6 +102,9 @@
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysAPiJobSt.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysAPiJobStFrequenz.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysStandort.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

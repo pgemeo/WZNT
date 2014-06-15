@@ -46,34 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\UcGruArtAufEinzelnutzen.cs">
+    <Compile Include="Forms\Controls\UcGruArtAufEinzelnutzen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UcGruArtAufEinzelnutzen.Designer.cs">
+    <Compile Include="Forms\Controls\UcGruArtAufEinzelnutzen.Designer.cs">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UcGruSysAPiJobl.cs">
+    <Compile Include="Forms\Controls\UcGruSysAPiJobl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UcGruSysAPiJobl.Designer.cs">
+    <Compile Include="Forms\Controls\UcGruSysAPiJobl.Designer.cs">
       <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UcGruSysAPiJobSt.cs">
+    <Compile Include="Forms\Controls\UcGruSysAPiJobSt.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UcGruSysAPiJobSt.Designer.cs">
+    <Compile Include="Forms\Controls\UcGruSysAPiJobSt.Designer.cs">
       <DependentUpon>UcGruSysAPiJobSt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UcGruSysStandort.cs">
+    <Compile Include="Forms\Controls\UcGruSysStandort.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UcGruSysStandort.Designer.cs">
+    <Compile Include="Forms\Controls\UcGruSysStandort.Designer.cs">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UcWerkzeugnummerntool.cs">
+    <Compile Include="Forms\Controls\UcWerkzeugnummerntool.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UcWerkzeugnummerntool.Designer.cs">
+    <Compile Include="Forms\Controls\UcWerkzeugnummerntool.Designer.cs">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -109,64 +109,64 @@
     <Compile Include="Workspaces\WsGruSysAPiJobl.cs" />
     <Compile Include="Workspaces\WsGruSysAPiJobSt.cs" />
     <Compile Include="Workspaces\WsGruSysStandort.cs" />
-    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.de.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruArtAufEinzelnutzen.de.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.fr.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruArtAufEinzelnutzen.fr.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruArtAufEinzelnutzen.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruArtAufEinzelnutzen.ru-RU.resx">
       <DependentUpon>UcGruArtAufEinzelnutzen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobl.de.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobl.de.resx">
       <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobl.fr.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobl.fr.resx">
       <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobl.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobl.resx">
       <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobl.ru-RU.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobl.ru-RU.resx">
       <DependentUpon>UcGruSysAPiJobl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobSt.de.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobSt.de.resx">
       <DependentUpon>UcGruSysAPiJobSt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobSt.fr.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobSt.fr.resx">
       <DependentUpon>UcGruSysAPiJobSt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobSt.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobSt.resx">
       <DependentUpon>UcGruSysAPiJobSt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysAPiJobSt.ru-RU.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysAPiJobSt.ru-RU.resx">
       <DependentUpon>UcGruSysAPiJobSt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysStandort.de.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysStandort.de.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysStandort.fr.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysStandort.fr.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysStandort.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysStandort.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcGruSysStandort.ru-RU.resx">
+    <EmbeddedResource Include="Forms\Controls\UcGruSysStandort.ru-RU.resx">
       <DependentUpon>UcGruSysStandort.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.de.resx">
+    <EmbeddedResource Include="Forms\Controls\UcWerkzeugnummerntool.de.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.fr.resx">
+    <EmbeddedResource Include="Forms\Controls\UcWerkzeugnummerntool.fr.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.resx">
+    <EmbeddedResource Include="Forms\Controls\UcWerkzeugnummerntool.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UcWerkzeugnummerntool.ru-RU.resx">
+    <EmbeddedResource Include="Forms\Controls\UcWerkzeugnummerntool.ru-RU.resx">
       <DependentUpon>UcWerkzeugnummerntool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
