@@ -18,7 +18,7 @@ namespace UI.Workspaces
 
         public WsGruSysAPiJobl()
         {
-            this._List = null;
+            this._List = DbManager.ReadGruSysAPiJoblList();
             this._Original = GlobalFunctions.CloneList(this._List);
         }
 
@@ -43,8 +43,8 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobl> Elements = (List<GruSysAPiJobl>)Data;
+                List<GruSysAPiJobl> BaseElements = (List<GruSysAPiJobl>)Original;
                 // Finding Deletes
                 IList =
                     (from B in BaseElements
@@ -62,14 +62,14 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobl> Elements = (List<GruSysAPiJobl>)Data;
+                List<GruSysAPiJobl> BaseElements = (List<GruSysAPiJobl>)Original;
                 // Finding Inserts
                 IList =
                     (from E in Elements
                         join B in BaseElements on E.Id equals B.Id into Join
                         from J in Join.DefaultIfEmpty()
-                        where J == null && E != null && (E.Id == 0 && E.StandortId != null)
+                        where J == null && E != null && (E.Id == 0 && E.JobId != null)
                         select E
                     ).ToList();
                 return IList;
@@ -81,8 +81,8 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobl> Elements = (List<GruSysAPiJobl>)Data;
+                List<GruSysAPiJobl> BaseElements = (List<GruSysAPiJobl>)Original;
                 // Finding Edits
                 IList =
                     (from E in Elements
@@ -97,13 +97,13 @@ namespace UI.Workspaces
         public bool SaveChanges()
         {
             bool ReturnValue = false;
-            List<GruSysStandort> InsertElements = (List<GruSysStandort>)Added;
-            List<GruSysStandort> DeleteElements = (List<GruSysStandort>)Deleted;
-            List<GruSysStandort> EditElements = (List<GruSysStandort>)Modified;
+            List<GruSysAPiJobl> InsertElements = (List<GruSysAPiJobl>)Added;
+            List<GruSysAPiJobl> DeleteElements = (List<GruSysAPiJobl>)Deleted;
+            List<GruSysAPiJobl> EditElements = (List<GruSysAPiJobl>)Modified;
             // Db Operations
-            DbManager.InsertGruSysStandort(InsertElements);
-            DbManager.DeleteGruSysStandort(DeleteElements);
-            DbManager.UpdateGruSysStandort(EditElements);
+            DbManager.InsertGruSysAPiJobl(InsertElements);
+            DbManager.DeleteGruSysAPiJobl(DeleteElements);
+            DbManager.UpdateGruSysAPiJobl(EditElements);
             // Return
             ReturnValue = true;
             return ReturnValue;

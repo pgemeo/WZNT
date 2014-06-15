@@ -96,6 +96,12 @@
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruSprachen.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysAPiJobl.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysAPiJobSt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\WZNTServices\Services.WZNTServices.GruSysStandort.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -102,5 +102,69 @@ namespace Services
                 Client.DeleteGruSysStandortList(List.ToArray());
             }
         }
+
+        //
+        // GruSysAPiJobl
+        //
+        public static List<GruSysAPiJobl> ReadGruSysAPiJoblList()
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                return Client.ReadGruSysAPiJoblList().ToList();
+            }
+        }
+        public static void InsertGruSysAPiJobl(List<GruSysAPiJobl> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.CreateGruSysAPiJoblList(List.ToArray());
+            }
+        }
+        public static void UpdateGruSysAPiJobl(List<GruSysAPiJobl> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.UpdateGruSysAPiJoblList(List.ToArray());
+            }
+        }
+        public static void DeleteGruSysAPiJobl(List<GruSysAPiJobl> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.DeleteGruSysAPiJoblList(List.ToArray());
+            }
+        }
+
+        //
+        // GruSysAPiJobSt
+        //
+        public static List<GruSysAPiJobSt> ReadGruSysAPiJobStList()
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                return Client.ReadGruSysAPiJobStList().ToList();
+            }
+        }
+        public static void InsertGruSysAPiJobSt(List<GruSysAPiJobSt> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.CreateGruSysAPiJobStList(List.ToArray());
+            }
+        }
+        public static void UpdateGruSysAPiJobSt(List<GruSysAPiJobSt> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.UpdateGruSysAPiJobStList(List.ToArray());
+            }
+        }
+        public static void DeleteGruSysAPiJobSt(List<GruSysAPiJobSt> List)
+        {
+            using (WZNTServices.ServiceClient Client = new ServiceClient())
+            {
+                Client.DeleteGruSysAPiJobStList(List.ToArray());
+            }
+        }
     }
 }

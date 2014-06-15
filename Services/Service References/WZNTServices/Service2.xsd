@@ -315,4 +315,40 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="GruSysStandort" nillable="true" type="tns:GruSysStandort" />
+  <xs:complexType name="ArrayOfGruSysAPiJobl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSysAPiJobl" nillable="true" type="tns:GruSysAPiJobl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruSysAPiJobl" nillable="true" type="tns:ArrayOfGruSysAPiJobl" />
+  <xs:complexType name="GruSysAPiJobl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AktivKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="JobBez" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobId" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Parameterdatei" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruSysAPiJobl" nillable="true" type="tns:GruSysAPiJobl" />
+  <xs:complexType name="ArrayOfGruSysAPiJobSt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSysAPiJobSt" nillable="true" type="tns:GruSysAPiJobSt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruSysAPiJobSt" nillable="true" type="tns:ArrayOfGruSysAPiJobSt" />
+  <xs:complexType name="GruSysAPiJobSt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AktivKz" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Frequenz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="JobId" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Startdatum" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Startzeit" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruSysAPiJobSt" nillable="true" type="tns:GruSysAPiJobSt" />
 </xs:schema>

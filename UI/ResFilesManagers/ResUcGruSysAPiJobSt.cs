@@ -20,7 +20,35 @@ namespace UI.ResFilesManagers
                 return RManager.GetString("JobId");
             }
         }
-
+        public static string Frequenz
+        {
+            get
+            {
+                return RManager.GetString("Frequenz");
+            }
+        }
+        public static string Startdatum
+        {
+            get
+            {
+                return RManager.GetString("Startdatum");
+            }
+        }
+        public static string Startzeit
+        {
+            get
+            {
+                return RManager.GetString("Startzeit");
+            }
+        }
+        public static string AktivKZ
+        {
+            get
+            {
+                return RManager.GetString("AktivKZ");
+            }
+        }
+        
         public static string SaveConfirmMsg
         {
             get

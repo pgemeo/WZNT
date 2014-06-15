@@ -126,11 +126,11 @@
   <data name="DeleteConfirmTitle" xml:space="preserve">
     <value>Confirmation de la suppression</value>
   </data>
+  <data name="JobBezeichnung" xml:space="preserve">
+    <value>JobBezeichnung</value>
+  </data>
   <data name="JobId" xml:space="preserve">
     <value>JobId</value>
-  </data>
-  <data name="JoebBezeichnung" xml:space="preserve">
-    <value>JobBezeichnung</value>
   </data>
   <data name="ParameterDatei" xml:space="preserve">
     <value>ParameterDatei</value>

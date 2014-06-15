@@ -19,8 +19,11 @@ namespace UI.Controls
         // 
         // Class Properties
         //
-        protected WsGruSysAPiJobl Workspace;
+        protected WsGruSysAPiJobl Workspace = new WsGruSysAPiJobl();
 
+        // 
+        // Constructor
+        //
         public UcGruSysAPiJobl()
         {
             InitializeComponent();
@@ -97,37 +100,40 @@ namespace UI.Controls
             // JoebBezeichnung
             Column = new DataGridViewTextBoxColumn();
             {
-                Column.HeaderText = ResUcGruSysAPiJobl.JoebBezeichnung; // Read Resource File
+                Column.HeaderText = ResUcGruSysAPiJobl.JobBezeichnung; // Read Resource File
                 Column.DataPropertyName = "JOB_Bez";
                 Column.Visible = true;
                 Columns.Add(Column);
             }
 
             // StandortKz
-            Column = new DataGridViewTextBoxColumn();
+            DataGridViewComboBoxColumn ComboBoxColumn = new DataGridViewComboBoxColumn();
             {
-                Column.HeaderText = ResUcGruSysAPiJobl.StandortId; // Read Resource File
-                Column.DataPropertyName = "StandortKz";
-                Column.Visible = true;
-                Columns.Add(Column);
+                ComboBoxColumn.FlatStyle = FlatStyle.Flat;
+                ComboBoxColumn.DataSource = Workspace.GruSysStandorts;
+                ComboBoxColumn.ValueMember = "StandortId";
+                ComboBoxColumn.DisplayMember = "StandortId";
+                ComboBoxColumn.HeaderText = ResUcGruSysAPiJobl.StandortId; // Read Resource File
+                ComboBoxColumn.DataPropertyName = "StandortId";
+                Columns.Add(ComboBoxColumn);
             }
 
             // ParameterDatei
             Column = new DataGridViewTextBoxColumn();
             {
                 Column.HeaderText = ResUcGruSysAPiJobl.ParameterDatei; // Read Resource File
-                Column.DataPropertyName = "ParameterDatei";
+                Column.DataPropertyName = "Parameterdatei";
                 Column.Visible = true;
                 Columns.Add(Column);
             }
 
             // AktivKZ
-            Column = new DataGridViewTextBoxColumn();
+            DataGridViewCheckBoxColumn CheckBoxColumn = new DataGridViewCheckBoxColumn();
             {
-                Column.HeaderText = ResUcGruSysAPiJobl.AktivKZ; // Read Resource File
-                Column.DataPropertyName = "AktivKZ";
-                Column.Visible = true;
-                Columns.Add(Column);
+                CheckBoxColumn.FlatStyle = FlatStyle.Flat;
+                CheckBoxColumn.HeaderText = ResUcGruSysAPiJobl.AktivKZ; // Read Resource File
+                CheckBoxColumn.DataPropertyName = "AktivKZ";
+                Columns.Add(CheckBoxColumn);
             }
 
             this.dataGridView1.Columns.AddRange(Columns.ToArray());
@@ -159,7 +165,6 @@ namespace UI.Controls
         //
         // Handlers
         //
-        
         private void DataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             DialogResult Dialog = MessageBox.Show(ResUcGruSysAPiJobl.DeleteConfirmMsg, ResUcGruSysAPiJobl.DeleteConfirmTitle,

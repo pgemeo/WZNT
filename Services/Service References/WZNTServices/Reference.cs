@@ -2993,6 +2993,288 @@ namespace Services.WZNTServices {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruSysAPiJobl", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruSysAPiJobl : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> AktivKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobBezField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int JobIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ParameterdateiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> AktivKz {
+            get {
+                return this.AktivKzField;
+            }
+            set {
+                if ((this.AktivKzField.Equals(value) != true)) {
+                    this.AktivKzField = value;
+                    this.RaisePropertyChanged("AktivKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JobBez {
+            get {
+                return this.JobBezField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobBezField, value) != true)) {
+                    this.JobBezField = value;
+                    this.RaisePropertyChanged("JobBez");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int JobId {
+            get {
+                return this.JobIdField;
+            }
+            set {
+                if ((this.JobIdField.Equals(value) != true)) {
+                    this.JobIdField = value;
+                    this.RaisePropertyChanged("JobId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Parameterdatei {
+            get {
+                return this.ParameterdateiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ParameterdateiField, value) != true)) {
+                    this.ParameterdateiField = value;
+                    this.RaisePropertyChanged("Parameterdatei");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruSysAPiJobSt", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruSysAPiJobSt : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> AktivKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FrequenzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int JobIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StartdatumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> StartzeitField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> AktivKz {
+            get {
+                return this.AktivKzField;
+            }
+            set {
+                if ((this.AktivKzField.Equals(value) != true)) {
+                    this.AktivKzField = value;
+                    this.RaisePropertyChanged("AktivKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Frequenz {
+            get {
+                return this.FrequenzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FrequenzField, value) != true)) {
+                    this.FrequenzField = value;
+                    this.RaisePropertyChanged("Frequenz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int JobId {
+            get {
+                return this.JobIdField;
+            }
+            set {
+                if ((this.JobIdField.Equals(value) != true)) {
+                    this.JobIdField = value;
+                    this.RaisePropertyChanged("JobId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Startdatum {
+            get {
+                return this.StartdatumField;
+            }
+            set {
+                if ((this.StartdatumField.Equals(value) != true)) {
+                    this.StartdatumField = value;
+                    this.RaisePropertyChanged("Startdatum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Startzeit {
+            get {
+                return this.StartzeitField;
+            }
+            set {
+                if ((this.StartzeitField.Equals(value) != true)) {
+                    this.StartzeitField = value;
+                    this.RaisePropertyChanged("Startzeit");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WZNTServices.IService")]
     public interface IService {
@@ -3080,6 +3362,54 @@ namespace Services.WZNTServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysStandortList", ReplyAction="http://tempuri.org/IService/DeleteGruSysStandortListResponse")]
         System.Threading.Tasks.Task<bool> DeleteGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/CreateGruSysAPiJoblListResponse")]
+        bool CreateGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/CreateGruSysAPiJoblListResponse")]
+        System.Threading.Tasks.Task<bool> CreateGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJoblListResponse")]
+        Services.WZNTServices.GruSysAPiJobl[] ReadGruSysAPiJoblList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJoblListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobl[]> ReadGruSysAPiJoblListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/UpdateGruSysAPiJoblListResponse")]
+        bool UpdateGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/UpdateGruSysAPiJoblListResponse")]
+        System.Threading.Tasks.Task<bool> UpdateGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/DeleteGruSysAPiJoblListResponse")]
+        bool DeleteGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysAPiJoblList", ReplyAction="http://tempuri.org/IService/DeleteGruSysAPiJoblListResponse")]
+        System.Threading.Tasks.Task<bool> DeleteGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/CreateGruSysAPiJobStListResponse")]
+        bool CreateGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CreateGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/CreateGruSysAPiJobStListResponse")]
+        System.Threading.Tasks.Task<bool> CreateGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJobStListResponse")]
+        Services.WZNTServices.GruSysAPiJobSt[] ReadGruSysAPiJobStList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/ReadGruSysAPiJobStListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobSt[]> ReadGruSysAPiJobStListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/UpdateGruSysAPiJobStListResponse")]
+        bool UpdateGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/UpdateGruSysAPiJobStListResponse")]
+        System.Threading.Tasks.Task<bool> UpdateGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/DeleteGruSysAPiJobStListResponse")]
+        bool DeleteGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruSysAPiJobStList", ReplyAction="http://tempuri.org/IService/DeleteGruSysAPiJobStListResponse")]
+        System.Threading.Tasks.Task<bool> DeleteGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ParsePixels", ReplyAction="http://tempuri.org/IService/ParsePixelsResponse")]
         double ParsePixels(string File1, string File2);
@@ -3231,6 +3561,70 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task<bool> DeleteGruSysStandortListAsync(Services.WZNTServices.GruSysStandort[] models) {
             return base.Channel.DeleteGruSysStandortListAsync(models);
+        }
+        
+        public bool CreateGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.CreateGruSysAPiJoblList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.CreateGruSysAPiJoblListAsync(models);
+        }
+        
+        public Services.WZNTServices.GruSysAPiJobl[] ReadGruSysAPiJoblList() {
+            return base.Channel.ReadGruSysAPiJoblList();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobl[]> ReadGruSysAPiJoblListAsync() {
+            return base.Channel.ReadGruSysAPiJoblListAsync();
+        }
+        
+        public bool UpdateGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.UpdateGruSysAPiJoblList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.UpdateGruSysAPiJoblListAsync(models);
+        }
+        
+        public bool DeleteGruSysAPiJoblList(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.DeleteGruSysAPiJoblList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteGruSysAPiJoblListAsync(Services.WZNTServices.GruSysAPiJobl[] models) {
+            return base.Channel.DeleteGruSysAPiJoblListAsync(models);
+        }
+        
+        public bool CreateGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.CreateGruSysAPiJobStList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.CreateGruSysAPiJobStListAsync(models);
+        }
+        
+        public Services.WZNTServices.GruSysAPiJobSt[] ReadGruSysAPiJobStList() {
+            return base.Channel.ReadGruSysAPiJobStList();
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruSysAPiJobSt[]> ReadGruSysAPiJobStListAsync() {
+            return base.Channel.ReadGruSysAPiJobStListAsync();
+        }
+        
+        public bool UpdateGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.UpdateGruSysAPiJobStList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.UpdateGruSysAPiJobStListAsync(models);
+        }
+        
+        public bool DeleteGruSysAPiJobStList(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.DeleteGruSysAPiJobStList(models);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteGruSysAPiJobStListAsync(Services.WZNTServices.GruSysAPiJobSt[] models) {
+            return base.Channel.DeleteGruSysAPiJobStListAsync(models);
         }
         
         public double ParsePixels(string File1, string File2) {

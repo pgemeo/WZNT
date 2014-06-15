@@ -92,6 +92,54 @@
   <wsdl:message name="IService_DeleteGruSysStandortList_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteGruSysStandortListResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysAPiJoblList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysAPiJoblList" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysAPiJoblList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysAPiJoblListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysAPiJoblList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysAPiJoblList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysAPiJoblList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysAPiJoblListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysAPiJoblList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysAPiJoblList" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysAPiJoblList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysAPiJoblListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysAPiJoblList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysAPiJoblList" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysAPiJoblList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysAPiJoblListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysAPiJobStList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysAPiJobStList" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateGruSysAPiJobStList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateGruSysAPiJobStListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysAPiJobStList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysAPiJobStList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruSysAPiJobStList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruSysAPiJobStListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysAPiJobStList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysAPiJobStList" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateGruSysAPiJobStList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGruSysAPiJobStListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysAPiJobStList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysAPiJobStList" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteGruSysAPiJobStList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGruSysAPiJobStListResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_ParsePixels_InputMessage">
     <wsdl:part name="parameters" element="tns:ParsePixels" />
   </wsdl:message>
@@ -160,6 +208,38 @@
     <wsdl:operation name="DeleteGruSysStandortList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruSysStandortList" message="tns:IService_DeleteGruSysStandortList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruSysStandortListResponse" message="tns:IService_DeleteGruSysStandortList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGruSysAPiJoblList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateGruSysAPiJoblList" message="tns:IService_CreateGruSysAPiJoblList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateGruSysAPiJoblListResponse" message="tns:IService_CreateGruSysAPiJoblList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysAPiJoblList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSysAPiJoblList" message="tns:IService_ReadGruSysAPiJoblList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSysAPiJoblListResponse" message="tns:IService_ReadGruSysAPiJoblList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysAPiJoblList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGruSysAPiJoblList" message="tns:IService_UpdateGruSysAPiJoblList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGruSysAPiJoblListResponse" message="tns:IService_UpdateGruSysAPiJoblList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysAPiJoblList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruSysAPiJoblList" message="tns:IService_DeleteGruSysAPiJoblList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruSysAPiJoblListResponse" message="tns:IService_DeleteGruSysAPiJoblList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGruSysAPiJobStList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateGruSysAPiJobStList" message="tns:IService_CreateGruSysAPiJobStList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateGruSysAPiJobStListResponse" message="tns:IService_CreateGruSysAPiJobStList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysAPiJobStList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruSysAPiJobStList" message="tns:IService_ReadGruSysAPiJobStList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruSysAPiJobStListResponse" message="tns:IService_ReadGruSysAPiJobStList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysAPiJobStList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateGruSysAPiJobStList" message="tns:IService_UpdateGruSysAPiJobStList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateGruSysAPiJobStListResponse" message="tns:IService_UpdateGruSysAPiJobStList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysAPiJobStList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruSysAPiJobStList" message="tns:IService_DeleteGruSysAPiJobStList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruSysAPiJobStListResponse" message="tns:IService_DeleteGruSysAPiJobStList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ParsePixels">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ParsePixels" message="tns:IService_ParsePixels_InputMessage" />
@@ -291,6 +371,78 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteGruSysStandortList">
       <soap:operation soapAction="http://tempuri.org/IService/DeleteGruSysStandortList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGruSysAPiJoblList">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateGruSysAPiJoblList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysAPiJoblList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruSysAPiJoblList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysAPiJoblList">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateGruSysAPiJoblList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysAPiJoblList">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteGruSysAPiJoblList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGruSysAPiJobStList">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateGruSysAPiJobStList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruSysAPiJobStList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruSysAPiJobStList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGruSysAPiJobStList">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateGruSysAPiJobStList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGruSysAPiJobStList">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteGruSysAPiJobStList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

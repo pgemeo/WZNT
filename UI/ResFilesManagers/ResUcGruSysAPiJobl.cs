@@ -21,11 +21,11 @@ namespace UI.ResFilesManagers
             }
         }
 
-        public static string JoebBezeichnung
+        public static string JobBezeichnung
         {
             get
             {
-                return RManager.GetString("JoebBezeichnung");
+                return RManager.GetString("JobBezeichnung");
             }
         }
 

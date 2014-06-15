@@ -18,7 +18,7 @@ namespace UI.Workspaces
 
         public WsGruSysAPiJobSt()
         {
-            this._List = null;
+            this._List = DbManager.ReadGruSysAPiJobStList();
             this._Original = GlobalFunctions.CloneList(this._List);
         }
 
@@ -43,8 +43,8 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobSt> Elements = (List<GruSysAPiJobSt>)Data;
+                List<GruSysAPiJobSt> BaseElements = (List<GruSysAPiJobSt>)Original;
                 // Finding Deletes
                 IList =
                     (from B in BaseElements
@@ -62,14 +62,14 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobSt> Elements = (List<GruSysAPiJobSt>)Data;
+                List<GruSysAPiJobSt> BaseElements = (List<GruSysAPiJobSt>)Original;
                 // Finding Inserts
                 IList =
                     (from E in Elements
                         join B in BaseElements on E.Id equals B.Id into Join
                         from J in Join.DefaultIfEmpty()
-                        where J == null && E != null && (E.Id == 0 && E.StandortId != null)
+                        where J == null && E != null && (E.Id == 0 && E.JobId != null)
                         select E
                     ).ToList();
                 return IList;
@@ -81,8 +81,8 @@ namespace UI.Workspaces
             get
             {
                 IList IList = null;
-                List<GruSysStandort> Elements = (List<GruSysStandort>)Data;
-                List<GruSysStandort> BaseElements = (List<GruSysStandort>)Original;
+                List<GruSysAPiJobSt> Elements = (List<GruSysAPiJobSt>)Data;
+                List<GruSysAPiJobSt> BaseElements = (List<GruSysAPiJobSt>)Original;
                 // Finding Edits
                 IList =
                     (from E in Elements
@@ -97,13 +97,13 @@ namespace UI.Workspaces
         public bool SaveChanges()
         {
             bool ReturnValue = false;
-            List<GruSysStandort> InsertElements = (List<GruSysStandort>)Added;
-            List<GruSysStandort> DeleteElements = (List<GruSysStandort>)Deleted;
-            List<GruSysStandort> EditElements = (List<GruSysStandort>)Modified;
+            List<GruSysAPiJobSt> InsertElements = (List<GruSysAPiJobSt>)Added;
+            List<GruSysAPiJobSt> DeleteElements = (List<GruSysAPiJobSt>)Deleted;
+            List<GruSysAPiJobSt> EditElements = (List<GruSysAPiJobSt>)Modified;
             // Db Operations
-            DbManager.InsertGruSysStandort(InsertElements);
-            DbManager.DeleteGruSysStandort(DeleteElements);
-            DbManager.UpdateGruSysStandort(EditElements);
+            DbManager.InsertGruSysAPiJobSt(InsertElements);
+            DbManager.DeleteGruSysAPiJobSt(DeleteElements);
+            DbManager.UpdateGruSysAPiJobSt(EditElements);
             // Return
             ReturnValue = true;
             return ReturnValue;
@@ -114,6 +114,30 @@ namespace UI.Workspaces
             get
             {
                 IList List = DbManager.ReadGruSysStandortList();
+                return List;
+            }
+        }
+
+        public IList Frequenzs
+        {
+            get
+            {
+                IList List = new List<string>();
+                List.Add("1h");
+                List.Add("6h");
+                List.Add("12h");
+                List.Add("24h");
+                List.Add("48h");
+                List.Add("168h");
+                return List;
+            }
+        }
+
+        public IList JobIds
+        {
+            get
+            {
+                IList List = DbManager.ReadGruSysAPiJoblList();
                 return List;
             }
         }
