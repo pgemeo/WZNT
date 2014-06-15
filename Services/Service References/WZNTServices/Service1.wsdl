@@ -56,6 +56,12 @@
   <wsdl:message name="IService_DeleteGruArtAufEinzelnutzenList_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteGruArtAufEinzelnutzenListResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_ReadGruArtFarbtypList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtFarbtypList" />
+  </wsdl:message>
+  <wsdl:message name="IService_ReadGruArtFarbtypList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadGruArtFarbtypListResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_ReadGruArtAufEinSpracheList_InputMessage">
     <wsdl:part name="parameters" element="tns:ReadGruArtAufEinSpracheList" />
   </wsdl:message>
@@ -190,6 +196,10 @@
     <wsdl:operation name="DeleteGruArtAufEinzelnutzenList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList" message="tns:IService_DeleteGruArtAufEinzelnutzenList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse" message="tns:IService_DeleteGruArtAufEinzelnutzenList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruArtFarbtypList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruArtFarbtypList" message="tns:IService_ReadGruArtFarbtypList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ReadGruArtFarbtypListResponse" message="tns:IService_ReadGruArtFarbtypList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ReadGruArtAufEinSpracheList">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheList" message="tns:IService_ReadGruArtAufEinSpracheList_InputMessage" />
@@ -327,6 +337,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteGruArtAufEinzelnutzenList">
       <soap:operation soapAction="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadGruArtFarbtypList">
+      <soap:operation soapAction="http://tempuri.org/IService/ReadGruArtFarbtypList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

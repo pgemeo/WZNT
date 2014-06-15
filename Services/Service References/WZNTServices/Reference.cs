@@ -2918,6 +2918,115 @@ namespace Services.WZNTServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GruArtFarbtyp", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
+    [System.SerializableAttribute()]
+    public partial class GruArtFarbtyp : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FarbtypSepField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> OTimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StandortKzField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> WzNerzField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FarbtypSep {
+            get {
+                return this.FarbtypSepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FarbtypSepField, value) != true)) {
+                    this.FarbtypSepField = value;
+                    this.RaisePropertyChanged("FarbtypSep");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> OTimeStamp {
+            get {
+                return this.OTimeStampField;
+            }
+            set {
+                if ((this.OTimeStampField.Equals(value) != true)) {
+                    this.OTimeStampField = value;
+                    this.RaisePropertyChanged("OTimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StandortKz {
+            get {
+                return this.StandortKzField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StandortKzField, value) != true)) {
+                    this.StandortKzField = value;
+                    this.RaisePropertyChanged("StandortKz");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> WzNerz {
+            get {
+                return this.WzNerzField;
+            }
+            set {
+                if ((this.WzNerzField.Equals(value) != true)) {
+                    this.WzNerzField = value;
+                    this.RaisePropertyChanged("WzNerz");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GruSysStandort", Namespace="http://schemas.datacontract.org/2004/07/Business.DTO")]
     [System.SerializableAttribute()]
     public partial class GruSysStandort : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -3420,6 +3529,12 @@ namespace Services.WZNTServices {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenList", ReplyAction="http://tempuri.org/IService/DeleteGruArtAufEinzelnutzenListResponse")]
         System.Threading.Tasks.Task<bool> DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtFarbtypList", ReplyAction="http://tempuri.org/IService/ReadGruArtFarbtypListResponse")]
+        Services.WZNTServices.GruArtFarbtyp[] ReadGruArtFarbtypList(string locationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtFarbtypList", ReplyAction="http://tempuri.org/IService/ReadGruArtFarbtypListResponse")]
+        System.Threading.Tasks.Task<Services.WZNTServices.GruArtFarbtyp[]> ReadGruArtFarbtypListAsync(string locationId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/ReadGruArtAufEinSpracheList", ReplyAction="http://tempuri.org/IService/ReadGruArtAufEinSpracheListResponse")]
         Services.WZNTServices.GruArtAufEinSprache[] ReadGruArtAufEinSpracheList(Services.WZNTServices.GruArtAufEinzelnutzen model);
         
@@ -3612,6 +3727,14 @@ namespace Services.WZNTServices {
         
         public System.Threading.Tasks.Task<bool> DeleteGruArtAufEinzelnutzenListAsync(Services.WZNTServices.GruArtAufEinzelnutzen[] models) {
             return base.Channel.DeleteGruArtAufEinzelnutzenListAsync(models);
+        }
+        
+        public Services.WZNTServices.GruArtFarbtyp[] ReadGruArtFarbtypList(string locationId) {
+            return base.Channel.ReadGruArtFarbtypList(locationId);
+        }
+        
+        public System.Threading.Tasks.Task<Services.WZNTServices.GruArtFarbtyp[]> ReadGruArtFarbtypListAsync(string locationId) {
+            return base.Channel.ReadGruArtFarbtypListAsync(locationId);
         }
         
         public Services.WZNTServices.GruArtAufEinSprache[] ReadGruArtAufEinSpracheList(Services.WZNTServices.GruArtAufEinzelnutzen model) {

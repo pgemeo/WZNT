@@ -114,17 +114,31 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ReadGruArtFarbtypList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="locationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadGruArtFarbtypListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruArtFarbtypListResult" nillable="true" type="q9:ArrayOfGruArtFarbtyp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ReadGruArtAufEinSpracheList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="model" nillable="true" type="q9:GruArtAufEinzelnutzen" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="model" nillable="true" type="q10:GruArtAufEinzelnutzen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ReadGruArtAufEinSpracheListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruArtAufEinSpracheListResult" nillable="true" type="q10:ArrayOfGruArtAufEinSprache" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruArtAufEinSpracheListResult" nillable="true" type="q11:ArrayOfGruArtAufEinSprache" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -138,14 +152,14 @@
   <xs:element name="ReadGruSprachenListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSprachenListResult" nillable="true" type="q11:ArrayOfGruSprachen" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSprachenListResult" nillable="true" type="q12:ArrayOfGruSprachen" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CreateGruSysStandortList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q12:ArrayOfGruSysStandort" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q13:ArrayOfGruSysStandort" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -164,14 +178,14 @@
   <xs:element name="ReadGruSysStandortListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysStandortListResult" nillable="true" type="q13:ArrayOfGruSysStandort" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysStandortListResult" nillable="true" type="q14:ArrayOfGruSysStandort" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateGruSysStandortList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q14:ArrayOfGruSysStandort" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q15:ArrayOfGruSysStandort" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -185,7 +199,7 @@
   <xs:element name="DeleteGruSysStandortList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q15:ArrayOfGruSysStandort" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q16:ArrayOfGruSysStandort" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -199,7 +213,7 @@
   <xs:element name="CreateGruSysAPiJoblList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q16:ArrayOfGruSysAPiJobl" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q17:ArrayOfGruSysAPiJobl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -218,14 +232,14 @@
   <xs:element name="ReadGruSysAPiJoblListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJoblListResult" nillable="true" type="q17:ArrayOfGruSysAPiJobl" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJoblListResult" nillable="true" type="q18:ArrayOfGruSysAPiJobl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateGruSysAPiJoblList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q18:ArrayOfGruSysAPiJobl" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q19:ArrayOfGruSysAPiJobl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -239,7 +253,7 @@
   <xs:element name="DeleteGruSysAPiJoblList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q19:ArrayOfGruSysAPiJobl" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q20:ArrayOfGruSysAPiJobl" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -253,7 +267,7 @@
   <xs:element name="CreateGruSysAPiJobStList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q20:ArrayOfGruSysAPiJobSt" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q21:ArrayOfGruSysAPiJobSt" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -272,14 +286,14 @@
   <xs:element name="ReadGruSysAPiJobStListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJobStListResult" nillable="true" type="q21:ArrayOfGruSysAPiJobSt" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJobStListResult" nillable="true" type="q22:ArrayOfGruSysAPiJobSt" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="UpdateGruSysAPiJobStList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q22:ArrayOfGruSysAPiJobSt" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q23:ArrayOfGruSysAPiJobSt" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -293,7 +307,7 @@
   <xs:element name="DeleteGruSysAPiJobStList">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q23:ArrayOfGruSysAPiJobSt" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="models" nillable="true" type="q24:ArrayOfGruSysAPiJobSt" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -312,7 +326,7 @@
   <xs:element name="ReadGruSysAPiJobStFrequenzListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJobStFrequenzListResult" nillable="true" type="q24:ArrayOfGruSysAPiJobStFrequenz" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Business.DTO" minOccurs="0" name="ReadGruSysAPiJobStFrequenzListResult" nillable="true" type="q25:ArrayOfGruSysAPiJobStFrequenz" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

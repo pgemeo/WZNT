@@ -295,6 +295,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfGruArtAufEinzelnutzen" nillable="true" type="tns:ArrayOfGruArtAufEinzelnutzen" />
+  <xs:complexType name="ArrayOfGruArtFarbtyp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GruArtFarbtyp" nillable="true" type="tns:GruArtFarbtyp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGruArtFarbtyp" nillable="true" type="tns:ArrayOfGruArtFarbtyp" />
+  <xs:complexType name="GruArtFarbtyp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FarbtypSep" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="OTimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandortKz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WzNerz" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GruArtFarbtyp" nillable="true" type="tns:GruArtFarbtyp" />
   <xs:complexType name="ArrayOfGruSprachen">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="GruSprachen" nillable="true" type="tns:GruSprachen" />
